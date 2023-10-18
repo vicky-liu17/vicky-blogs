@@ -124,7 +124,7 @@ C --> E(Whew!)
     - $$U_h([s_0, s_1, ... s_n]) = R(s_0)+ \gamma R(s_1)+ \gamma^2 R(s_2) ...$$
 
 - Gives bounded utility: $$R(s)\le R_{max} \Rightarrow U_h\le \sum_{i=0}^{\infty}\gamma^iR_{max} = R_{max}\frac{1}{1-\gamma}$$ 
->The formula for the sum of an infinite geometric progression (or series) is as follows: $S = a / (1 - r)$ (等比数列求和公式)
+>The formula for the sum of an infinite geometric progression (or series) is as follows: S = a / (1 - r) 
 
 ### Selecting the best policy
 - How do we select the best policy?
@@ -135,4 +135,8 @@ $$\pi^* = \arg\max_{\pi}E[\sum_{t=0}^{\infty }\gamma^tR(s_t)|\pi]$$
 The following is the sum of discounted rewards:
 $$[\sum_{t=0}^{\infty }\gamma^tR(s_t)|\pi]$$ 
 
+### Policy Evaluation
+
+![](Pictures/DecisionMaking05.png)
+![](Pictures/DecisionMaking06.png)
 
