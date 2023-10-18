@@ -69,3 +69,10 @@ C --> E(Whew!)
 - Probability to succeed: 0.32776
 ![](Pictures/DecisionMaking03.png)
 
+#### Connection to HMM:
+- Markov Model: Each square can be regarded as a state
+- The transition function defines the probability transitioning from one state to another
+- In decision making, each action is associated with its own transition function
+    - select action to control the system to behave in some desired way or maximize the chance of achieving some goal
+>“Markov” generally means that given the present state, the future and the past are independent
+
