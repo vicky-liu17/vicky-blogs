@@ -40,7 +40,8 @@ C --> E(Whew!)
  - Asking for information is one of the most important actions
  - Information is acquired through "sensing actions"
  - Information typically has a cost
- - Agent must ask itself, what information to ask for?
+ - Agent must ask itself, what information to ask for?   
+
  - Information has **value** if it might change your action
  - Value = difference between **expected value with and without the information**
 
@@ -49,5 +50,6 @@ C --> E(Whew!)
   - Sequential environments!
 
   #### Seq. Decisions example: Grid World
-  ##### A maze-like problem
-  - The agent lives in a grid
+  - A maze-like problem
+    - The agent lives in a grid
+    - Walls block the agent's path
