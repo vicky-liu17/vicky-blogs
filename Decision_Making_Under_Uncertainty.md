@@ -105,4 +105,16 @@ C --> E(Whew!)
 - For MDPs, we want an optimal policy $\pi^*:S\to A$
     - A policy $\pi$ gives an action for any state
     - An optimal policy is one that maximizes expected utility if followed
+
+### How good is a policy?
+- How to measure the quality of a policy?
+- $\to$ Measure expected utility over the history (Stochastic Env means that we need to use expectations)
+- Optimal policy: $\pi^*$: highest possible expected utility
+
+#### Utility of sequences:
+- Additive rewards: $U_h([s_0, s_1, ... s_n]) = R(s_0)+ R(s_1)+...+ R(s_n)$
+- What about infinite sequences?
+    - Might get $\infty $ without terminal state
+    - How to compare $\infty $ and $\infty $?
+
     
