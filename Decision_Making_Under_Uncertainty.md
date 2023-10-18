@@ -54,4 +54,11 @@ C --> E(Whew!)
 - A maze-like problem
     - The agent lives in a grid
     - Walls block the agent's path
-
+- Noisy movement: actions (Up, Down, Left, Right) do not always go as planned
+    - 80% of the time, the intended outcome occurs (if there is no wall there)
+    - 20% of the time, the agent moves at right angles to the intended direction
+    - If there is a wall in the direction the agent would have been taken, the agent stays put(留在原地)
+- The agent receives rewards each time step
+    - Small "living" reward each step (can be negative)
+    - Big rewards come at the end (good or bad)
+- Goal: maximize sum of rewards
