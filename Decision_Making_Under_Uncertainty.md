@@ -25,7 +25,7 @@ C --> E(Whew!)
 ### Maximum Expected Utility(MEU)
 - Outcome of action is non-deterministic
 - Result of action A is $Result_i(A)$ (a state)
-- Given evidence **E(measurements)** the probability for each result is: ** $P(Result_i(A)|Do(A),E)$ **
+- Given evidence **E(measurements)** the probability for each result is: $P(Result_i(A)|Do(A),E)$
 - Principle of maximum expected utility:
 - A rational agent picks an action that maximizes the expected utility, given its knowledge
-> $\arg\min_A\sum_{i}P(Result_i(A)|Do(A),E)\bigcup (Result_i(A))$
+ $\arg\min_A\sum_{i}P(Result_i(A)|Do(A),E)\bigcup (Result_i(A))$
