@@ -114,7 +114,6 @@ C --> E(Whew!)
 #### Utility of sequences:
 - Additive rewards: $U_h([s_0, s_1, ... s_n]) = R(s_0)+ R(s_1)+...+ R(s_n)$
 - What about infinite sequences?
-    - Might get $\infty $ without terminal state
-    - How to compare $\infty $ and $\infty $?
-
+    - Might get $\infty$ without terminal state
+    - How to compare $\infty$ and $\infty$?
     
