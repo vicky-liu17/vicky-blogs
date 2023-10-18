@@ -42,5 +42,5 @@ C --> E(Whew!)
  - Information typically has a cost
  - Agent must ask itself, what information to ask for?
 <br/>
- - Information has **value** if it might change your action
- - Value = difference between **expected value with and without the information**
+ - Information has ** value ** if it might change your action
+ - Value = difference between ** expected value with and without the information **
