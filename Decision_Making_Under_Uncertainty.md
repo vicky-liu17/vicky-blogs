@@ -151,5 +151,6 @@ $$[\sum_{t=0}^{\infty }\gamma^tR(s_t)|\pi]$$
     - Step 1: Take correct first action
     - Step 2: Keep being optimal
 - Bellman Equation:
-$$U_{i+1}(s)\gets R(s)+\gamma max_{a}\sum_{s'}T(s,a,s')U_i(s')$$
-
+$$U_{i+1}(s)\gets R(s)+\gamma \max_{a}\sum_{s'}T(s,a,s')U_i(s')$$
+- $R(s)$: immediate reward
+- $\gamma \max_{a}\sum_{s'}T(s,a,s')U_i(s')$ :discounted expected utility of the next state, assunming optimal action
