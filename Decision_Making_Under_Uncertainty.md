@@ -86,4 +86,4 @@ C --> E(Whew!)
     - A start state $S_0$
     - Maybe a terminal state
 
--$T(s,a,s'):p(S_t+1=s'|s_t=s, a_t=a)$
+- $T(s,a,s'):p(S_t+1=s'|s_t=s, a_t=a)$
