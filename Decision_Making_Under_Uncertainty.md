@@ -43,3 +43,11 @@ C --> E(Whew!)
  - Agent must ask itself, what information to ask for?
  - Information has **value** if it might change your action
  - Value = difference between **expected value with and without the information**
+
+  ### Sequential Decisions
+  - A one step horizon (one action) often not good enough
+  - Sequential environments!
+
+  #### Seq. Decisions example: Grid World
+  ##### A maze-like problem
+  - The agent lives in a grid
