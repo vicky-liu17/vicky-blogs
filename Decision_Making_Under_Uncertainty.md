@@ -116,4 +116,11 @@ C --> E(Whew!)
 - What about infinite sequences?
     - Might get $\infty$ without terminal state
     - How to compare $\infty$ and $\infty$?
+
+### Discounted rewards
+- Idea: Give less weight to future rewards (e.g. rewards decay exponentially)
+- Captures that rewards "tomorrow" is less certain
+- Use discount factor $\gamma$, $0<\gamma<1$
+
+
     
