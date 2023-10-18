@@ -159,3 +159,7 @@ $$U_{i+1}(s)\gets R(s)+\gamma \max_{a}\sum_{s'}T(s,a,s')U_i(s')$$
 - Stop iterations when largest change in utility for any state is small enough 
 - Can show that:
 $$\left\| U_{i+1}-U_i \right\|\lt \epsilon \frac{1-\gamma}{\gamma} \Rightarrow \left\| U_{i+1}-U_i \right\|\lt \epsilon$$
+
+### Value Iteration
+- Key insight: Utility of a state is immediate reward plus discounted expected utility of next states(assuming that we choose the optimal policy)
+$$U(s)=R(s)+\gamma\max_{a}\sum_{s'}\T(s,a,s')U(s')$$
