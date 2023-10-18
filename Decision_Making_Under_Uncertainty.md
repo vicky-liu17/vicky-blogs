@@ -179,3 +179,17 @@ Loop until policy has converfed
     end
 end
 ```
+
+#### Problems with Value Iteration
+- Value iteration repeats the Bellman updates:
+$$U(s)=R(s)+\gamma\max_{a}\sum_{s'}T(s,a,s')U(s')$$
+
+- Problem 1: It's slow - $O(S^2A)$ per iteration
+- Problem 2: The "max" at rach state rarely changes
+- Problem 3: The policy often converges long before the values
+
+#### Algorithm: Policy iteration
+- CHoose an arbitrary policy
+- Loop until the policy does not change any more
+    - Policy evaluation: Compute the value function $V(s)$ until convergence , given the fixed policy(not optimal values):
+    
