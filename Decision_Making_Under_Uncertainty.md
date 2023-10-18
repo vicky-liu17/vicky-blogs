@@ -96,3 +96,13 @@ C --> E(Whew!)
     - Probability to reach s' starting from s given action a
 
 ![](Pictures/DecisionMaking04.png)
+
+- T depends only on the previous state s and not the rest of the history
+
+### Solution to MDP
+- In deterministic single-agent search problems, we wanted an optimal **plan**, or sequence of actions, form start to a goal
+- A solution to an MDP cannot be a fixed plan(non-determinstic world, need to sense state)
+- For MDPs, we want an optimal policy $\pi^*:S\to A$
+    - A policy $\pi$ gives an action for any state
+    - An optimal policy is one that maximizes expected utility if followed
+    
