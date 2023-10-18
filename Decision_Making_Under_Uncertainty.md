@@ -18,6 +18,6 @@ Uncertainty Everywhere
 graph TD
 A[Getting ice cream] --> B(Get single)
 A --> C(Get double)
-C --> D(Oops(spilled))
+C --> D(spilled)
 C --> E(Whew!)
 ```
