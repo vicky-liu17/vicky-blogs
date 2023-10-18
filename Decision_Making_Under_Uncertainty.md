@@ -154,3 +154,8 @@ $$[\sum_{t=0}^{\infty }\gamma^tR(s_t)|\pi]$$
 $$U_{i+1}(s)\gets R(s)+\gamma \max_{a}\sum_{s'}T(s,a,s')U_i(s')$$
 - $R(s)$: immediate reward
 - $\gamma \max_{a}\sum_{s'}T(s,a,s')U_i(s')$ :discounted expected utility of the next state, assunming optimal action
+
+- COnverges to unique optimal solution
+- Stop iterations when largest change in utility for any state is small enough 
+- Can show that:
+$$\left\| U_{i+1}-U_i \right\|\lt \epsilon \frac{1-\gamma}{\gamma} \Rightarrow \left\| U_{i+1}-U_i \right\|\lt \epsilon$$
