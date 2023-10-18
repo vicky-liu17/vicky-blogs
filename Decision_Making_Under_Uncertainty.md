@@ -123,4 +123,4 @@ C --> E(Whew!)
 - Use discount factor $\gamma$, $0<\gamma<1$
     - $U_h([s_0, s_1, ... s_n]) = R(s_0)+ \gamma R(s_1)+ \gamma^2 R(s_2) ...$
 
-- Gives bounded utility: $$\sum_{i=0}^{\infty}\gamma^iR_{max} = R_{max}\frac{1}{1-\gamma}$$
+- Gives bounded utility: $$R(s)\le R_max \Rightarrow U_h\le \sum_{i=0}^{\infty}\gamma^iR_{max} = R_{max}\frac{1}{1-\gamma}$$
