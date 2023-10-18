@@ -16,8 +16,8 @@ Uncertainty Everywhere
 
 ```mermaid
 graph TD
-A[Square Rect] --> B(Round Rect)
-A --> C(Round Rect)
-C --> D(Round Rect)
-C --> E(Round Rect)
+A[Getting ice cream] --> B(Get single)
+A --> C(Get double)
+C --> D(Oops(spilled))
+C --> E(Whew!)
 ```
