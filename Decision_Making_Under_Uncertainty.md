@@ -16,8 +16,8 @@ Uncertainty Everywhere
 
 ```mermaid
 graph TD
-A[Square Rect] -- Link text --> B((Circle))
+A[Square Rect] --> B(Round Rect)
 A --> C(Round Rect)
-B --> D{Rhombus}
-C --> D
+C --> D(Round Rect)
+C --> E(Round Rect)
 ```
