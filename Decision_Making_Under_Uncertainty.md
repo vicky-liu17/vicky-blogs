@@ -76,3 +76,5 @@ C --> E(Whew!)
     - select action to control the system to behave in some desired way or maximize the chance of achieving some goal
 >“Markov” generally means that given the present state, the future and the past are independent
 
+### Markov Decision Process(MDP) Formulation
+- Mathematical model: Markov Decision Process($S$, $A$, $T$, $R$, $\gamma$)
