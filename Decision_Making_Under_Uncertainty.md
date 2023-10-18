@@ -21,3 +21,7 @@ A --> C(Get double)
 C --> D(spilled)
 C --> E(Whew!)
 ```
+
+### Maximum Expected Utility(MEU)
+- Outcome of action is non-deterministic
+- Result of action A is $Result_i(A)$ (a state)
