@@ -50,6 +50,7 @@ C --> E(Whew!)
   - Sequential environments!
 
   #### Seq. Decisions example: Grid World
+  ![](DecisionMaking01.png)
   - A maze-like problem
     - The agent lives in a grid
     - Walls block the agent's path
