@@ -28,4 +28,19 @@ C --> E(Whew!)
 - Given evidence **E(measurements)** the probability for each result is: $P(Result_i(A)|Do(A),E)$
 - Principle of maximum expected utility:
 - A rational agent picks an action that maximizes the expected utility, given its knowledge
- $\arg\min_A\sum_{i}P(Result_i(A)|Do(A),E)\bigcup (Result_i(A))$
+ $\arg\max_A\sum_{i}P(Result_i(A)|Do(A),E)\bigcup (Result_i(A))$
+
+ ### MEU not so easy to apply
+ - State of the world?(partially observable at best)
+ - How to compute $P(Result_i(A)|Do(A),E)$ ? Requires a model of the world
+ - Also need to consider one action (one shot decision) vs. sequential decisions
+ - Utility of a state?
+
+ ### The value of information
+ - Asking for information is one of the most important actions
+ - Information is acquired through "sensing actions"
+ - Information typically has a cost
+ - Agent must ask itself, what information to ask for>
+
+ - Information has **value** if it might change your action
+ - Value = difference between **expected value with and without the information**
