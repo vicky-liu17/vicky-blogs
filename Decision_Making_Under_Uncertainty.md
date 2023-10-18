@@ -78,3 +78,12 @@ C --> E(Whew!)
 
 ### Markov Decision Process(MDP) Formulation
 - Mathematical model: Markov Decision Process($S$, $A$, $T$, $R$, $\gamma$)
+    - State Space $S$
+    - Action space $A$
+    - Environment Transition model $T$
+    - Reward Function $R$
+    - Discount factor $\gamma$
+    - A start state $S_0$
+    - Maybe a terminal state
+
+-$T(s,a,s'):p(S_t+1=s'|s_t=s, a_t=a)$
