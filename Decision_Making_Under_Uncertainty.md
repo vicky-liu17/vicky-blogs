@@ -62,3 +62,4 @@ C --> E(Whew!)
     - Small "living" reward each step (can be negative)
     - Big rewards come at the end (good or bad)
 - Goal: maximize sum of rewards
+![](Pictures/DecisionMaking02.png)
