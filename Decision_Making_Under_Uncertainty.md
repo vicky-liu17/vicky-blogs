@@ -30,27 +30,28 @@ C --> E(Whew!)
 - A rational agent picks an action that maximizes the expected utility, given its knowledge
  $\arg\max_A\sum_{i}P(Result_i(A)|Do(A),E)\bigcup (Result_i(A))$
 
- ### MEU not so easy to apply
- - State of the world?(partially observable at best)
- - How to compute $P(Result_i(A)|Do(A),E)$ ? Requires a model of the world
- - Also need to consider one action (one shot decision) vs. sequential decisions
- - Utility of a state?
+### MEU not so easy to apply
+- State of the world?(partially observable at best)
+- How to compute $P(Result_i(A)|Do(A),E)$ ? Requires a model of the world
+- Also need to consider one action (one shot decision) vs. sequential decisions
+- Utility of a state?
 
- ### The value of information
- - Asking for information is one of the most important actions
- - Information is acquired through "sensing actions"
- - Information typically has a cost
- - Agent must ask itself, what information to ask for?   
+### The value of information
+- Asking for information is one of the most important actions
+- Information is acquired through "sensing actions"
+- Information typically has a cost
+- Agent must ask itself, what information to ask for?   
 
- - Information has **value** if it might change your action
- - Value = difference between **expected value with and without the information**
+- Information has **value** if it might change your action
+- Value = difference between **expected value with and without the information**
 
-  ### Sequential Decisions
-  - A one step horizon (one action) often not good enough
-  - Sequential environments!
+### Sequential Decisions
+- A one step horizon (one action) often not good enough
+- Sequential environments!
 
-  #### Seq. Decisions example: Grid World
-  ![](Pictures/DecisionMaking01.png)
-  - A maze-like problem
+#### Seq. Decisions example: Grid World
+![](Pictures/DecisionMaking01.png)
+- A maze-like problem
     - The agent lives in a grid
     - Walls block the agent's path
+
