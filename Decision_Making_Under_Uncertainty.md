@@ -132,7 +132,7 @@ C --> E(Whew!)
 - Many state sequences to compare…
 - As before, maximize expected utility
 $$\pi^* = \arg\max_{\pi}E[\sum_{t=0}^{\infty }\gamma^tR(s_t)|\pi]$$
-
-$[\sum_{t=0}^{\infty }\gamma^tR(s_t)|\pi]$ (sum of discounted rewards)
+The following is the sum of discounted rewards:
+$$[\sum_{t=0}^{\infty }\gamma^tR(s_t)|\pi]$$ 
 
 
