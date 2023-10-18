@@ -168,7 +168,7 @@ $$U(s)=R(s)+\gamma\max_{a}\sum_{s'}T(s,a,s')U(s')$$
     - Use utilities to select optimal decision in each state
 
 #### Algorithm: Value iteration
-```
+
 Initialize U(s) arbitrarily for all s
 Loop until policy has converfed
     loop over all states, s
@@ -178,4 +178,3 @@ Loop until policy has converfed
         U(s):=\max_a Q(s,a)
     end
 end
-```
