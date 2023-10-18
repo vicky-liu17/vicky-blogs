@@ -140,3 +140,14 @@ $$[\sum_{t=0}^{\infty }\gamma^tR(s_t)|\pi]$$
 ![](Pictures/DecisionMaking05.png)
 ![](Pictures/DecisionMaking06.png)
 
+
+### Utilities of states
+- The utilities of the states in the 4X3 world, calculated with $\gamma=1$ and $R(s)=-0.04 for nonterminal states.
+![](Pictures/DecisionMaking07.png)
+
+### Bellman Equation
+- How to be optimal:
+    - Step 1: Take correct first action
+    - Step 2: Keep being optimal
+
+    
