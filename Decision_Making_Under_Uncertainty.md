@@ -63,3 +63,9 @@ C --> E(Whew!)
     - Big rewards come at the end (good or bad)
 - Goal: maximize sum of rewards
 ![](Pictures/DecisionMaking02.png)
+
+#### What is the probability that a predefined pan succeeds?
+- Plan: Up, Up, Right, Right, Right
+- Probability to succeed: 0.32776
+![](Pictures/DecisionMaking03.png)
+
