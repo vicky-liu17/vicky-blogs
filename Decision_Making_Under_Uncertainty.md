@@ -94,4 +94,4 @@ C --> E(Whew!)
 - Now function of the action
 - $T(s,a,s')$ (First order Markov assumption*)
     - Probability to reach s' starting from s given action a
-![](Pictures/DecisionMaking04.png)
+![](Pictures/DecisionMaking03.png)
