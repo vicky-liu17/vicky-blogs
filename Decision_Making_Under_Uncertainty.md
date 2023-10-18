@@ -131,7 +131,7 @@ C --> E(Whew!)
     - i.e. choice of action for each state
 - Many state sequences to compare…
 - As before, maximize expected utility
-$$\pi^* = \argmax_{\pi}E[\sum_{t=0}^{\infty }\gamma^tR(s_t)|\pi]$$
+$$\pi^* = \arg\max_{\pi}E[\sum_{t=0}^{\infty }\gamma^tR(s_t)|\pi]$$
 
 $$[\sum_{t=0}^{\infty }\gamma^tR(s_t)|\pi]$$ (sum of discounted rewards)
 
