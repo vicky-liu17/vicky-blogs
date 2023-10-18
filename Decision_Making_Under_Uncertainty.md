@@ -121,6 +121,6 @@ C --> E(Whew!)
 - Idea: Give less weight to future rewards (e.g. rewards decay exponentially)
 - Captures that rewards "tomorrow" is less certain
 - Use discount factor $\gamma$, $0<\gamma<1$
-
+    - $U_h([s_0, s_1, ... s_n]) = R(s_0)+ \gamma R(s_1)+ \gamma^2 R(s_2) ...$
 
     
