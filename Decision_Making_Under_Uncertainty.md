@@ -87,3 +87,11 @@ C --> E(Whew!)
     - Maybe a terminal state
 
 - $T(s,a,s'):p(S_t+1=s'|s_t=s, a_t=a)$
+- $R(s,a,s')$: immediate reward for transitioning from state $s$ to state $s'$ due to action $a$
+> frequently reward depends only on the state, so we usually write R(s)
+
+### Transition Model
+- Now function of the action
+- $T(s,a,s')$ (First order Markov assumption*)
+    - Probability to reach s' starting from s given action a
+![](Pictures/DecisionMaking04.png)
