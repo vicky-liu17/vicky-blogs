@@ -25,5 +25,5 @@ $$h(x)=log\frac{1}{P(x)}=-logP(x)$$
 - **There are many functions that satisfy at least one of the above conditions. However, it turns out that the negative logarithm is the only function that satisfies all three of them, making it the perfect choice as a function to represent information content.**
 
 ###### Prove property 3 of the Shannon information content:
-$$h(x,y) = -logP(x,y)=-log(P(x)*P(y))=-logP(x)-logP(y)=h(x)+h(y)$$
+$$h(x,y) = -logP(x,y)=-log(P(x)\cdot P(y))=-logP(x)-logP(y)=h(x)+h(y)$$
 
