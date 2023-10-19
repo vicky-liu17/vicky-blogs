@@ -112,5 +112,15 @@ $$P(x;\theta) =
 \end{cases}$$
 
 It is easy to show that the entropy is zero bits when the outcome is completely predictable, for example, if it’s always 0, then:
-$$\mathrm H(\mathrm{\pmb{x}}) &= - \bigg(P_{\mathrm{\pmb x}}(\mathrm{\pmb{x}}=0) \log_2 P_{\mathrm{\pmb x}}(\mathrm{\pmb{x}}=0) + P_{\mathrm{\pmb x}}(\mathrm{\pmb{x}}=1) \log_2 P_{\mathrm{\pmb x}}(\mathrm{\pmb{x}}=1) \bigg )= \\
-&= - \bigg( 1 \cdot \underbrace{\log_2 1}_0 + 0 \cdot \log_2 0 \bigg ) = 0$$
+$$H(X) = -\sum_{x} P(x) \log_2 P(x)$$
+
+When the outcome is completely predictable (e.g., always 0), $P(x=0) = 1$, and $P(x=1) = 0$.
+
+Substitute probabilities into the entropy formula:
+$$H(X) = -\left(1 \cdot \log_2(1) + 0 \cdot \log_2(0)\right)$$
+
+By convention, treat $0 \cdot \log_2(0)$ as 0:
+$$H(X) = -\left(1 \cdot 0 + 0\right)$$
+
+$$H(X) = 0$$
+
