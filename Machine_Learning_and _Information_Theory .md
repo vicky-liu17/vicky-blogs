@@ -33,3 +33,8 @@ $$h(x,y) = -logP(x,y)=-log(P(x)\cdot P(y))=-logP(x)-logP(y)=h(x)+h(y)$$
 $$H(x) = \mathbb{E}_{x\sim \mathcal{P}_x}[h(x)] = $$
 
 $$= - \sum_{x\in\Omega}P_x(x)\log P_x(x)$$
+
+- In other words, the entropy measures the average surprise in the outcomes of a random variable.
+- Note that we often interchangeably talk about the entropy of a probability mass function, $H(P_{\mathrm{\pmb x}})$. This is just the entropy of a random variable distributed according to that probability mass function.
+- Probability Mass Function: A probability mass function (pmf) is a function over the sample space of a discrete random variable X which gives the probability that X is equal to a certain value. f(x)=P[X=x]. (概率质量函数（probability mass function，简写为pmf）是离散随机变量在各特定取值上的概率。)
+
