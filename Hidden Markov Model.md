@@ -26,7 +26,7 @@
 ### HMMs can be cast into different problem settings
 - Evaluating/Filtering: Compute likelihood $p(O_{1:t}|\lambda)$ of observation sequence $(O_{1:T}={O_1, O_2,...O_t,...,O_T})$ given $\lambda$. 
     - **Forward Algorithm**
-- Decoding: Most likely state sequence $X_{1:T}^*$ given $O_{1:T} and $\lambda$.
+- Decoding: Most likely state sequence $X_{1:T}^*$ given $O_{1:T}$ and $\lambda$.
     - **Viterbi algorithm**
 - Learning: Estimate model parameters $\Lambda={\lambda}$ given $O_{1:T}$ such that $P(O_{1:T}|\lambda)$ is maximized. $\to$ A and B matrices and $\pi$. 
     - **Baum–Welch Algorithm**
