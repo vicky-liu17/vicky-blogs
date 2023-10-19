@@ -138,3 +138,11 @@ $$H(X) = -\left(\frac{1}{2} \cdot (-1) + \frac{1}{2} \cdot (-1)\right)$$
 
 $$H(X) = \left(\frac{1}{2} + \frac{1}{2}\right) = 1$$
 
+- If we plot the entropy as a function of the parameter $\theta$, then we can see that 0 and 1 are the two extrema of the function. 
+
+![](Pictures/InformationTheory02.png)
+
+The base 2 entropy of a single coin toss. Note that this function is not a parabola（抛物线）, although it is quite close! 
+
+> A substantial part of information theory focuses on how to create codes (or encodings) of information. One application is in compression, which requires finding an efficient representation of the data. `zip` and similar file formats are built from information-theoretic concepts.
+> In information theory, the entropy can be interpreted as the expected number of bits required to represent and transmit an outcome of a random variable $\pmb{\mathrm x}$ when using the most efficient binary code based on $P_{\mathrm{\pmb x}}$.
