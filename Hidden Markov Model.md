@@ -1,4 +1,4 @@
-# Reinforcement Learning
+# Hidden Markov Model
 
 ### What is Markov Model?
 - A Markov model is a stochastic method for randomly changing systems that possess the Markov property. This means that, at any given time, the next state is only dependent on the current state and is independent of anything in the past.
