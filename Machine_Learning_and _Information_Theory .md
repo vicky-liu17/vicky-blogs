@@ -22,3 +22,8 @@ $$h(x)=log\frac{1}{P(x)}=-logP(x)$$
     > This is also intuitive. As discussed above, we are not surprised at all when an event that has a 100% probability to happen actually happens.
     - Property 3: The information content of a joint outcome $(x,y)$ of two independent random variables $\pmb x, \pmb y$ is the sum of the information content of the two individual outcomes. 
     > This property means that if two events are completely independent from each other, then we don’t gain or lose any extra information by observing them at the same time.
+- **There are many functions that satisfy at least one of the above conditions. However, it turns out that the negative logarithm is the only function that satisfies all three of them, making it the perfect choice as a function to represent information content.**
+
+###### Prove property 3 of the Shannon information content:
+$$h(x,y) = -logP(x,y)=-log(P(x)*P(y))=-logP(x)-logP(y)=h(x)+h(y)$$
+
