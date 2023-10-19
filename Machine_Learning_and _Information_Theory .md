@@ -40,3 +40,4 @@ $$= - \sum_{x\in\Omega}P_x(x)\log P_x(x)$$
 
 > **The units of entropy:** Depending on the base of the logarithm in the formula, the common units of the entropy are bits (for the base-2 logarithm), nats (for the natural logarithm) and dits (for the base-10 logarithm). In this lesson, we will mostly use bits, since it arguably is the most familiar unit for those who have experience with digital computers. It doesn’t matter so much for the theory, since the principles are the same no matter what units we use.
 
+- Exercise: Prove that $\mathrm{H}(\mathrm{\pmb x}, \mathrm{\pmb y}) = \mathrm{H}(\mathrm{\pmb x}) + \mathrm{H}(\mathrm{\pmb y})$ if $\mathrm{\pmb x}$ and $\mathrm{\pmb y }$ are independent random variables.
