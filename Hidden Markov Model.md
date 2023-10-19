@@ -29,3 +29,5 @@
 - Decoding: Most likely state sequence $X_{1:T}^*$ given ${O_1:T} and $\lambda$.
     - **Viterbi algorithm**
 - Learning: Estimate model parameters $\Lambda={\lambda}$ given $O_{1:T}$ such that $P(O_{1:T}|\lambda)$ is maximized. $\to$ A and B matrices and $\pi$. 
+    - **Baum–Welch Algorithm**
+
