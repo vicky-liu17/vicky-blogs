@@ -111,7 +111,7 @@ $$P(x;\theta) =
 1 - \theta & \text{if } x = 0 
 \end{cases}$$
 
-It is easy to show that the entropy is zero bits when the outcome is completely predictable, for example, if it’s always 0, then:
+**It is easy to show that the entropy is zero bits when the outcome is completely predictable**, for example, if it’s always 0, then:
 $$H(X) = -\sum_{x} P(x) \log_2 P(x)$$
 
 When the outcome is completely predictable (e.g., always 0), $P(x=0) = 1$, and $P(x=1) = 0$.
@@ -123,4 +123,18 @@ By convention, treat $0 \cdot \log_2(0)$ as 0:
 $$H(X) = -\left(1 \cdot 0 + 0\right)$$
 
 $$H(X) = 0$$
+
+**The entropy is one bit when the two outcomes are equally likely**
+**Entropy for Equally Likely Outcomes:**
+$$H(X) = -\sum_{x} P(x) \log_2 P(x)$$
+
+When the outcomes are equally likely, \(P(x=0) = P(x=1) = \frac{1}{2}\).
+
+Substitute the probabilities into the entropy formula:
+$$H(X) = -\left(\frac{1}{2} \log_2 \frac{1}{2} + \frac{1}{2} \log_2 \frac{1}{2}\right)$$
+
+Simplify the logarithmic terms:
+$$H(X) = -\left(\frac{1}{2} \cdot (-1) + \frac{1}{2} \cdot (-1)\right)$$
+
+$$H(X) = \left(\frac{1}{2} + \frac{1}{2}\right) = 1$$
 
