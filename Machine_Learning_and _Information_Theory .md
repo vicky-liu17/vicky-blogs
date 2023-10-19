@@ -32,4 +32,4 @@ $$h(x,y) = -logP(x,y)=-log(P(x)\cdot P(y))=-logP(x)-logP(y)=h(x)+h(y)$$
 - The information entropy (also called the Shannon entropy) is a natural generalisation of the information content to a discrete random variable $\mathrm{\pmb x}$. It is defined as the expected information content across all possible outcomes:
 $$H(x) = \mathbb{E}_{x\sim \mathcal{P}_x}[h(x)] = $$
 
-$$\sum_{x\in\Omega}P_x(x)\log P_x(x)$$
+$$= - \sum_{x\in\Omega}P_x(x)\log P_x(x)$$
