@@ -14,3 +14,11 @@ $$h(x)=log\frac{1}{P(x)}=-logP(x)$$
 - The quantity is also known as the **Shannon information**(after its inventor) or the **surprisal**. 
 
 ![](Pictures/InformationTheory01.png)
+
+- The mathematical expression above has the following three desirable properties:
+    - Property 1: The information content has a monotonic relationship with probability.
+    > In particular, less probable things should have more information content, since they are more surprising when they happen.
+    - Property 2: A guaranteed event has zero information content.
+    > This is also intuitive. As discussed above, we are not surprised at all when an event that has a 100% probability to happen actually happens.
+    - Property 3: The information content of a joint outcome $(x,y)$ of two independent random variables $\pmb x, \pmb y$ is the sum of the information content of the two individual outcomes. 
+    > This property means that if two events are completely independent from each other, then we don’t gain or lose any extra information by observing them at the same time.
