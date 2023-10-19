@@ -19,3 +19,4 @@
         - $X_t = x_i$, $i\epsilon${1,2,...N}: N possible hidden states
         - $O_t = o_k$, $k\epsilon${1,2,...N}: K possible observations
         - $\pi_{i}=P(X_1=i)$: The initial probability vector $\pi\epsilon\mathbb{R}^{1,N}$ with elements $\pi_{i}$
+        - $a_{i,j}=P(X_{t+1}=j|X_{t}=i)$: The transition probability matrix $A\epsilon\mathbb{R}^{N,N}$ with elements $a_{i,j}$
