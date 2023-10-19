@@ -128,7 +128,7 @@ $$H(X) = 0$$
 **Entropy for Equally Likely Outcomes:**
 $$H(X) = -\sum_{x} P(x) \log_2 P(x)$$
 
-When the outcomes are equally likely, $$P(x=0) = P(x=1) = \frac{1}{2}$$.
+When the outcomes are equally likely, $P(x=0) = P(x=1) = \frac{1}{2}$.
 
 Substitute the probabilities into the entropy formula:
 $$H(X) = -\left(\frac{1}{2} \log_2 \frac{1}{2} + \frac{1}{2} \log_2 \frac{1}{2}\right)$$
