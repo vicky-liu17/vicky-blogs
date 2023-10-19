@@ -40,4 +40,66 @@ $$= - \sum_{x\in\Omega}P_x(x)\log P_x(x)$$
 
 > **The units of entropy:** Depending on the base of the logarithm in the formula, the common units of the entropy are bits (for the base-2 logarithm), nats (for the natural logarithm) and dits (for the base-10 logarithm). In this lesson, we will mostly use bits, since it arguably is the most familiar unit for those who have experience with digital computers. It doesn’t matter so much for the theory, since the principles are the same no matter what units we use.
 
-- Exercise: Prove that $\mathrm{H}(\mathrm{\pmb x}, \mathrm{\pmb y}) = \mathrm{H}(\mathrm{\pmb x}) + \mathrm{H}(\mathrm{\pmb y})$ if $\mathrm{\pmb x}$ and $\mathrm{\pmb y }$ are independent random variables.
+##### Exercise: 
+Prove that $\mathrm{H}(\mathrm{\pmb x}, \mathrm{\pmb y}) = \mathrm{H}(\mathrm{\pmb x}) + \mathrm{H}(\mathrm{\pmb y})$ if $\mathrm{\pmb x}$ and $\mathrm{\pmb y }$ are independent random variables.
+
+To prove that $H(x, y) = H(x) + H(y)$, we'll use the definition of joint entropy and the properties of entropy.
+
+The joint entropy $H(x, y)$ is defined as:
+
+$$H(x, y) = -\sum_{x \in \Omega}\sum_{y \in \Omega}P_{xy}(x, y) \log P_{xy}(x, y)$$
+
+And the individual entropies $H(x)$ and $H(y)$ are defined as:
+
+$$H(x) = -\sum_{x \in \Omega}P_x(x) \log P_x(x)$$
+$$H(y) = -\sum_{y \in \Omega}P_y(y) \log P_y(y)$$
+
+Now, let's work on showing that $H(x, y) = H(x) + H(y)$:
+
+$$
+H(x, y) = -\sum_{x \in \Omega}\sum_{y \in \Omega}P_{xy}(x, y) \log P_{xy}(x, y)
+$$
+
+Now, use the definition of conditional entropy:
+
+$$
+H(x, y) = -\sum_{x \in \Omega}\sum_{y \in \Omega}P_{xy}(x, y) \log P(x | y)P(y)
+$$
+
+Since the events are independent, $P(x | y) = P(x)$, and the expression becomes:
+
+$$
+H(x, y) = -\sum_{x \in \Omega}\sum_{y \in \Omega}P(x)P(y) \log P(x)P(y)
+$$
+
+Now, you can factor out the $P(x)$ and $P(y)$ terms from the summation:
+
+$$
+H(x, y) = -\sum_{x \in \Omega}\sum_{y \in \Omega}P(x)P(y) \left(\log P(x) + \log P(y)\right)
+$$
+
+Next, distribute the terms inside the summation:
+
+$$
+H(x, y) = -\sum_{x \in \Omega}\sum_{y \in \Omega}P(x)P(y)\log P(x) - \sum_{x \in \Omega}\sum_{y \in \Omega}P(x)P(y)\log P(y)
+$$
+
+Now, use the linearity property of the summation:
+
+$$
+H(x, y) = -\sum_{x \in \Omega}P(x)\log P(x) \sum_{y \in \Omega}P(y) - \sum_{y \in \Omega}P(y)\log P(y) \sum_{x \in \Omega}P(x)
+$$
+
+The inner summations are just the probabilities of $x$ and $y$, which sum to 1:
+
+$$
+H(x, y) = -1 \cdot \sum_{x \in \Omega}P(x)\log P(x) - 1 \cdot \sum_{y \in \Omega}P(y)\log P(y)
+$$
+
+Therefore:
+
+$$
+H(x, y) = -H(x) - H(y)
+$$
+
+So, $H(x, y) = H(x) + H(y)$, which proves the desired result.
