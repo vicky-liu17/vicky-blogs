@@ -31,5 +31,5 @@ $$h(x,y) = -logP(x,y)=-log(P(x)\cdot P(y))=-logP(x)-logP(y)=h(x)+h(y)$$
 - In practice, we are often more interested in entire distributions rather than single outcomes.For example, it is useful to ask how informative the e-mails in our inbox tend to be, on average. 
 - The information entropy (also called the Shannon entropy) is a natural generalisation of the information content to a discrete random variable $\mathrm{\pmb x}$. It is defined as the expected information content across all possible outcomes:
 $$\mathrm H(\pmb {\mathrm x} ) = {\mathbb{E}_{\mathrm x \sim \mathcal{P}_{\pmb x}}} \big[ \mathrm h(\mathrm{x}) \big] = -\sum_{\mathrm x \in \Omega}
-P_{\pmb {\mathrm{x}}}(\mathrm x) \log P_{\pmb {\mathrm{x}}}(\mathrm x) $$
+P_{\pmb {\mathrm{x}}}(\mathrm x) \log P_{\pmb {\mathrm{x}}}(\mathrm x)$$
 
