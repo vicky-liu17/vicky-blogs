@@ -105,8 +105,8 @@ $$
 So, $H(x, y) = H(x) + H(y)$, which proves the desired result.
 
 ##### Worked example: The entropy of a Bernoulli distribution
-$$P(x) = 
+$$P(x;\theta) = 
 \begin{cases} 
-p & \text{if } x = 1 \\
-1 - p & \text{if } x = 0 
+p & \text{if } x = \theta \\
+1 - \theta & \text{if } x = 0 
 \end{cases}$$
