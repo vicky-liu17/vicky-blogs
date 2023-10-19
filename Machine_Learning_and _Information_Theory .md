@@ -13,4 +13,4 @@
 $$h(x)=log\frac{1}{P(x)}=-logP(x)$$
 - The quantity is also known as the **Shannon information**(after its inventor) or the **surprisal**. 
 
-![](InformationTheory01.png)
+![](Pictures/InformationTheory01.png)
