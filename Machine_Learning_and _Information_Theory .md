@@ -107,6 +107,10 @@ So, $H(x, y) = H(x) + H(y)$, which proves the desired result.
 ##### Worked example: The entropy of a Bernoulli distribution
 $$P(x;\theta) = 
 \begin{cases} 
-p & \text{if } x = \theta \\
+\theta & \text{if } x = 1 \\
 1 - \theta & \text{if } x = 0 
 \end{cases}$$
+
+It is easy to show that the entropy is zero bits when the outcome is completely predictable, for example, if it’s always 0, then:
+$$\mathrm H(\mathrm{\pmb{x}}) &= - \bigg(P_{\mathrm{\pmb x}}(\mathrm{\pmb{x}}=0) \log_2 P_{\mathrm{\pmb x}}(\mathrm{\pmb{x}}=0) + P_{\mathrm{\pmb x}}(\mathrm{\pmb{x}}=1) \log_2 P_{\mathrm{\pmb x}}(\mathrm{\pmb{x}}=1) \bigg )= \\
+&= - \bigg( 1 \cdot \underbrace{\log_2 1}_0 + 0 \cdot \log_2 0 \bigg ) = 0$$
