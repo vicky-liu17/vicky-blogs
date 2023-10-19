@@ -38,3 +38,5 @@ $$= - \sum_{x\in\Omega}P_x(x)\log P_x(x)$$
 - Note that we often interchangeably talk about the entropy of a probability mass function, $H(P_{\mathrm{\pmb x}})$. This is just the entropy of a random variable distributed according to that probability mass function.
 - Probability Mass Function: A probability mass function (pmf) is a function over the sample space of a discrete random variable X which gives the probability that X is equal to a certain value. f(x)=P[X=x]. (概率质量函数（probability mass function，简写为pmf）是离散随机变量在各特定取值上的概率。)
 
+> **The units of entropy:** Depending on the base of the logarithm in the formula, the common units of the entropy are bits (for the base-2 logarithm), nats (for the natural logarithm) and dits (for the base-10 logarithm). In this lesson, we will mostly use bits, since it arguably is the most familiar unit for those who have experience with digital computers. It doesn’t matter so much for the theory, since the principles are the same no matter what units we use.
+
