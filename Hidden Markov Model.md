@@ -16,4 +16,6 @@
     - Thus, $P(X_t = x_t|X_{t−1} = x_{t−1})$ denotes the probability of being in a specific state at time t given that the system was in a specific state at time $t-1$. $P(O_t = o_t | X_t = x_t)$ is the probability of observing $o_t$ given that the system is in hidden state $x_t$.
 
     - At each time step $t\epsilon[1,T]$ in the interval from 1 to $T$ an HMM can be characterized by the following components:
-        - $X_t = x_i$, $i\epsilon${1,2,...N}$: N possible hidden states
+        - $X_t = x_i$, $i\epsilon${1,2,...N}: N possible hidden states
+        - $O_t = o_k$, $k\epsilon${1,2,...N}: K possible observations
+        - $\pi_{i}=P(X_1=i)$: The initial probability vector $\pi\epsilon\mathbb{R}^{1,N}$ with elements $\pi_{i}$
