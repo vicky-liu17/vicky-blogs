@@ -35,3 +35,10 @@
 
 - The marginal probability mass distribution of $P(O=o_i)$ is given by 
 $$P(O=o_i)=\sum_{j=1}^{m}P(O=o_i,X=x_j)=\sum_{j=1}^{m}P(O=o_i|X=x_j)P(X=x_j)$$
+
+### HMM 1 - Probability of Observation Sequence
+- We want to estimate what the probability of the made observation sequence $O_{1:t} = [O_1 = 0_1, O_2=o_2, ..., O_T=o_T]$ is . In order to solve this problem, we can make use of the so-called forward algorithm or α-pass algorithm. This procedure iteratively estimate the probability to be in a certain state i at time t and having observed the observation sequence up to time t for t∈[1, ..,T]
+
+- Brute-force method
+$$P(O_1:t)=\sum_{X_1:t}P(O_1:t,X_1:t)=\sum_{X_1:t}P(O_1:t|X_1:t)P(X_1:t)$$
+$$=\sum_{X_1:t}\pi a_{1,2}a_{2,3}...a_{T-1,T}b_{x_1}(O_1)b_{x_2}(O_2)...b_{x_T}(O_T)$$
