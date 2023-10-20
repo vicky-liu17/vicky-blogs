@@ -31,4 +31,7 @@
 - Learning: Estimate model parameters $\Lambda={\lambda}$ given $O_{1:T}$ such that $P(O_{1:T}|\lambda)$ is maximized. $\to$ A and B matrices and $\pi$. 
     - **Baum–Welch Algorithm**
 
-- In general terms, let $O\sim P(O)$ and $X\sim P(X)$ be random variables in a discrete space that can take values $O\in \{o_1,o_2,...o_n\}$
+- In general terms, let $O\sim P(O)$ and $X\sim P(X)$ be random variables in a discrete space that can take values $O\in \{o_1,o_2,...o_k\}$ and $X\in \{x_1,x_2,...x_k\}$ respectively. The joint probability distribution over O and X is denoted by P(O,X) and the conditional distribution of O given X by P(O|X).
+
+- The marginal probability mass distribution of $P(O=o_i)$ is given by 
+$$ P(O=o_i)=\sum_{j=1}^{m}P(O=o_i,X=x_j)=\sum_{j=1}^{m}P(O=o_i|X=x_j)P(X=x_j)$$
