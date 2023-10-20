@@ -31,4 +31,4 @@
 - Learning: Estimate model parameters $\Lambda={\lambda}$ given $O_{1:T}$ such that $P(O_{1:T}|\lambda)$ is maximized. $\to$ A and B matrices and $\pi$. 
     - **Baum–Welch Algorithm**
 
-- In general terms, let $O\sim P(O)$ and $X\sim P(X)$ be random variables in a discrete space that can take values $O\in{\left{o_1,o_2,...o_n\right}}$
+- In general terms, let $O\sim P(O)$ and $X\sim P(X)$ be random variables in a discrete space that can take values $O\in \{o_1, o_2, \ldots, o_k\}$
