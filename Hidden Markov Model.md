@@ -42,3 +42,21 @@ $$P(O=o_i)=\sum_{j=1}^{m}P(O=o_i,X=x_j)=\sum_{j=1}^{m}P(O=o_i|X=x_j)P(X=x_j)$$
 - Brute-force method
 $$P(O_1:t)=\sum_{X_1:t}P(O_1:t,X_1:t)=\sum_{X_1:t}P(O_1:t|X_1:t)P(X_1:t)$$
 $$=\sum_{X_1:t}\pi a_{1,2}a_{2,3}...a_{T-1,T}b_{x_1}(O_1)b_{x_2}(O_2)...b_{x_T}(O_T)$$
+
+- Time Complexity
+    - We need to summing over all possible permutations of $X_{1:T}$
+    - Evaluating this requires $O(TN^T)$ multiplications:
+        - Exhaustively enumerate all state chains (t time steps)
+        - In every step, there are N possible hidden states
+        - There are totally $N^T$ possiblities
+        - When you calculating every possible state chain, there are T steps(You need to calculate from the beginning to the end for every chain), and the complexity is O(T).
+        - Totally: $O(TN^T)$
+
+### Forward Algorithm:
+
+- Introduce $\alpha$
+- Given hidden state x=i, we call the probability of the observation sequence is ${0_q, o_2,..., o_t} forward probability 
+
+
+
+
