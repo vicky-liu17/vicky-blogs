@@ -208,4 +208,5 @@ def run_viterbi(O, A, B, delta, max_id):
 
 ##### $\beta$ -pass algorithm
 - The $\beta$ is defined as
-$$\Beta_t(i)=P(O_{t+1:T}=o_{t+1:T}|X_t=x_i)$$
+
+$$\beta_{t}(i)=P(O_{t+1:T}=o_{t+1:T}|X_t=x_i)$$
