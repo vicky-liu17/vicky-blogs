@@ -280,9 +280,9 @@ At last, the initial probabilites are given by
 $$\pi_i = \gamma_{1}(i)$$
 
 Now we have everything in place in order to learn the parameters of our HMM with the Baum-Welch Algorithm:
-1. Initialize $$\lambda=(A,B,\pi)$$
-2. Compute all $$\alpha_t(i)$$, $$\beta_t(i)$$, $$\gamma_t(i,j)$$,$$\gamma_t(i)$$ values
-3. Re-estimate $$\lambda=(A,B,\pi)$$
+1. Initialize $\lambda=(A,B,\pi)$
+2. Compute all $\alpha_t(i)$, $\beta_t(i)$, $\gamma_t(i,j)$,$\gamma_t(i)$ values
+3. Re-estimate $\lambda=(A,B,\pi)$
 4. Repeat from 2 until convergence
 
 ```python
