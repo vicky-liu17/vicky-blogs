@@ -211,7 +211,7 @@ def run_viterbi(O, A, B, delta, max_id):
 
 $$\beta_{t}(i)=P(O_{t+1:T}=o_{t+1:T}|X_t=x_i)$$
 
-i.e. the probability of observing all future observations $O_{t+1:T}$ given the current state X_t=x_i. Again, we need to determine $\beta$ values for all time steps and all states. For this, we initialize:
+i.e. the probability of observing all future observations $O_{t+1:T}$ given the current state $X_t=x_i$. Again, we need to determine $\beta$ values for all time steps and all states. For this, we initialize:
 
 $$\beta_{T}(i)=1$$
 
@@ -229,8 +229,9 @@ $$\gamma_t(i,j)=P(X_t=x_i, X_{t+1}=x_j|O_{1:T}=o_{1:T})$$
 
 $$=\frac{\alpha_t(i)a_(i,j)b_j(O_{t+1})\beta_{t+1}(j)}{\sum_{k=1}^N\alpha_T(k)}$$
 
+###### The derivation process
 - Bayes Formula
-$$P(A|B)=\frac{P(B|A)P(A)}{P(B)}
+$$P(A|B)=\frac{P(B|A)P(A)}{P(B)}$$
 
     - $P(B)=P(O_{1:T}=o_{1:T})$
 
@@ -239,3 +240,16 @@ $$P(O_{1:T}=o_{1:T})=\sum_{j=1}^{N}P(O_{1:T}=0_{1:T}, X_T=x_j)$$
 $$=\sum_{j=1}^{N}\alpha_T(j)$$
 
 $$P(B|A)P(A)=P(A,B)= P(X_t=x_i, X_{t+1}=x_j,O_{1:T}=o_{1:T})$$
+
+define: $\gamma_t(i)=P(x_t=q_i|O_{1:T}=0_{1:T})$
+Since $\alpha_t(i)$ measures the relevant probability up to time t and $\beta_t(i)$ measures the relevant probability after time t,
+
+$$\gamma_t(i)=\frac{\alpha_t(i)\beta_t(i)}{P(O_{1:T}=0_{1:T})}$$
+
+The $\gamma_t(i，j)$ is the probabilty of being in state i at time t and transiting to state j at time t+1. 
+
+$$\gamma_t(i,j)=\frac{\alpha_t(i)a_(i,j)b_j(O_{t+1})\beta_{t+1}(j)}{\sum_{k=1}^N\alpha_T(k)}$$
+
+and the gamma function
+
+$$\gamma_t(i)=P(X_t=x_i|O_{1:T}=o_{1:T})=\sum_{j=1}^N\gamma_t(i,j)$$
