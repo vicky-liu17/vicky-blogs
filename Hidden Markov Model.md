@@ -114,14 +114,14 @@ def forward_algorithm(A, B, pi, O):
 ### HMM 2 - Estimate Sequence of States
 - The forward algorithm marginalizes over the hidden state distribution. 
 - In contrast, we can also compute the most likely sequence of hidden states given the observations.
-- Let use denote this sequence with ${X^*}_1:t = {X^*_1,X^*_2,...,X^*_T}$   
+- Let use denote this sequence with $X_{1:t}^*=X_1^*,X_2^*,...,X_T^*$
 
 
 - Given:
     - Emission Sequence $O=\{ O_1, O_2, ...O_t \}$
     - A, B, $\pi$
 - To find:
-    - Hidden state sequence ${X^{*}}_1:t = {X^{*}_1,X^{*}_2,...,X^{*}_T}$ that most likely produce O.
+    - Hidden state sequence  that most likely produce O.
     - Probability of occurrence of $X^*$
 
 ---
