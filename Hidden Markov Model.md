@@ -118,10 +118,10 @@ def forward_algorithm(A, B, pi, O):
 
 
 - Given:
-    - Emission Sequence $O={O_1, O_2, ...O_t}$
+    - Emission Sequence $O=\{ O_1, O_2, ...O_t \}$
     - A, B, $\pi$
 - To find:
-    - Hidden state sequence ${X^*}_1:t = {X^*_1,X^*_2,...,X^*_T}$ that most likely produce O.
+    - Hidden state sequence ${X^{*}}_1:t = {X^{*}_1,X^{*}_2,...,X^{*}_T}$ that most likely produce O.
     - Probability of occurrence of $X^*$
 
 ---
@@ -129,7 +129,7 @@ def forward_algorithm(A, B, pi, O):
 - Viterbi Algorithm
 
 ```mermaid
-graph TD;
+graph LR;
     S-->A1;
     S-->A2;
     S-->A3;
