@@ -128,7 +128,7 @@ def forward_algorithm(A, B, pi, O):
 
 - Viterbi Algorithm
 
-```mermaid
+```
 graph LR;
     S-->A1;
     S-->A2;
