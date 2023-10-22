@@ -239,7 +239,9 @@ $$P(O_{1:T}=o_{1:T})=\sum_{j=1}^{N}P(O_{1:T}=0_{1:T}, X_T=x_j)$$
 
 $$=\sum_{j=1}^{N}\alpha_T(j)$$
 
-$$P(B|A)P(A)=P(A,B)= P(O_{1:T}=o_{1:T} | X_t=x_i, X_{t+1}=x_j)P(X_t=x_i, X_{t+1}=x_j)$$
+$$P(B|A)P(A)=P(A,B)= P(O_{1:T}=o_{1:T} | X_t=x_i, X_{t+1}=x_j)P(X_t=x_i, X_{t+1}=x_j)= P(O_{1:T}=o_{1:T}, X_t=x_i, X_{t+1}=x_j)$$
+
+$$=P(X_t=x_i, O_{1:t}=o_{1:t})P(O_{t+1:T}=o_{t+1:T}|X_{t+1}=x_j)P(X_{t+1}=x_j|X_t=x_i)$$
 
 $$=\alpha_t(i)\beta_{t+1}(j)P(X_{t+1}=x_j)$$
 
@@ -257,3 +259,7 @@ $$\gamma_t(i,j)=\frac{\alpha_t(i)a_(i,j)b_j(O_{t+1})\beta_{t+1}(j)}{\sum_{k=1}^N
 and the gamma function
 
 $$\gamma_t(i)=P(X_t=x_i|O_{1:T}=o_{1:T})=\sum_{j=1}^N\gamma_t(i,j)$$
+
+Finally, we can estimate $\lambda = (A, B,\pi)$ by determining the expected value of the probabilites. We have the transition estimates given by 
+
+a_{i,j}=
