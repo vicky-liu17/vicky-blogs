@@ -75,3 +75,37 @@ $$P(O_t=o_t|X_t=x_i)[\sum_{j=1}^{N}P(X_t=x_i|X_{t-1}=x_j)P(X_{t-1}=x_j, O_{1:t-1
 - This step has to be computed iteratively for every $t\in [1,...,T]$. Finally, we can compute the probability of having observed the given observation sequence $O_1:T$. For this, we again have to marginalize over the hidden state distribution such that
 $$P(O_{1:T}=o_{1:T})=\sum_{j=1}^{N}P(O_{1:T}=0_{1:T}, X_T=x_j)$$
 $$=\sum_{j=1}^{N}\alpha_T(j)$$
+
+
+
+
+### HMM 1 - Estimate Sequence of States
+```python
+# Define the forward algorithm for Hidden Markov Models (HMMs)
+def forward_algorithm(A, B, pi, O):
+    # N: Number of hidden states
+    N = len(A)
+    
+    # T: Number of time steps in the observation sequence
+    T = len(O)
+    
+    # Initialize the matrix to store forward probabilities
+    forward_probs = [[0.0] * T for _ in range(N)]
+    
+    # Initialization step: Calculate the initial forward probabilities
+    for j in range(N):
+        forward_probs[j][0] = pi[j] * B[j][O[0]]
+    
+    # Recursion step: Calculate forward probabilities for each time step
+    for t in range(1, T):
+        for j in range(N):
+            # Calculate the forward probability for state j at time t
+            forward_probs[j][t] = sum(forward_probs[i][t-1] * A[i][j] for i in range(N)) * B[j][O[t]]
+    
+    # Termination step: Sum up the forward probabilities at the last time step
+    # to obtain the total probability of observing the sequence O
+    probability = sum(forward_probs[i][T-1] for i in range(N))
+    
+    # Return the total probability of the observed sequence
+    return probability
+```
