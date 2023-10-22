@@ -242,16 +242,16 @@ $$=\sum_{j=1}^{N}\alpha_T(j)$$
 $$P(B|A)P(A)=P(A,B)= P(O_{1:T}=o_{1:T} | X_t=x_i, X_{t+1}=x_j)P(X_t=x_i, X_{t+1}=x_j)
 $$= P(O_{1:T}=o_{1:T}, X_t=x_i, X_{t+1}=x_j)$$
 
-$$=P(X_t=x_i, O_{1:t}=o_{1:t})P(O_{t+1:T}=o_{t+1:T}|X_{t+1}=x_j)P(X_{t+1}=x_j|X_t=x_i)$$
+$$=P(X_t=x_i, O_{1:t}=o_{1:t})P(O_{t+2:T}=o_{t+2:T}|X_{t+1}=x_j)P(X_{t+1}=x_j|X_t=x_i)P(O_{t+1}=o_{t+1}|X_{t+1}=x_j)$$
 
-$$=\alpha_t(i)\beta_{t+1}(j)P(X_{t+1}=x_j|X_t=x_i)$$
+$$=\alpha_t(i)\beta_{t+1}(j)P(X_{t+1}=x_j|X_t=x_i)P(O_{t+1}=o_{t+1}|X_{t+1}=x_j)$$
 
 $$=\alpha_t(i)a_(i,j)b_j(O_{t+1})\beta_{t+1}(j)$$
 
 define: $\gamma_t(i)=P(x_t=q_i|O_{1:T}=0_{1:T})$
 Since $\alpha_t(i)$ measures the relevant probability up to time t and $\beta_t(i)$ measures the relevant probability after time t,
 
-$$\gamma_t(i)=\frac{\alpha_t(i)\beta_t(i)}{P(O_{1:T}=0_{1:T})}$$
+$$\gamma_t(i)=\frac{\alpha_t(i)\beta_t(i)}{P(O_{1:T}=o_{1:T})}$$
 
 The $\gamma_t(i，j)$ is the probabilty of being in state i at time t and transiting to state j at time t+1. 
 
