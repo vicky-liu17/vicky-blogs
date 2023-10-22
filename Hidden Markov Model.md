@@ -155,3 +155,5 @@ $$\delta_t(i)=\max_{j\in[1,2,...,n]}a_{j,i}\delta_{t-1}(j)b_i(o_t)$$
 - In order to be able to trace back the most likely sequence later on, it is convenient to store the indices of the most likely states at each step. 
 $$\delta_t^{idx}(i)=\arg\max_{j\in[1,2,...,n]}a_{j,i}\delta_{t-1}(j)b_i(o_t) $$
 for i $\in$ [1,..N]
+
+So if the algorithm determined $\delta_t(i)$ for state i at time t and have been preceded by state k, then $\delta_t^{idx}(i)=k$
