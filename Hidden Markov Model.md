@@ -222,3 +222,8 @@ as we do not intend to favour any final state over the other. In the following, 
 $$\beta_{t}(i)= P(O_{t+1:T}=o_{t+1:T}|X_t=x_i)$$
 
 $$=\sum_{j=1}^{N}\beta_{t+1}(j)b_j(o_{t+1})a_{i,j}$$
+
+Now we have computed both $\alpha$ and $\beta$, we can estimate the probability of being in state i at time t and being in state j at time t+1 given all made observations and the probability of being in state i at time t given all made observations. These probabilites are given by the di-gamma function
+
+$$\gamma_t(i,j)=P(X_t=x_i, X_{t+1}=x_j|O_{1:T}=o_{1:T})$$
+$$=\frac{\alpha_t(i)a_(i,j)b_j(O_{t+1})\beta_{t+1}(j)}{\sun_{k=1}^N\alpha_T(k)}$$
