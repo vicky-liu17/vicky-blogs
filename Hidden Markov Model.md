@@ -220,4 +220,5 @@ for i $\in$ [1,2,...N]
 as we do not intend to favour any final state over the other. In the following, we iterate backward through the observation sequence and compute the $\beta$ values, defined in the following equation:
 
 $$\beta_{t}(i)= P(O_{t+1:T}=o_{t+1:T}|X_t=x_i)$$
+
 $$=\sum_{j=1}^{N}\beta_{t+1}(j)b_j(o_{t+1})a_{i,j}$$
