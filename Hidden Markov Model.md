@@ -150,4 +150,4 @@ def forward_algorithm(A, B, pi, O):
     - At first, we need to compute the probability of having observed $O_{1:t}=o_{1:t}$ and being in a state $X_t=x_i$ for each t.
 $$\delta_t(i)=P(O_1=o_1,X_1=x_i)=b_i(o_1)\pi_{i}$$
     - The subsequent steps update the $\delta_t$ as follows:
-$$\delta_t(i)=\max_{j\in[1,2,...,n]}P(X_t=x_i|X_{t-1}=x_j)P(O_{1:t-1},X^*_{1:t-2})$$
+$$\delta_t(i)=\max_{j\in[1,2,...,n]}P(X_t=x_i|X_{t-1}=x_j)P(O_{1:t-1},X^*_{1:t-2},X^*_{t-1}=x_j)$$
