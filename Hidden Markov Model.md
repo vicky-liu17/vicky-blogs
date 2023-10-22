@@ -241,12 +241,6 @@ $$=\sum_{j=1}^{N}\alpha_T(j)$$
 
 $$P(B|A)P(A)=P(A,B)= P(O_{1:T}=o_{1:T} | X_t=x_i, X_{t+1}=x_j)P(X_t=x_i, X_{t+1}=x_j)$$
 
-$$=P(O_{1:T}=o_{1:T} | X_t=x_i, X_{t+1}=x_j)P(X_t=x_i)P(X_{t+1}=x_j)$$
-
-$$=P(O_{1:T}=o_{1:T} | X_t=x_i)P(O_{1:T}=o_{1:T}|X_{t+1}=x_j)P(X_t=x_i)P(X_{t+1}=x_j)$$
-
-$$=P(O_{1:T}=o_{1:T}, X_t=x_i)P(O_{1:T}=o_{1:T}|X_{t+1}=x_j)P(X_{t+1}=x_j)$$
-
 $$=\alpha_t(i)\beta_{t+1}(j)P(X_{t+1}=x_j)$$
 
 $$=\alpha_t(i)a_(i,j)b_j(O_{t+1})\beta_{t+1}(j)$$
