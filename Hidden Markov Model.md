@@ -204,3 +204,8 @@ def run_viterbi(O, A, B, delta, max_id):
 ```
 
 ### HMM3 - Estimate Model Parameters
+- Recall that the $\alpha$ - pass algorithm determined the joint probability of each state at time t and all observations up to t. In order to be able to determine the probability of any state at any time point given all observations, we need to assess the probability of a state at time t and all future observation [t+1 : T ].
+
+##### $\beta$ -pass algorithm
+- The $\beta$ is defined as
+$$\Beta_t(i)=P(O_{t+1:T}=o_{t+1:T}|X_t=x_i)$$
