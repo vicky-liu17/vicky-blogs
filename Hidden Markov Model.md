@@ -126,12 +126,26 @@ def forward_algorithm(A, B, pi, O):
 
 #### Viterbi Algorithm
 ![](Pictures/hmm01.png)
-Goal: To find the shortest path from S to E.
-Start from S to A
-There are 3 paths S-A1、S-A2、S-A3. 
-But now we cannot arbitrarily say which path is the shortest under global conditions.
-So we move to B.
-There are three path passing B1.
-S-A1-B1
-S-A2-B1
-S-A3-B1
+- Goal: To find the shortest path from S to E.
+
+- Start from S to A
+    - There are 3 paths S-A1、S-A2、S-A3. 
+    - But now we cannot arbitrarily say which path is the shortest under global conditions.
+    - So we move to B.
+    - There are three path passing B1.
+        - S-A1-B1
+        - S-A2-B1
+        - S-A3-B1
+    - Suppose S-A3-B1 is the shortest in the above three paths, the other two cannot be the final result, so we can delete them directly. 
+    - Similarly, we can find the shortest path passing B2 and B3, and delete the other paths. 
+    - We can store the length of the shortest path in a matrix, like:
+        - B1: length of S-A3-B1
+        - B2: length of S-A2-B2
+        - B3: length of S-A2-B3
+    - When we move forward, we can directly use it. 
+    - We can also calculate the distance of the following points like this. 
+    - In terms of efficiency, compared to roughly traversing all paths, the Viterbi algorithm will delete paths that do not meet the shortest path requirements when reaching each column, greatly reducing the time complexity.
+
+- In HMM:
+    - At first, we need to compute the probability of having observed $O_{1:t}=o_{1:t}$ and being in a state $X_t=x_i$ for each t.
+$$\delta_t(i)=P(O_1=o_1,X_1=x_i)=b_i(o_1)\pi_{i}$$
