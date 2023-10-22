@@ -124,26 +124,14 @@ def forward_algorithm(A, B, pi, O):
     - Hidden state sequence  that most likely produce O.
     - Probability of occurrence of $X^*=\{ X_1, X_2, ...X_t \}$
 
----
-
-- Viterbi Algorithm
-
-```mermaid
-graph LR;
-    S --> A1 & A2 & A3;
-    A1 --> B1 & B2 & B3;
-    A2 --> B1 & B2 & B3;
-    A3 --> B1 & B2 & B3;
-    B1-->C1;
-    B1-->C2;
-    B1-->C3;
-    B2-->C1;
-    B2-->C2;
-    B2-->C3;
-    B3-->C1;
-    B3-->C2;
-    B3-->C3;
-    C1-->E;
-    C2-->E;
-    C3-->E;
-```
+#### Viterbi Algorithm
+![](Pictures/hmm01.png)
+Goal: To find the shortest path from S to E.
+Start from S to A
+There are 3 paths S-A1、S-A2、S-A3. 
+But now we cannot arbitrarily say which path is the shortest under global conditions.
+So we move to B.
+There are three path passing B1.
+S-A1-B1
+S-A2-B1
+S-A3-B1
