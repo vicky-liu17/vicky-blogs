@@ -285,4 +285,191 @@ Now we have everything in place in order to learn the parameters of our HMM with
 3. Re-estimate $$\lambda=(A,B,\pi)$$
 4. Repeat from 2 until convergence
 
+```python
+import sys
+import math
+import fileinput
 
+# Function to create a matrix from a line of space-separated values
+def create_matrix(line):
+    values = list(map(float, line.split()))
+    height, width = map(int, values[:2])
+    values = values[2:]
+    matrix = [values[i:i+width] for i in range(0, len(values), width)]
+    return matrix
+
+# Function to print a matrix with specified formatting
+def print_matrix(matrix):
+    num_rows, num_cols = len(matrix), len(matrix[0])
+    dimensions = f"{num_rows} {num_cols}"
+    formatted_matrix = " ".join(" ".join(f"{round(e, 6)}" for e in row) for row in matrix)
+
+    result = f"{dimensions} {formatted_matrix}"
+
+    print(result)
+
+
+# Backward algorithm for Hidden Markov Models
+def backward_algorithm(A, B, O, pi, c):
+    # Initialize the beta matrix
+    beta = []
+
+    # Initialization step: Initialize the last row of the beta matrix with c[T-1]
+    beta.extend([[c[len(O) - 1]] * len(A)])
+
+    # Recursion step: Compute the beta values for each time step in reverse order
+    for t in range(len(O) - 2, -1, -1):
+        state = []  # Store the beta values for each state at time step t
+        for s in range(len(A)):
+            # Calculate the backward path probabilities for each state s
+            backward_path = [beta[0][k] * A[s][k] * B[k][O[t + 1]] for k in range(len(A))]
+            # Compute the beta value for state s at time step t
+            state.append(c[t] * sum(backward_path))
+        # Insert the computed beta values at the beginning of the beta matrix
+        beta.insert(0, state)
+
+    # Termination step: Return the computed beta matrix
+    return beta
+
+# Forward algorithm for Hidden Markov Models
+def forward_algorithm(A, B, O, pi):
+    c = []      # Scaling factors
+    alpha = []  # Forward probabilities
+    alpha_n = []  # Scaled forward probabilities
+
+    # Initialization step: Compute alpha[0] and scaling factor c[0]
+    alpha.append([pi[s] * B[s][O[0]] for s in range(len(A))])
+    c.append(1 / sum(alpha[0]))  # Compute scaling factor c[0]
+    alpha_n.append([c[0] * alpha[0][s] for s in range(len(A))])
+
+    # Recursion step: Compute alpha values and scaling factors for each time step
+    for t in range(1, len(O)):
+        state = []  # Store the alpha values for each state at time step t
+        for s in range(len(A)):
+            # Calculate the forward path probabilities for each state s
+            forward_path = [alpha_n[t - 1][k] * A[k][s] * B[s][O[t]] for k in range(len(A))]
+            # Compute the alpha value for state s at time step t
+            state.append(sum(forward_path))
+        # Compute the scaling factor c[t] for time step t
+        c.append(1 / sum(state))
+        alpha.append(state)  # Store alpha values at time step t
+        alpha_n.append([c[t] * alpha[t][i] for i in range(len(A))])  # Scale alpha values
+
+    # Termination step: Return the scaled alpha values, scaling factors, and the final probability
+    return alpha_n, c, sum(alpha[len(O) - 1])
+# Estimation step: Compute gamma and digamma values
+def estimator(A, B, O, alpha, beta):
+    gamma = []  # Initialize gamma values
+    digamma = []  # Initialize digamma values
+
+    # Calculate gamma and digamma for each time step except the last one
+    for t in range(len(O) - 1):
+        g = []  # Initialize gamma values for the current time step
+        dg = []  # Initialize digamma values for the current time step
+        for s in range(len(A)):
+            # Calculate the probabilities for each state transition
+            prob = [alpha[t][s] * A[s][k] * B[k][O[t + 1]] * beta[t + 1][k] for k in range(len(A))]
+            g.append(sum(prob))  # Sum of probabilities for the current state s
+            dg.append(prob)  # Store individual probabilities in digamma
+        gamma.append(g)  # Store gamma values for the current time step
+        digamma.append(dg)  # Store digamma values for the current time step
+
+    gamma.append(alpha[len(O) - 1])  # Add gamma for the last time step
+
+    return gamma, digamma  # Return gamma and digamma values
+
+
+# Maximization step: Update initial state probabilities (pi)
+def maximise_pi(n, gamma):
+    return [gamma[0][i] for i in range(n)]  # Update pi based on gamma values
+
+
+# Maximization step: Update state transition probabilities (A)
+def maximise_A(n_state, n_obs, gamma, digamma):
+    A = []  # Initialize the updated state transition matrix A
+
+    for i in range(n_state):
+        i_trans = sum(gamma[t][i] for t in range(n_obs))  # Calculate the sum of gamma values for state i
+
+        A_new = []  # Initialize the row for state i in the updated A matrix
+        for j in range(n_state):
+            ij_trans = sum(digamma[t][i][j] for t in range(n_obs))  # Calculate the sum of digamma values for states i and j
+            A_new.append(ij_trans / i_trans)  # Update the probability for transitioning from state i to state j
+        A.append(A_new)  # Add the updated row to the updated A matrix
+
+    return A  # Return the updated state transition matrix A
+
+
+# Maximization step: Update emission probabilities (B)
+def maximise_B(B_est, O, n_state, n_obs, gamma):
+    B = []  # Initialize the updated emission matrix B
+
+    for i in range(n_state):
+        i_trans = sum(gamma[t][i] for t in range(n_obs))  # Calculate the sum of gamma values for state i
+
+        B_new = []  # Initialize the row for state i in the updated B matrix
+        for j in range(len(B_est[0])):
+            ij_trans = sum(gamma[t][i] for t in range(n_obs) if O[t] == j)  # Calculate the sum of gamma values for state i and observation j
+            B_new.append(ij_trans / i_trans)  # Update the probability of emitting observation j from state i
+        B.append(B_new)  # Add the updated row to the updated B matrix
+
+    return B  # Return the updated emission matrix B
+
+
+# Baum-Welch algorithm for Hidden Markov Models
+def baum_welch(A, B, O, pi, max_iters=100, tol=1e-4):
+    iter = 0  # Initialize the iteration count
+    log_prob = float('-inf')  # Initialize the log probability to negative infinity
+
+    while iter <= max_iters:
+        # Forward and backward probabilities
+        alpha, c, _ = forward_algorithm(A, B, O, pi)  # Calculate forward probabilities
+        beta = backward_algorithm(A, B, O, pi, c)  # Calculate backward probabilities
+
+        # Calculate the new log probability based on the convergence of scaling factors
+        new_log_prob = compute_convergence(c, len(O))
+
+        # Check for convergence or reaching the maximum number of iterations
+        if log_prob >= new_log_prob or iter > max_iters:
+            break
+
+        # Expectation step: Estimate gamma and digamma using the forward and backward probabilities
+        gamma, digamma = estimator(A, B, O, alpha, beta)
+
+        # Maximization step: Recompute A, B, and pi using the estimated gamma and digamma
+        pi = maximise_pi(len(A), gamma)  # Update initial state probabilities
+        A = maximise_A(len(A), len(O) - 1, gamma, digamma)  # Update state transition probabilities
+        B = maximise_B(B, O, len(A), len(O), gamma)  # Update emission probabilities
+
+        iter += 1  # Increment the iteration count
+        log_prob = new_log_prob  # Update the log probability
+
+    # Return the updated state transition matrix A and emission matrix B
+    return A, B
+
+
+# Function to compute the convergence measure of the algorithm
+def compute_convergence(c, n):
+    # Initialize the log probability to zero
+    log_prob = 0
+
+    # Calculate the sum of logarithms of scaling factors
+    for ct in c:
+        log_prob += math.log(ct)
+
+    # Calculate and return the negative log probability as the convergence measure
+    convergence_measure = -log_prob
+    return convergence_measure
+
+
+A  = create_matrix(sys.stdin.readline())
+B  = create_matrix(sys.stdin.readline())
+pi = create_matrix(sys.stdin.readline())[0]
+O  = [int(i) for i in sys.stdin.readline().split()[1:]]
+
+# learn transition and emission probabilities
+A, B = baum_welch(A, B, O, pi)
+
+print_matrix(A)
+print_matrix(B)
+```
