@@ -55,8 +55,8 @@ $$=\sum_{X_1:t}\pi a_{1,2}a_{2,3}...a_{T-1,T}b_{x_1}(O_1)b_{x_2}(O_2)...b_{x_T}(
 ### Forward Algorithm:
 
 - Introduce $\alpha$
-- Given hidden state x=i, we call the probability of the observation sequence is ${0_q, o_2,..., o_t} forward probability 
-
+- Given hidden state x=i, we call the probability of the observation sequence is ${0_q, o_2,..., o_t} forward probability. 
+$$\alpha_t(i) = p(O_{1:t},x_t=i|\lambda)=P(O_1=o_1|X_1=x_i)P(X_1=x_i)=b_i(o_i)\pi_i$$
 
 
 
