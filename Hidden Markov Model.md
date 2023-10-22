@@ -72,6 +72,6 @@ $$P(O_t=o_t|X_t=x_i)[\sum_{j=1}^{N}P(X_t=x_i|X_{t-1}=x_j)P(X_{t-1}=x_j, O_{1:t-1
 
 > Maginalization is a method that requires summing over the possible values of one variable to determine the marginal contribution of another. 
 
-- This step has to be computed iteratively for every $t\in [1,...,T]$. Finally, we can compute the probability of having observed the given observation sequence $O_1:T. For this, we again have to marginalize over the hidden state distribution such that
+- This step has to be computed iteratively for every $t\in [1,...,T]$. Finally, we can compute the probability of having observed the given observation sequence $O_1:T$. For this, we again have to marginalize over the hidden state distribution such that
 $$P(O_{1:T}=o_{1:T})=\sum_{j=1}^{N}P(O_{1:T}=0_{1:T}, X_T=x_j)$$
 $$=\sum_{j=1}^{N}\alpha_T(j)$$
