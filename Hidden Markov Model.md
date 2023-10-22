@@ -156,4 +156,11 @@ $$\delta_t(i)=\max_{j\in[1,2,...,n]}a_{j,i}\delta_{t-1}(j)b_i(o_t)$$
 $$\delta_t^{idx}(i)=\arg\max_{j\in[1,2,...,n]}a_{j,i}\delta_{t-1}(j)b_i(o_t) $$
 for i $\in$ [1,..N]
 
-So if the algorithm determined $\delta_t(i)$ for state i at time t and have been preceded by state k, then $\delta_t^{idx}(i)=k$
+- So if the algorithm determined $\delta_t(i)$ for state i at time t and have been preceded by state k, then $\delta_t^{idx}(i)=k$
+
+- When arriving at the end of the observing sequence, T, the probability of the most likely hidden state sequence is given by 
+$$P(X^*_{1:T}, O_1:T=o_1:T)=\max_{j\in [1,...,N]}\delta_T$$
+
+- In the second step, we can back track the sequence ${X^*}$ by setting
+$$X^*_T= \arg\max_{j\in[1,...,N]}\delta_T(j)$$
+$$X^*_t=\delta_{t+1}^{idx}(X*_{t+1})$$
