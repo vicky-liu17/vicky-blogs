@@ -164,3 +164,43 @@ $$P(X^_{1:T}, O_1:T=o_1:T)=\max_{j\in [1,...,N]}\delta_T$$
 - In the second step, we can back track the sequence ${X^*}$ by setting
 $$X_T= \arg\max_{j\in[1,...,N]}\delta_T(j)$$
 $$X_t=\delta_{t+1}^{idx}(X_{t+1})$$
+
+```python
+def run_viterbi(O, A, B, delta, max_id):
+    """
+    Run the Viterbi algorithm to find the most likely sequence of hidden states given observations.
+
+    Args:
+    O (list): List of observations (sequence of observed data).
+    A (list): State transition probabilities (N x N matrix).
+    B (list): Observation probabilities given states (N x M matrix).
+    delta (list): List to store the Viterbi path and accumulated probabilities.
+    max_id (list): List to track the most likely state at each time step.
+
+    Returns:
+    None: The function prints the most likely sequence of hidden states.
+    """
+    if len(O) == 0:
+        # Termination step: Track back the most probable hidden states and print them
+        state_list = []
+        last_state = delta.index(max(delta)) 
+        state_list.append(last_state) 
+        # Iterate backward through the 'max_id' list to backtrack and find the most likely hidden states.
+        for i in range(len(max_id) - 1, 0, -1):
+            state_list.insert(0, max_id[i][last_state])
+            last_state = max_id[i][last_state]
+        print(' '.join([str(x) for x in state_list]))
+        return 0
+    
+    # Calculate probabilities for all possible state transitions
+    all_probs = [[delta[pre] * A[pre][curr] * B[curr][O[0]] for pre in range(len(A))] for curr in range(len(A))]
+    possible_delta = [max(probabilities_curr_state) for probabilities_curr_state in all_probs]
+    
+    # Update the state tracking list for backtracking
+    max_id.append([max_idx.index(possible_delta[i]) for i, max_idx in enumerate(all_probs)])
+    
+    # Recursively call the Viterbi algorithm for the remaining observations
+    run_viterbi(O[1:], A, B, possible_delta, max_id)
+```
+
+### HMM3 - Estimate Model Parameters
