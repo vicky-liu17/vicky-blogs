@@ -210,3 +210,14 @@ def run_viterbi(O, A, B, delta, max_id):
 - The $\beta$ is defined as
 
 $$\beta_{t}(i)=P(O_{t+1:T}=o_{t+1:T}|X_t=x_i)$$
+
+i.e. the probability of observing all future observations $O_{t+1:T}$ given the current state X_t=x_i. Again, we need to determine $\beta$ values for all time steps and all states. For this, we initialize:
+
+$$\beta_{T}(i)=1$$
+
+for i $\in$ [1,2,...N]
+
+as we do not intend to favour any final state over the other. In the following, we iterate backward through the observation sequence and compute the $\beta$ values, defined in the following equation:
+
+$$\beta_{t}(i)= P(O_{t+1:T}=o_{t+1:T}|X_t=x_i)$$
+$$=\sum_{j=1}^{N}\beta_{t+1}(j)b_j(o_{t+1})a_{i,j}$$
