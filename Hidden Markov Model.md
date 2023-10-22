@@ -263,13 +263,13 @@ $$\gamma_t(i)=P(X_t=x_i|O_{1:T}=o_{1:T})=\sum_{j=1}^N\gamma_t(i,j)$$
 
 Finally, we can estimate $\lambda = (A, B,\pi)$ by determining the expected value of the probabilites. We have the transition estimates given by 
 
-$$a_{i,j}=\frac{sum_{t=1}^{T-1}\gamma_t(i,j)}{sum_{t=1}^{T-1}\gamma_t(i)}$$
+$$a_{i,j}=\frac{\sum_{t=1}^{T-1}\gamma_t(i,j)}{\sum_{t=1}^{T-1}\gamma_t(i)}$$
 
 for i,j $\in$ [1,..N]
 
 The observation estimates given by
 
-$$b_j(k)=\frac{sum_{t=1}^{T-1}1(O_t=k)\gamma_t(j)}{sum_{t=1}^{T-1}\gamma_t(j)}$$
+$$b_j(k)=\frac{\sum_{t=1}^{T-1}1(O_t=k)\gamma_t(j)}{\sum_{t=1}^{T-1}\gamma_t(j)}$$
 
 for j $\in$ [1,..N], k $\in$ [1,..K]
 
