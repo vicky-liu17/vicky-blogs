@@ -76,10 +76,6 @@ $$P(O_t=o_t|X_t=x_i)[\sum_{j=1}^{N}P(X_t=x_i|X_{t-1}=x_j)P(X_{t-1}=x_j, O_{1:t-1
 $$P(O_{1:T}=o_{1:T})=\sum_{j=1}^{N}P(O_{1:T}=0_{1:T}, X_T=x_j)$$
 $$=\sum_{j=1}^{N}\alpha_T(j)$$
 
-
-
-
-### HMM 1 - Estimate Sequence of States
 ```python
 # Define the forward algorithm for Hidden Markov Models (HMMs)
 def forward_algorithm(A, B, pi, O):
@@ -108,4 +104,54 @@ def forward_algorithm(A, B, pi, O):
     
     # Return the total probability of the observed sequence
     return probability
+```
+
+- The forward algorithm use a matrix to store the forward probabilities of each step. So every time, we only need to calculate from the last step(t-1) to current step(t). 
+- We do not need to calculate from the very begining. In every time step, there are $N^2$ possibilities. (from j to i, j and i both have N possibilities). 
+- There are totally T time steps. 
+- So the time complexity of the forward algorithm is $O(N^{2T})$.
+
+### HMM 2 - Estimate Sequence of States
+- The forward algorithm marginalizes over the hidden state distribution. 
+- In contrast, we can also compute the most likely sequence of hidden states given the observations.
+- Let use denote this sequence with ${X^*}_1:t = {X^*_1,X^*_2,...,X^*_T}$   
+
+
+- Given:
+    - Emission Sequence $O={O_1, O_2, ...O_t}$
+    - A, B, $\pi$
+- To find:
+    - Hidden state sequence ${X^*}_1:t = {X^*_1,X^*_2,...,X^*_T}$ that most likely produce O.
+    - Probability of occurrence of $X^*$
+
+---
+
+- Viterbi Algorithm
+
+```mermaid
+graph TD;
+    S-->A1;
+    S-->A2;
+    S-->A3;
+    A1-->B1;
+    A1-->B2;
+    A1-->B3;
+    A2-->B1;
+    A2-->B2;
+    A2-->B3;
+    A3-->B1;
+    A3-->B2;
+    A3-->B3;
+    B1-->C1;
+    B1-->C2;
+    B1-->C3;
+    B2-->C1;
+    B2-->C2;
+    B2-->C3;
+    B3-->C1;
+    B3-->C2;
+    B3-->C3;
+    C1-->E;
+    C2-->E;
+    C3-->E;
 ```
