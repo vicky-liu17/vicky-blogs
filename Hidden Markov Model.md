@@ -227,4 +227,15 @@ Now we have computed both $\alpha$ and $\beta$, we can estimate the probability 
 
 $$\gamma_t(i,j)=P(X_t=x_i, X_{t+1}=x_j|O_{1:T}=o_{1:T})$$
 
-$$=\frac{\alpha_t(i)a_(i,j)b_j(O_{t+1})\beta_{t+1}(j)}{\sun_{k=1}^N\alpha_T(k)}$$
+$$=\frac{\alpha_t(i)a_(i,j)b_j(O_{t+1})\beta_{t+1}(j)}{\sum_{k=1}^N\alpha_T(k)}$$
+
+- Bayes Formula
+$$P(A|B)=\frac{P(B|A)P(A)}{P(B)}
+
+    - $P(B)=P(O_{1:T}=o_{1:T})$
+
+$$P(O_{1:T}=o_{1:T})=\sum_{j=1}^{N}P(O_{1:T}=0_{1:T}, X_T=x_j)$$
+
+$$=\sum_{j=1}^{N}\alpha_T(j)$$
+
+$$P(B|A)P(A)=P(A,B)= P(X_t=x_i, X_{t+1}=x_j,O_{1:T}=o_{1:T})$$
