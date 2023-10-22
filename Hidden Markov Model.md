@@ -239,7 +239,7 @@ $$P(O_{1:T}=o_{1:T})=\sum_{j=1}^{N}P(O_{1:T}=0_{1:T}, X_T=x_j)$$
 
 $$=\sum_{j=1}^{N}\alpha_T(j)$$
 
-$$P(B|A)P(A)=P(A,B)= P(X_t=x_i, X_{t+1}=x_j,O_{1:T}=o_{1:T})$$
+$$P(B|A)P(A)=P(A,B)= P(O_{1:T}=o_{1:T} | X_t=x_i, X_{t+1}=x_j)P(X_t=x_i, X_{t+1}=x_j)$$
 
 define: $\gamma_t(i)=P(x_t=q_i|O_{1:T}=0_{1:T})$
 Since $\alpha_t(i)$ measures the relevant probability up to time t and $\beta_t(i)$ measures the relevant probability after time t,
