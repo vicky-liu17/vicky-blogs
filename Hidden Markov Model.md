@@ -482,6 +482,5 @@ print_matrix(B)
 - The basic recurrence is:
 $$\alpha_i(t)=b_i(o_t)[\sum_{j=1}^{N}a_{i,j}\alpha_{t-1}(j)]$$
 - It seems sensible to normalize each $\alpha_t(i)$ by dividing by the sum(over j) of $\alpha_t(j)$. However, we must verify that the re-estimation formula hold. 
-
 - For t = 0, let $\alpha‘_0(i) = \alpha_0(i)$ for i = 0, 1,..., N-1. Then let $c_0=\frac{1}{\sum_{j=0}^{N-1}\alpha’_0(j)}$, and finally, $\alpha‘_0(i) = c_0\alpha’_0(i) for i = 0,1,...N. Then for each t=1, 2,..., T-1, do the following. 
     - 
