@@ -70,7 +70,7 @@ $$=P(O_t=o_t|X_t=x_i)P(X_t=x_i, O_{1:t-1})$$
 
 $$P(O_t=o_t|X_t=x_i)[\sum_{j=1}^{N}P(X_t=x_i|X_{t-1}=x_j)P(X_{t-1}=x_j, O_{1:t-1})]$$
 
-$$=b_i(o_t)[\sum_{j=1}^{N}a_{i,j}\alpha_{t-1}(j)]
+$$=b_i(o_t)[\sum_{j=1}^{N}a_{i,j}\alpha_{t-1}(j)]$$
 
 > Maginalization is a method that requires summing over the possible values of one variable to determine the marginal contribution of another. 
 
