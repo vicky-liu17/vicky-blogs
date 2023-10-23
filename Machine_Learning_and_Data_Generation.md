@@ -38,6 +38,6 @@ D[Synthesis use cases]---|for machines|E[Data imputation] & F[dataset augmentati
 ### Categories of synthesis problems
 ```mermaid
 graph LR;
-A[synthesis type]-|unconditional|->B[generate new examples x: e.g. dataset augmentation, entertainment, drug discovery];
-A[synthesis type]-|conditional|->C[generate new examples x given the conditioning y: e.g. dataset imputation, text-to-speech, text-to-image, anyinteractive or controllable setting];
+A[synthesis type]-->|unconditional|B[generate new examples x: e.g. dataset augmentation, entertainment, drug discovery];
+A[synthesis type]-->|conditional|C[generate new examples x given the conditioning y: e.g. dataset imputation, text-to-speech, text-to-image, anyinteractive or controllable setting];
 ```
