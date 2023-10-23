@@ -380,12 +380,12 @@ def estimator(A, B, O, alpha, beta):
 
 
 # Maximization step: Update initial state probabilities (pi)
-def maximise_pi(n, gamma):
+def update_pi(n, gamma):
     return [gamma[0][i] for i in range(n)]  # Update pi based on gamma values
 
 
 # Maximization step: Update state transition probabilities (A)
-def maximise_A(n_state, n_obs, gamma, digamma):
+def update_A(n_state, n_obs, gamma, digamma):
     A = []  # Initialize the updated state transition matrix A
 
     for i in range(n_state):
@@ -400,8 +400,8 @@ def maximise_A(n_state, n_obs, gamma, digamma):
     return A  # Return the updated state transition matrix A
 
 
-# Maximization step: Update emission probabilities (B)
-def maximise_B(B_est, O, n_state, n_obs, gamma):
+# Update emission probabilities (B)
+def update_B(B_est, O, n_state, n_obs, gamma):
     B = []  # Initialize the updated emission matrix B
 
     for i in range(n_state):
@@ -437,9 +437,9 @@ def baum_welch(A, B, O, pi, max_iters=100, tol=1e-4):
         gamma, digamma = estimator(A, B, O, alpha, beta)
 
         # Maximization step: Recompute A, B, and pi using the estimated gamma and digamma
-        pi = maximise_pi(len(A), gamma)  # Update initial state probabilities
-        A = maximise_A(len(A), len(O) - 1, gamma, digamma)  # Update state transition probabilities
-        B = maximise_B(B, O, len(A), len(O), gamma)  # Update emission probabilities
+        pi = update_pi(len(A), gamma)  # Update initial state probabilities
+        A = update_A(len(A), len(O) - 1, gamma, digamma)  # Update state transition probabilities
+        B = update_B(B, O, len(A), len(O), gamma)  # Update emission probabilities
 
         iter += 1  # Increment the iteration count
         log_prob = new_log_prob  # Update the log probability
@@ -473,3 +473,4 @@ A, B = baum_welch(A, B, O, pi)
 print_matrix(A)
 print_matrix(B)
 ```
+
