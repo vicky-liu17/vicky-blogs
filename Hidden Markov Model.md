@@ -486,3 +486,5 @@ $$\alpha_i(t)=b_i(o_t)[\sum_{j=1}^{N}a_{i,j}\alpha_{t-1}(j)]$$
 ![](Pictures/hmm02.png)
 
 ![](Pictures/hmm03.png)
+
+-  The same scale factor is used for $\beta_t(i)$
