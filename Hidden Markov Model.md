@@ -487,4 +487,10 @@ $$\alpha_i(t)=b_i(o_t)[\sum_{j=1}^{N}a_{i,j}\alpha_{t-1}(j)]$$
 
 ![](Pictures/hmm03.png)
 
--  The same scale factor is used for $\beta_t(i)$
+![](Pictures/hmm04.png)
+
+
+- The convergence in the Baum-Welch algorithm is related to the likelihood of the observed data, and the algorithm iteratively updates the model parameters (transition probabilities, emission probabilities, and initial state probabilities) to maximize this likelihood. Convergence is achieved when the likelihood of the observed data stops increasing significantly across iterations. 
+- After each iteration, the code computes a new log-likelihood of the observed data, which is a measure of how well the current model explains the data. It calculates the log-likelihood by summing the negative logarithms of the scaling factors (c) obtained during the forward pass. This log-likelihood is used to check for convergence.
+
+$$logP(O|\lambda)=-\sum_{j=0}^{T-1}log(c_j)$$
