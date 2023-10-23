@@ -12,6 +12,6 @@
 
 ```mermaid
 graph LR;
-A[Practical Utilities] & B[Art and entertainment] & C[Privacy and anonymisation]---D[Synthesis use cases];
-D[Synthesis use cases]---E[Data imputation] & F[dataset augmentation];
+A[Practical Utilities] & B[Art and entertainment] & C[Privacy and anonymisation]---|for humans|D[Synthesis use cases];
+D[Synthesis use cases]---|for machines|E[Data imputation] & F[dataset augmentation];
 ```
