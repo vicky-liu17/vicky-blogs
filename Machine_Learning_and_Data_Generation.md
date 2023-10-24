@@ -368,3 +368,5 @@ $$D_{JS}(P,Q):=\frac{1}{2}D_{KL}(P||\frac{P+Q}{2})+\frac{1}{2}D_{KL}(Q||\frac{P+
 $$V_D(\phi,\theta)= \frac{1}{2}\mathbb{E}_{x\sim\mathcal{X}}[ln D(x;\phi)]$$
 
 $$+\frac{1}{2}\mathbb{E}_{x\sim\mathcal{N}_z}[ln(1-D(G(z;\theta);\phi))]$$
+
+$$V_D(\phi,\theta) = \mathbb{E}_{x\sim\mathcal{N}_z}[lnD(G(z;\theta);\phi)]$$
