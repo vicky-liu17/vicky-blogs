@@ -131,3 +131,61 @@ graph LR;
 A[Realism] & B[Recognisability] & C[User preference]---D[Evaluation Aspects];
 D[Evaluation Aspects]---E[Accuracy of control] & F[speed] & G[Downstream performance] & H[Computational load];
 ```
+- Realism: human-likeness
+- Recognisability: e.g. voice assistant
+- User preference: e.g, collaborative synthesis(HCI)
+- Accuracy of control: appropriateness for the context
+- Speed: latency in real-time interactions
+- Downstream performance: e.g. dataset augmentaion
+- Computational load: can the model run on my phone?
+
+#### Objective evaluation
+- A mathematical approximation
+- Quick and cheap
+- but often unreliable or even misleading
+- Mainly used during development
+- examples:
+    - MSE
+    - Likelihood
+    - FID
+
+#### Subjective evaluation
+- Asking people to do the work 
+- Time-consuming and expensive
+- The "gold standard" of evaluation
+
+##### Objective evaluation via MSE
+- Mean squared error in data space between real and synthetic is a common -  but bad!-performance measure
+- It promotes excessive averaging
+    - Example: The MSE-optimal unconditional image model is just a blur
+- It penalise diversity
+    - It is optimal to always predict the conditional mean every time
+    - The true distribution is not MSE optimal!
+- Small squared distance in data space does not imply perceptual similarity
+    - Example: Nearest neighbours in image databases.
+
+##### Objective evaluation via log-likelihood
+- Widely used for benchmarking explicit deep generative methods
+    - Example: Bits per dimension(or per pixel)
+- Advantages: 
+    - Consistent
+    - The same idea works for any data space across in invertible transformation. 
+- Limitations:
+    - Requires the ability to compute probabilites, or ar least a lower bound(ELBO)
+        - Dows not work for co-called implicit models(GANs)
+    - Has quesionable priorties
+        - Bettwe image dequantisation can increase log-likelihood a lot, despite its effects being invisible by definition
+
+- High likelihood is not necessarily better
+    - Takeaway: do not rely on objective metrics alone, if you can avoid it
+
+##### Objective evaluation via FID
+- Fréchet inception distance(FID)
+    - Improvements in FID usually correlate well with improvements in perceived quality
+        - very common image benchmark
+    - Perhapes the best objective metric we have right now
+- First introduced for images, but the idea has been ported to other domains
+    - Example: Fréchet audio distance
+- Usually not used during model development, only for model assessment
+    - Too computational expensive
+    
