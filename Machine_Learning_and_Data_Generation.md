@@ -340,4 +340,4 @@ F[Approximate density]--->J[VAE] & K[Diffusion model];
 
 $$\hat{G}=\arg\min_{G}\max_{D}V(D,G)$$
 
-$$V(D,G)=\frac{1}{2}\mathbb{E}_x\sim_{P(x)}[ln D(X)]+\frac{1}{2}\mathbb{E}_x\sim_{G}[1-ln D(X)]$$
+$$V(D,G)=\frac{1}{2}\mathbb{E}_x\sim_{P(x)}[ln D(X)]$$
