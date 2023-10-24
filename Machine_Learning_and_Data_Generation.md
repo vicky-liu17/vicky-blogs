@@ -2,7 +2,7 @@
 
 ### Outline
 - What are synthesis problems?
-- What does it mean to so;ve synthesis problem?
+- What does it mean to solve synthesis problem?
 - How can we solve synthesis problems with ML?
 
 
@@ -284,6 +284,60 @@ graph TD;
 A[Deep generative models]--->B[explicit] & C[implicit];
 C[implicit]--->D[GAN];
 B[explicit]--->E[Tractable density] & F[Approximate density];
-B[explicit]--->G[multivariate parametric] & H[Autoregressive] & I[Normalising flow];
+E[Tractable density]--->G[multivariate parametric] & H[Autoregressive] & I[Normalising flow];
 F[Approximate density]--->J[VAE] & K[Diffusion model];
 ```
+
+##### Simple parametric models
+- Example: "The vector x is distibuted according to a multivariate Gaussian"
+    - Implicitly, this says that, e.g."The image distribution is the average image plus Gaussian noise"
+- This is too simple
+    - Example: For images, we get the blurry pictures from before(but now with added noises)
+
+##### Autoregressive models
+- "Given previous elements of x, the next element is distributed accoding to, e.g. a Gaussian".
+    - Example: Pixels in an image
+    - Use a neutral network to parameterise the dependence on previous pixels
+- more powerfulm but we have to generate one element at a time
+
+##### Flows and VAEs
+- Normalising flows
+    - "The distribution is an invertible nonlinear transformation of a Gaussian."
+    - This gives a much more powerful parametric family of distributions
+- Variational autonencoders(VAEs)
+    - Leverage the manifold hypothesis 
+    - "the distribution is a nonlinear transformation of a low dimensional Gaussian, plus Gaussian noise".
+- Other methods:
+    - Energy-based and diffusion-based models
+
+##### Generative adversarial networks
+- Main idea: Simulate a Turing test using machines
+- A generator G:
+    - "A counterfeiter of fake examples"
+    - This will be our synthesiser
+- A discriminator D
+    - "A policeman trying to spot fakes"
+    - Its role is only to help train G
+- Both G and D can be conditioned on a input y
+    - conditional GAN(CGAN)
+
+##### The idea behind GAN training
+- D is trained to distinguish real from synthetic examples
+    - Classifier mapping form x to binary label(1:real, 0: fake)
+- G is trained to produce a distribution x that fools D
+    - Change G to reduce D's performance
+    - Needs backpropogation through D
+    - Result: Training moves the density towards outcomes D classifies as real
+- "Adversarial": because G and D have opposing goals
+
+##### Mathematical Formulation
+- Two interacting agents --> the situation can be analysed using game theory
+- Let V be the log-likelihood for training D on an even mixture of real an fake examples
+    - D wants V to be high
+    - G wants V to be low
+    - V is called the value function of the game
+- This is called a minimax problem
+
+$$\hat{G}=\arg\min_{G}\max_{D}V(D,G)$$
+
+$$V(D,G)=\frac{1}{2}\mathbb{E}_x\sim_{P(x)}[ln D(X)]+\frac{1}{2}\mathbb{E}_x\sim_{G}[1-ln D(X)]$$
