@@ -395,4 +395,25 @@ $$V_D(\phi,\theta) = \mathbb{E}_{x\sim\mathcal{N}_z}[lnD(G(z;\theta);\phi)]$$
 
 $$p_{x}^{\beta}(x;\theta)\propto (p_x(x;\theta))^{\frac{1}{\beta}}$$
 
-$$ p_{x}^{\beta}(x;\theta)=\frac{1}{beta}ln p_x(x;\theta)-c$$
+$$ p_{x}^{\beta}(x;\theta)=\frac{1}{\beta}ln p_x(x;\theta)-c$$
+
+### Summary
+- Synthesis has many real-world applications
+- Synthesis can be seen as the inverse of analysis(e.g. classification)
+    - Synthesis problems require hallucinating nre information
+- Choices in synthesiser design:
+    - Dataset
+    - Metrics for tuning and evaluation
+    - Architecture(parametric family)
+    - Mathod(objective function) and optimisation
+        - GANs can be finicky to get to work, but perform very well when they do 
+    - Output generation(sampling or not)
+- Design principle in synthesis for humans:
+    - It is easier to notice a presence than an absence
+    - Deterministic(regression-based) methods are most likely to work when the output is expected to show little variation
+    - Sampling from probablistic models works better the better the model is
+    - Most applications "reduce the temperature"
+- Subjective evaluation is the gold standard in synthesis for humans
+    - Reliable objective metrics are rare
+    - Do not trust mean squired error or validation-set log-likelihhood
+    - always look at your output
