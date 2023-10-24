@@ -194,3 +194,96 @@ D[Evaluation Aspects]---E[Accuracy of control] & F[speed] & G[Downstream perform
     - This requires drawing something like 3k-50k samples from your model
 2. Map fake and real observations to a learned perceptual space z=f(x) "inception" comes the name of a neutral network used to define $f(\cdot)$
 3. fit a (diagnonal covariance) Gaussian to each { $z_i$ } and { $\hat{z_i}$ }
+4. Compute a divergence measure between the two Gaussian
+    - Use the Wasserstein divergence, which is sensitive to distance and has an analytical soluttion(known as the Fréchet distance)
+    - Since the divergence is nonzero unless two distributions are identical, FID is sensitive both to overall appearance and to insufficient or excessive variation
+
+
+#### "It's easier to notice a presence than an absence"
+- Canned speech can be convincing the first time
+    - It's only the second time we hear it that we can notice the complete absence of variation
+- Something with an obvious artefact can instantly be disregarded artificial and fake
+
+##### This was a simple example of subjective evaluation
+- Designing a good user study requires expertise:
+    - What question to ask
+    - Isolated, paired, or parallel sample resentations
+    - Binary preference, rankings, ratings, Likert-scale responses
+    - Physiological measures
+        - Pupillometry
+        - Heart rate
+        - Skin conductance
+    - Behavioural measures
+        - reaction time
+        - completion time
+
+### Subjective Evaluation
+- Upsides:
+    - The gold standard in studying and quantifying what humans think and like
+        - Is seen as necessary in some fields(e.g. speech), but not in others(e.g. images)
+    - Can measure many different aspectsm to answer many different questions
+- Downsides
+    - Slow and expensive
+        - You have to pay human beings to do tasks for you 
+    - require careful design and careful statistical analysis to get reliable results
+- Can be crowdsourced online, or performed in the lab
+    - "Attention checks" needed to be prevent participants from cheating
+
+### Part 3: How can we solve synthesis problems
+
+- Outline:
+    - Deterministic methods
+    - Probabilistic methods
+        - Deep generative models
+            - GANs
+        - Generating output
+
+##### Deterministic methods
+- You don't  always need machind learning for synthesis
+    - Just like you don't always need mahcine learning for all engineering problems
+- Playback-based or corpus-based methods
+- Example: Pre-recorded voiceover in a video game(canned speech)
+    - Has data, but does not learn/generalize from the data in any obvious way
+    - Hand-written rules decide when to play back different recordings and how to combine them
+    - Highly realistic(since every example is real) but very limited capabilities
+        - Anything you want to be able to say/do has to be covered by your database
+    - You can build entire synthesis system based on cutting and pasting
+
+- **Regression** is the simplest machine-learning approach to synthesising continuous-valued x from y
+    - Only for conditional synthesis
+- Main idea: The output x is a function x=f(y) of the condtioning y
+    - No randomness(it is deterministic)
+        - f(y) is often a neutral network
+- The loss function is oftwn mean squared error(a.k.a. L2 loss)（a.k.a. = also known as）
+    - This is minimised by the conditional mean f(y)= E[x|y]
+        - See the module 6 summary lecture
+- Practical consequencesL we get "averaging" artefacts
+    - Question: What is the average value of a throw a die?
+
+##### WHen to use regression and not
+- Manifold hypothesis: The data sits on a low dimensional manifold
+    - Known the context y helps narrow down the range of possible outputs
+    - The conditional mean is the center of mass of the data distribution
+- The greater the range of outcomes we average over the more noticeably unnatural the result tends to be 
+    - Regression methods likely work well when x|y has a narrow, concentrated distribution
+    - If x|y exhibits a lot of variety, regression methods are likely show noticeable artefacts - we need something that can describe a range of different outcomes
+
+    ### Probablistic methods
+    - Main idea: Use the methods from module 6 to fit a parametric model to the observations and learn their distribution 
+        - models can be unconditional, conditional x|y, or joint (x,y)
+        - Theoretical advantage: if real observation contain randomness, only a model with randomness can be indistinguishable from reality
+            - Example: canned speech can be revealed as fake since it is the same every time
+    - In so-called deep generative models, the probabilistic model is defined by the parameters of a neutral network
+        - It is straightforward to model the influence of y on x in conditional synthesis
+        - A staggering amount of different network architectures are possible
+        - MLE(i.e, the negative log-likelihood loss) is the most common, but not universal
+
+#### A hierarchy of deep generative models
+```mermaid
+graph TD;
+A[Deep generative models]--->B[explicit] & C[implicit];
+C[implicit]--->D[GAN];
+B[explicit]--->E[Tractable density] & F[Approximate density];
+B[explicit]--->G[multivariate parametric] & H[Autoregressive] & I[Normalising flow];
+F[Approximate density]--->J[VAE] & K[Diffusion model];
+```
