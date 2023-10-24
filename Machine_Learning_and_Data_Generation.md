@@ -90,8 +90,10 @@ A[observations]--->|analysis|B[attributes];
 
 ```mermaid
 graph LR;
-A[typically high-dimensional, e.g. pipe.jpg]--->|distill information|B[typically low-dimensional, e.g,"A painting of a pipe."];
+A[typically high-dimensional]--->|distill information|B[typically low-dimensional];
 ```
+typically high-dimensional:e.g. pipe.jpg
+typically low-dimensional: e.g,"A painting of a pipe."
 
 ```mermaid
 graph RL;
