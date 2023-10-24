@@ -393,4 +393,6 @@ $$V_D(\phi,\theta) = \mathbb{E}_{x\sim\mathcal{N}_z}[lnD(G(z;\theta);\phi)]$$
 - Not very principled, but it works
     - Nearly every synthesis system and publication uses this tric, or an approximation of it
 
-$$p_{x}^{\beta}(x;\theta)\propto (p_x(x;\theta))^{frax{1}{\beta}}$$
+$$p_{x}^{\beta}(x;\theta)\propto (p_x(x;\theta))^{\frac{1}{\beta}}$$
+
+$$ p_{x}^{\beta}(x;\theta)=\frac{1}{beta}ln p_x(x;\theta)-c$$
