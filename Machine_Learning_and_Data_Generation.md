@@ -104,11 +104,30 @@ graph RL;
 A[attributes]--->|synthesis|B[observations];
 ```
 
-#### ANalysis and synthesis can be used together
+#### Analysis and synthesis can be used together
 Analysis: find the one correct anser for diverse inputs(many to one)
 Synthesis: generate any realistic sample given the fixed condition(one to many)
 
 ```mermaid
 graph TD;
 A[Spoken question]--->|automatic speech recognition|B[Text transcription]--->|conversational AI|C[generated reply]--->|text to speech|D[Spoken reply];
+```
+
+#### But synthesis is more difficult to evaluate
+
+- Analysis: find the one correct anser for the diverse inputs(many-to-one)
+    - Goal: Generate predictions that are correct, i.e. march the ground truth
+- Synthesis: generate synthetic examples that are convincing, i.e. similar to the dataset
+    - Goal: Generate synthesis examples that are convincing, i.e. similar to the dataset.
+
+- Evaluation: Estimate the difference between ground truth and predictions, or real datapoints and synthetic examples.
+    - Analysis: Aim for exact match in low dimensions
+    - Synthesis: Aim for similarity in high dimensions
+- Measuring similarity is difficult, especially in high dimensions
+
+#### Similarity is only the tip of the iceberg
+```mermaid
+graph LR;
+A[Realism] & B[Recognisability] & C[User preference]---D[Evaluation Aspects];
+D[Evaluation Aspects]---E[Accuracy of control] & F[speed] & G[Downstream performance] & H[Computational load];
 ```
