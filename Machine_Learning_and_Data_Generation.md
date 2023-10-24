@@ -92,10 +92,14 @@ A[observations]--->|analysis|B[attributes];
 graph LR;
 A[typically high-dimensional]--->|distill information|B[typically low-dimensional];
 ```
-typically high-dimensional:e.g. pipe.jpg
-typically low-dimensional: e.g,"A painting of a pipe."
+- typically high-dimensional:e.g. pipe.jpg
+- typically low-dimensional: e.g,"A painting of a pipe."
 
 ```mermaid
 graph RL;
 B[typically low-dimensional]--->|hallucinate information|A[typically high-dimensional];
+```
+```mermaid
+graph RL;
+A[attributes]--->|synthesis|B[observations];
 ```
