@@ -370,3 +370,27 @@ $$V_D(\phi,\theta)= \frac{1}{2}\mathbb{E}_{x\sim\mathcal{X}}[ln D(x;\phi)]$$
 $$+\frac{1}{2}\mathbb{E}_{x\sim\mathcal{N}_z}[ln(1-D(G(z;\theta);\phi))]$$
 
 $$V_D(\phi,\theta) = \mathbb{E}_{x\sim\mathcal{N}_z}[lnD(G(z;\theta);\phi)]$$
+
+- GAN traing can be whack-a-mole
+
+##### Generating output from the model
+- Generate the most probable output every time $x=\arg\max_x p_x(x)$
+    - Repetitive
+    - The most probable outcome can be atypical
+        - Example: Coin flip sequences
+- Draw random samples $\hat{x}\sim p_x(x)$
+    - Theorectically optimal with the correct model
+    - easily exposes model flaws
+        - Example: Average image plus noise
+- We should sample from strong models, but not from weak ones
+
+
+##### "Reducing the temperature"
+- Idea: sample from a more consistent, lower-entropy model
+    - The Gibbs measure from the thermodynamics with temperature beta gives a narrower distribution
+        - A compromise between sampling and the most probable outcome
+    - Special case: shringking the standard deviation of a Gaussian
+- Not very principled, but it works
+    - Nearly every synthesis system and publication uses this tric, or an approximation of it
+
+$$p_{x}^{\beta}(x;\theta)\propto (p_x(x;\theta))^{frax{1}{\beta}}$$
