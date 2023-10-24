@@ -179,7 +179,7 @@ D[Evaluation Aspects]---E[Accuracy of control] & F[speed] & G[Downstream perform
 - High likelihood is not necessarily better
     - Takeaway: do not rely on objective metrics alone, if you can avoid it
 
-##### Objective evaluation via FID
+### Objective evaluation via FID
 - Fréchet inception distance(FID)
     - Improvements in FID usually correlate well with improvements in perceived quality
         - very common image benchmark
@@ -188,4 +188,6 @@ D[Evaluation Aspects]---E[Accuracy of control] & F[speed] & G[Downstream perform
     - Example: Fréchet audio distance
 - Usually not used during model development, only for model assessment
     - Too computational expensive
-    
+
+#### How FID works
+1. Start form two sets of obervations, real ${x_i}$ and fake $\hat{x_i}$
