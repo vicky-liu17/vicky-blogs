@@ -103,3 +103,12 @@ B[typically low-dimensional]--->|hallucinate information|A[typically high-dimens
 graph RL;
 A[attributes]--->|synthesis|B[observations];
 ```
+
+#### ANalysis and synthesis can be used together
+Analysis: find the one correct anser for diverse inputs(many to one)
+Synthesis: generate any realistic sample given the fixed condition(one to many)
+
+```mermaid
+graph TD;
+A[Spoken question]--->|automatic speech recognition|B[Text transcription]--->|conversational AI|C[generated reply]--->|text to speech|D[Spoken reply];
+```
