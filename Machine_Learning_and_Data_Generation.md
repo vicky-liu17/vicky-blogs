@@ -348,6 +348,21 @@ $$+\frac{1}{2}\mathbb{E}_{x\sim G}[ln (1-D(X))]$$
 - Games have Nash equilibria rather than conventional extreme points
     - Points where neither D nor G can improve their respective objectives by changing what they do (i.e., saddle point)
     - Example: it is easy to see that "the generator is perfect" is a Nash equilibrium
-- In the case of misspecification, the original GA game has a Nash equilibrium when G minimises the Jensen-Shannon divergence
+- In the case of misspecification, the original GAN game has a Nash equilibrium when G minimises the Jensen-Shannon divergence
 
 $$D_{JS}(P,Q):=\frac{1}{2}D_{KL}(P||\frac{P+Q}{2})+\frac{1}{2}D_{KL}(Q||\frac{P+Q}{2})$$
+    - This is less prone to mass-covering than MLE
+    - Other GAN formulations can minimise other divergences.
+
+##### Practical aspects of GANs
+- Adcantages:
+    - Training only requires sampling, not computing probabilities
+        - Can be achieved by passing Gaussian noise z through neutral network G(z), which is known as an implicit model
+    - GANs are state-of-the-art on most problems
+- Training is tricky
+    - Gradients can saturate(become close to zero) when fakes are easy to spot
+        - Especially in the original GAN formulation
+        - Use non-saturating GANs instead; see formula on right
+    - Progress need to be monotonic
+
+$$V_D(\phi,\theta)= \frac{1}{2}\mathbb{E}_{x\sim\mathcal{X}}[ln D(x;\phi)]$$
