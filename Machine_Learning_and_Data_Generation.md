@@ -86,5 +86,9 @@ Outline
 ```mermaid
 graph LR;
 A[observations]--->|analysis|B[attributes];
-
+```
+```mermaid
+graph LR;
+C[typically high dimensional, e.g. pipe.jpg]--->|distill information|D[typically low dimensional "A painting of a pipe"];
+D[typically low dimensional "A painting of a pipe"]--->|hallucinate information|C[typically high dimensional-e.g. pipe.jpg];
 ```
