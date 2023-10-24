@@ -190,4 +190,7 @@ D[Evaluation Aspects]---E[Accuracy of control] & F[speed] & G[Downstream perform
     - Too computational expensive
 
 #### How FID works
-1. Start form two sets of obervations, real ${x_i}$ and fake $\hat{x_i}$
+1. Start form two sets of obervations, real {$x_i$} and fake {$\hat{x_i}$}
+    - This requires drawing something like 3k-50k samples from your model
+2. Map fake and real observations to a learned perceptual space z=f(x) "inception" comes the name of a neutral network used to define $f(\dot)$
+3. fit a (diagnonal covariance) Gaussian to each {$z_i$} and {$\hat{z_i}$}
