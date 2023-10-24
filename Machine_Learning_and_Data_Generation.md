@@ -193,4 +193,4 @@ D[Evaluation Aspects]---E[Accuracy of control] & F[speed] & G[Downstream perform
 1. Start form two sets of obervations, real { $x_i$ } and fake { $\hat{x_i}$ }
     - This requires drawing something like 3k-50k samples from your model
 2. Map fake and real observations to a learned perceptual space z=f(x) "inception" comes the name of a neutral network used to define $f(\cdot)$
-3. fit a (diagnonal covariance) Gaussian to each {$z_i$} and {$\hat{z_i}$}
+3. fit a (diagnonal covariance) Gaussian to each { $z_i$ } and { $\hat{z_i}$ }
