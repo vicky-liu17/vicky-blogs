@@ -343,3 +343,11 @@ $$\hat{G}=\arg\min_{G}\max_{D}V(D,G)$$
 $$V(D,G)=\frac{1}{2}\mathbb{E}_{x\sim P(x)}[ln D(X)]$$
 
 $$+\frac{1}{2}\mathbb{E}_{x\sim G}[ln (1-D(X))]$$
+
+##### Nash equilibria
+- Games have Nash equilibria rather than conventional extreme points
+    - Points where neither D nor G can improve their respective objectives by changing what they do (i.e., saddle point)
+    - Example: it is easy to see that "the generator is perfect" is a Nash equilibrium
+- In the case of misspecification, the original GA game has a Nash equilibrium when G minimises the Jensen-Shannon divergence
+
+$$D_{JS}(P,Q):=\frac{1}{2}D_{KL}(P||\frac{P+Q}{2})+\frac{1}{2}D_{KL}(Q||\frac{P+Q}{2})$$
