@@ -86,6 +86,8 @@ C --> E(Whew!)
     - A start state $S_0$
     - Maybe a terminal state
 
+![](Pictures/DecisionMaking08.png)
+
 - $T(s,a,s'):p(S_t+1=s'|s_t=s, a_t=a)$
 - $R(s,a,s')$: immediate reward for transitioning from state $s$ to state $s'$ due to action $a$
 > frequently reward depends only on the state, so we usually write R(s)
@@ -105,6 +107,9 @@ C --> E(Whew!)
 - For MDPs, we want an optimal policy $\pi^*:S\to A$
     - A policy $\pi$ gives an action for any state
     - An optimal policy is one that maximizes expected utility if followed
+
+- stationary vs nonstationary policies:
+    - a stationary policy will always choose the same action in the same state, independent of time, while a non-stationary policy can choose different action in the same state, depending on time.
 
 ### How good is a policy?
 - How to measure the quality of a policy?
@@ -155,7 +160,7 @@ $$U_{i+1}(s)\gets R(s)+\gamma \max_{a}\sum_{s'}T(s,a,s')U_i(s')$$
 - $R(s)$: immediate reward
 - $\gamma \max_{a}\sum_{s'}T(s,a,s')U_i(s')$ :discounted expected utility of the next state, assunming optimal action
 
-- COnverges to unique optimal solution
+- Converges to unique optimal solution
 - Stop iterations when largest change in utility for any state is small enough 
 - Can show that:
 $$\left\| U_{i+1}-U_i \right\|\lt \epsilon \frac{1-\gamma}{\gamma} \Rightarrow \left\| U_{i+1}-U_i \right\|\lt \epsilon$$
@@ -189,7 +194,7 @@ $$U(s)=R(s)+\gamma\max_{a}\sum_{s'}T(s,a,s')U(s')$$
 - Problem 3: The policy often converges long before the values
 
 #### Algorithm: Policy iteration
-- CHoose an arbitrary policy
+- Choose an arbitrary policy
 - Loop until the policy does not change any more
     - Policy evaluation: Compute the value function $V(s)$ until convergence , given the fixed policy(not optimal values):
-    
+$$V(s)=\sum_{s'\in \mathcal{S}}T(s,\pi(s),s')[R(s,\pi(s),s')+\gamma V(s')],\forall s \in mathcal{S}$$
