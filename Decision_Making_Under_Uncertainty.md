@@ -320,3 +320,78 @@ P(A)=p(s')= $\sum_s T(s,a,s')b(s)$
 - The big picture
 
 ![](Pictures/DecisionMaking14.png)
+
+### Game Theory
+- Other agents also introduce uncertainty (what decision do they make?)
+- Game theory studies settings where multiple parties (agents) each have
+    - different preferences (utility functions)
+    - different actions that they can take
+- Each agent’s utility (potentially) depends on all agents’ actions
+    - What is optimal for one agent depends on what other agents do
+- Agents can rationally form beliefs over what other agents will do, and (hence) how agents should act
+    - Important area not only to make money at gambling
+    - Useful for acting and predicting behavior of others
+
+- Two main areas:
+    - Agent design: What is the best strategy for the individual, assuming others act optimally
+    - Mechanism design:
+        - “Given that agents pick rational strategies, what game should we design?”
+        -  i.e., How do we construct rules such that the best policy for the individual agents are also for the good of all? (e.g. multi-agent distributed systems)
+
+##### Agent Design: Single Move Games
+- Main components:
+    - Players or agents
+    - Actions
+    - Payoff-matrix: Gives utility for each player for each combination of actions
+- combination of actions
+
+##### Example: Prisoner’s dilemma
+    - Burglars Alice and Bob are caught, interrogated separately by the the police
+    - Rules of the game:
+        - Both testify: 5 years in prison each
+        - Both refuse to confess: 1 year each
+        - If only one testifies: One person 10 years, other goes free
+
+###### Prisoner’s dilemma cont’d
+
+![](Pictures/DecisionMaking15.png)
+
+![](Pictures/DecisionMaking16.png)
+
+![](Pictures/DecisionMaking17.png)
+
+#### Mechanism design example: Auctions
+- Single good
+- Each player has utility value $v_i$ for the good
+- Utility value known only to the bidder
+- Bidders make bids $b_i$, highest bid wins
+
+#### Example: English auction (ascending bid)
+- Bids are incremented
+- Continues until only one bidde
+- Bidder with the highest $v_i$ wins
+- Strategy: bid as long as price below your value
+- Result:
+    - Pays $b_m+d$ ( $b_m$ highest among other, d=increment)
+- Requires a lot of communication
+
+#### Example: Sealed bid auction
+- Each bidder makes a single bid
+- Highest bid wins
+- Strategy: bid $\min(v_i, b_m+\epsilon)$ ( $b_m$ : believed max of other bidders)
+- Player with highest $v_i$ might not get the good
+- Requires less communication but more “work”(need to estimate $b_m$ )
+
+#### Example: Vickrey auction
+- Same as sealed-bid auction but winner pays second highest bid
+- Strategy: bid your own value $v_i$
+- Simple and minimal communication
+
+#### Mechanism design
+- A good design benefits both the individual and the system!
+- Can be applied to many areas of society as well
+
+
+### Recap
+
+![](Pictures/DecisionMaking17.png)
