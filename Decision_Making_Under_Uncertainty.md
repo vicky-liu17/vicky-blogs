@@ -394,4 +394,4 @@ P(A)=p(s')= $\sum_s T(s,a,s')b(s)$
 
 ### Recap
 
-![](Pictures/DecisionMaking17.png)
+![](Pictures/DecisionMaking18.png)
