@@ -90,5 +90,38 @@ $$p(s'|s,a)=T(s,a,s')$$
 - Step 2: Solve the learned MDP
     - For example, use value iteration, as before
 
-Model-Based Learning: Example
+### Model-Based Learning: Example
+
+![](Pictures/rl05.png)
+
+- Advantage:
+    - Make good use of data
+
+- Disadvantage:
+    - Requires building the sctual MDP model
+    - Intractable if state space is too large
+
+### Model-Free Learning
+- Remember: we don't know the transition model **T** and reward distribution **R**
+
+Key intuition: Learn while optimizing policy
+
+- Model is unknown but agent observes samples
+- Adjust "model" as you observe more samples
+- Learn optimal policy by sampling the environment(without the need to create a model beforehand)
+
+#### Differences:
+- Model-free reinforcement learning is a category of reinforcement learning algorithms that do not require a model of the environment to operate. Model-free algorithms learn directly from experience or trial-and-error and use the feedback they receive to update their internal policies or value functions. Model-free algorithms operate in the absence of complete knowledge of the environment dynamics or a transition model.
+- Model-based reinforcement learning is a category of reinforcement learning algorithms that require a model of the environment to operate. Model-based algorithms learn the dynamics of the environment from experience and use the learned model to predict the outcomes of actions.
+
+![](Pictures/rl06.png)
+
+### Passive Reinforcement Learning
+![](Pictures/rl07.png)
+
+Simplified task: policy evaluation
+- Input: a fixed policy $\pi(s)$
+- We don't know the transitions T(s,a,s')
+- We don't know the rewards R(s,a,s')
+- Goal: learn the state values
 
