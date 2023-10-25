@@ -171,3 +171,53 @@ $$V^{\pi}(s)\gets V^{\pi}(s)+\alpha(sample-V^{\pi}(s))$$
 ![](Pictures/rl12.png)
 
 ![](Pictures/rl13.png)
+
+![](Pictures/rl14.png)
+
+![](Pictures/rl15.png)
+
+
+#### Active Reinforcement Learning
+- Full reinforcement learning: optimal policies
+    - You don't know the transitions T(s,a,s')
+    - You don't know the rewards R(s,a,s')
+    - You choose the actions now
+    - Goal: learn the optimal policy/values
+- In this case:
+    - Learner makes choices!
+    - Unlike passive RL, in active RL the agent needs to learn the outcome probabilites for all actions, not just the model for the fixed policy
+    - Fandamental tradeoff(权衡): exploration vs. expoitation
+    - Exploration is any action that lets the agent discover new features about the environment, while exploitation is capitalizing on knowledge already gained. 
+
+#### Active Reinforcement Learning（cont.）
+
+- Choose actions(randomly or in some other way)
+- Estimate T and R from the sample trials (average counts)
+- Use esimated T and R to compute estimate of optimal values and optimal policy
+- Will the computed values and policy converge to the true values and policy in the limit of infinite data?
+    - Sufficient condition: if all states are reachable from any other state
+    - Be able to visit each state and take each action as many times as we want
+
+
+### Q-Learning Intuition
+- Optimal value functions(used e.g in TD learning) tell us how "good" a state is, but does not explicitly capture how good the actions are
+
+![](Pictures/rl16.png)
+
+- Instead of evaluating the value of a state, evaluate the actions Q(s,a)
+
+![](Pictures/rl17.png)
+
+### Q Function
+
+![](Pictures/DecisionMaking04.png)
+
+so we define:
+Q(s,a): the value of taking action a in state s
+Optimal Q function: 
+
+$$Q_{*}(s,a):=\max_{\pi}Q_{\pi}(s,a)$$
+
+If we know $Q_{*}(s,a)$ we can more easily obtain an optimal policy:
+
+$$\pi^{*}(s)=\arg\max_a Q_{*}(s,a)$$
