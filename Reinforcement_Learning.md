@@ -152,3 +152,22 @@ $$V^{\pi}(s)\gets (1-\alpha)V^{\pi}(s)+(\alpha)sample$$
 **Same Update:**
 
 $$V^{\pi}(s)\gets V^{\pi}(s)+\alpha(sample-V^{\pi}(s))$$
+
+- sample: waht actually did happen(in one experience)
+
+- $V^{\pi}(s)$ : what we thought would happen
+
+
+##### TD Learning Example
+
+![](Pictures/rl08.png)
+
+![](Pictures/rl09.png)
+
+![](Pictures/rl10.png)
+
+![](Pictures/rl11.png)
+
+![](Pictures/rl12.png)
+
+![](Pictures/rl13.png)
