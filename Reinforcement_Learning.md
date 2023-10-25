@@ -220,4 +220,4 @@ $$Q_{*}(s,a):=\max_{\pi}Q_{\pi}(s,a)$$
 
 If we know $Q_{*}(s,a)$ we can more easily obtain an optimal policy:
 
-$$\pi^{*}(s)=\arg\max_a Q_{*}(s,a)$$
+$$\pi*(s)=\arg\max_a Q_*(s,a)$$
