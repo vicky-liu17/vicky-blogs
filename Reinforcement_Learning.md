@@ -75,6 +75,12 @@ $$p(s'|s,a)=T(s,a,s')$$
 
 ![](Pictures/rl04.png)
 
+##### The discount factor:
+- Future Reward Consideration: The primary purpose of the discount factor is to weigh the importance of future rewards relative to immediate rewards. In RL, agents aim to maximize cumulative rewards over time, and the discount factor helps them decide how much they value rewards in the distant future compared to rewards obtained sooner. A discount factor less than 1 (0 < γ < 1) signifies that future rewards are considered, but they are "discounted" or reduced in value relative to immediate rewards. A discount factor of 1 would mean that all rewards are treated equally, regardless of when they are obtained.
+- Control of Agent Behavior: The choice of the discount factor influences the agent's behavior. A higher discount factor (close to 1) encourages the agent to consider long-term consequences and strive for higher cumulative rewards over time. In contrast, a lower discount factor (close to 0) encourages the agent to focus on immediate rewards and may lead to more myopic decision-making.
+- Handling Infinite Horizons: The discount factor allows RL to deal with problems that have potentially infinite horizons. In such cases, without discounting, the cumulative sum of rewards may become infinite, making it challenging to work with. The discount factor ensures that the sum of rewards converges to a finite value, facilitating mathematical analysis and convergence guarantees.
+- Stochastic Environments: In stochastic environments, where outcomes are uncertain, the discount factor helps agents account for the inherent uncertainty in predicting future rewards. It encourages agents to act robustly and not overvalue risky, high-reward, high-risk actions.
+
 
 ### Model-Based Learning
 - Key intuition:
@@ -187,7 +193,8 @@ $$V^{\pi}(s)\gets V^{\pi}(s)+\alpha(sample-V^{\pi}(s))$$
     - Learner makes choices!
     - Unlike passive RL, in active RL the agent needs to learn the outcome probabilites for all actions, not just the model for the fixed policy
     - Fandamental tradeoff(权衡): exploration vs. expoitation
-    - Exploration is any action that lets the agent discover new features about the environment, while exploitation is capitalizing on knowledge already gained. 
+        - Exploration is any action that lets the agent discover new features about the environment, while exploitation is capitalizing on knowledge already gained. 
+        - The agent interacts with the environment by selecting actions based on an exploration strategy, such as epsilon-greedy. The exploration strategy balances exploration (trying new actions) and exploitation (choosing actions with the highest Q-values).
 
 #### Active Reinforcement Learning（cont.）
 
@@ -221,3 +228,17 @@ $$Q_{*}(s,a):=\max_{\pi}Q_{\pi}(s,a)$$
 If we know $Q_{*}(s,a)$ we can more easily obtain an optimal policy:
 
 $$\pi*(s)=\arg\max_a Q_*(s,a)$$
+
+How do we learn Q*(s,a)?
+
+### Q-Learning updates
+
+- Q-value updates to each Q-state
+    - Receive a sample transition(s,a,r,s')
+    - This sample suggests:
+
+$$Q(s,a)\approx r + \gamma \max_{a'}Q(s',a')$$
+
+- But we want to average over results from (s,a)
+
+$$Q(s,a)\gets (1-\alpha)Q(s,a)+(alpha)[r+\gamma max_{a'}Q(s',a')]$$
