@@ -193,8 +193,6 @@ $$V^{\pi}(s)\gets V^{\pi}(s)+\alpha(sample-V^{\pi}(s))$$
     - Learner makes choices!
     - Unlike passive RL, in active RL the agent needs to learn the outcome probabilites for all actions, not just the model for the fixed policy
     - Fandamental tradeoff(权衡): exploration vs. expoitation
-        - Exploration is any action that lets the agent discover new features about the environment, while exploitation is capitalizing on knowledge already gained. 
-        - The agent interacts with the environment by selecting actions based on an exploration strategy, such as epsilon-greedy. The exploration strategy balances exploration (trying new actions) and exploitation (choosing actions with the highest Q-values).
 
 #### Active Reinforcement Learning（cont.）
 
@@ -241,4 +239,66 @@ $$Q(s,a)\approx r + \gamma \max_{a'}Q(s',a')$$
 
 - But we want to average over results from (s,a)
 
-$$Q(s,a)\gets (1-\alpha)Q(s,a)+(alpha)[r+\gamma max_{a'}Q(s',a')]$$
+$$Q(s,a)\gets (1-\alpha)Q(s,a)+(\alpha)[r+\gamma max_{a'}Q(s',a')]$$
+
+#### Q-Learning Algorithm
+
+![](Pictures/rl18.png)
+
+### Q-Learning Properties
+- Q-learning converges to an optimal policy - even if you're acting sub-optimally.
+- This is called off-policy learning
+    - An off-policy learner learns the value of the optimal policy independently of the agent's actions. Q-learning is an off-policy learner. An on-policy learner learns the value of the policy being carried out by the agent including the exploration steps.
+- caveats:
+    - You have to eventually make the learning rate $\alpha$ small enough
+    - In the limit, it doesn't matter how you select actions
+    - You have to explore enough
+
+### Q-Learning: the need for Exploration
+
+![](Pictures/rl19.png)
+
+![](Pictures/rl20.png)
+
+### Exloration & Expoitation
+
+![](Pictures/rl21.png)
+
+ - Exploration is any action that lets the agent discover new features about the environment, while exploitation is capitalizing on knowledge already gained. 
+ - The agent interacts with the environment by selecting actions based on an exploration strategy, such as epsilon-greedy. The exploration strategy balances exploration (trying new actions) and exploitation (choosing actions with the highest Q-values).
+
+ ##### How to explore?
+ - Several schemes for forcing exploration
+ - Simplest: random actions( $\epsilon$ greedy)
+    - Every time step, flip a coin
+    - With(small) probability $\epsilon$ , act randomly
+    - With(large) probability 1 - $\epsilon$ , act on current policy
+
+- Problems with random actions?
+    - You do eventually explore the space, but keep thrashing around once learning is done
+    - One solution: lower $\epsilon$ over time
+    - Another solution: optimal exploration policies
+
+#### Regret
+- Even if you learn the optimal policy, you still make mistakes along the way!
+- Regret is a measure of your total mistake cost: the difference between your(expected) rewards and optimal (expected) rewards
+- Minimizing regret goes beyond learning to be optimal - it requires optimally leaning to be optimal
+- Example: random exploration and (more sophisticated) exploration functions both end up optimal, but random exploration has higher regret
+
+#### Multi-Armed Bandit Problems 多臂老虎机问题
+- 多臂老虎机问题是概率论中一个经典问题,也属于强化学习的范畴.设想,一个赌徒面前有N个老虎机,事先他不知道每台老虎机的真实盈利情况,他如何根据每次玩老虎机的结果来选择下次拉哪台或者是否停止赌博,来最大化自己的从头到尾的收益.
+
+- Is there an optional exploration policy?
+    - Bandit problems are difficult to solve exactly to obtain an optimal exploration method, but it is possible to come up with reasonable solutions that eventually lead an agent to take the optimal behavior
+- Optimally balance the exploration-exploitation tradeoff, minimizing regret
+
+#### Multi-Armed Bandit Problem Formulation
+
+![](Pictures/rl22.png)
+
+- A gambler can play in K slot machines
+- Sampling action a is like pulling a slot machine arm with random payoff $\r_n$
+- Goal: find an arm-pulling stategy that maximizes the expected total reward at time n
+- Procedure: at time step n, pick an arm $a_n$ based on what happened so far and receive reward $r_n$
+
+UCB Algorithm
