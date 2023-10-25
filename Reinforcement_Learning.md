@@ -48,5 +48,9 @@
 
 - Goal: find the optimal policy that maximizes expected rewards
     - Recall the principle of maximum expected utility:
-    
+
 $$\pi^*(s) = \arg \max_a \sum_{s'}p(s'|s,a)U(s')$$
+
+    - Where U(s) satisfies Bellman optimality equation:
+
+$$U(s)=R(s)+\gamma \max_a \sum_{s'}p(s'|s,a)U(s')$$
