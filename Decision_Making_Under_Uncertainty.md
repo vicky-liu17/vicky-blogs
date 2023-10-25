@@ -277,6 +277,8 @@ $$P(A|B)=\frac{P(B|A)P(A)}{P(B)}$$
 
 In this situation:
 P(A|B) = b'(s') = P(S'|O)
-P(B)=$\frac{1}{\alpha}$ = Pr(o|b,a)= $\sum_{s'\in S} O(o|s',a)\sum_{s\in S}T(s',a,s')b(s)$ = $\sum_{s',s} P(o|s,s')$
+
+$$P(B)=\frac{1}{\alpha} = Pr(o|b,a)= \sum_{s'\in S} O(o|s',a)\sum_{s\in S}T(s',a,s')b(s) = \sum_{s',s} P(o|s,s')$$
+
 P(B|A)=P(o|s')=O(s',o)
-P(A)=p(s')=$\sum_s T(s,a,s')b(s)$
+P(A)=p(s')= $\sum_s T(s,a,s')b(s)$
