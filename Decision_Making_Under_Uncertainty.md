@@ -203,6 +203,7 @@ $$V(s)=\sum_{s'\in \mathcal{S}}T(s,\pi(s),s')[R(s,\pi(s),s')+\gamma V(s')],\fora
 
 ![](Pictures/DecisionMaking09.png)
 
-    - Policy improvement: Given this value function, improve the policy for each state
+
+- Policy improvement: Given this value function, improve the policy for each state
 
 $$\pi(s)\gets \arg \max_a \sum_{s'\in \mathcal{S}}T(s,a,s')[R(s,a,s')+\gamma V(s')]$$
