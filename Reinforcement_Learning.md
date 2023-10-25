@@ -125,3 +125,30 @@ Simplified task: policy evaluation
 - We don't know the rewards R(s,a,s')
 - Goal: learn the state values
 
+In this case:
+- No choice about what actions to take
+- Just executr the policy and learn from experience
+- Learned values depend on the policy
+(is $pi(s)$ is "bad", the values won't be very useful)
+
+### Temporal Difference(TD) Learning
+
+Key idea: 
+- Update V(s) each time we experience a transition(s,a,s',r)
+- Likely outcomes s' will contribute more often
+
+Temporal Difference learning of values:
+- Policy still fixed, still doing evaluation!
+- Move values toward value of whatever successor occurs: running average
+
+**Sample pf V(s):**
+
+$$sample = R(s,\pi(s),s')+\gamma V^{\pi}(s')$$
+
+**Update to V(s):**
+
+$$V^{\pi}(s)\gets (1-\alpha)V^{\pi}(s)+(\alpha)sample$$
+
+**Same Update:**
+
+$$V^{\pi}(s)\gets V^{\pi}(s)+\alpha(sample-V^{\pi}(s))$$
