@@ -309,3 +309,14 @@ P(A)=p(s')= $\sum_s T(s,a,s')b(s)$
 - Belief state is a probability distibution
 
 ![](Pictures/DecisionMaking12.png)
+
+#### POMDP Connection to HMM?
+- The next state (position) depends only on the previous state(and action)
+- Our transition matrix is a function of action!
+- Now also uncertain observation like in HMM case but unlike MDP
+
+![](Pictures/DecisionMaking13.png)
+
+- The big picture
+
+![](Pictures/DecisionMaking14.png)
