@@ -301,4 +301,41 @@ $$Q(s,a)\gets (1-\alpha)Q(s,a)+(\alpha)[r+\gamma max_{a'}Q(s',a')]$$
 - Goal: find an arm-pulling stategy that maximizes the expected total reward at time n
 - Procedure: at time step n, pick an arm $a_n$ based on what happened so far and receive reward $r_n$
 
-UCB Algorithm
+### UCB Algorithm
+
+![](Pictures/rl23.png)
+
+#### Multi-Armed Bandit Applications
+
+- Bandit problems arise in many applications, whenever
+    - we have a set of independent options with unknown utilites
+    - There is a cost for sampling options or a limit on total samples
+    - Want to find the best option or maximize utility of our samples
+
+- Clinical Trials
+    - Arms = possible treatments
+    - Arm Pulls = application of treatment to individual
+    - Rewards = outcome of treatment
+    - Objective = maximize cumulative reward = maximize
+    - benefit to trial population (or find best treatment quickly)
+
+- Online Advertising
+    - Arms = different ads/ad-types for a web page 
+    - Arm Pulls = displaying an ad upon a page access
+    - Rewards = click through
+    - Objective = maximize cumulative reward = maximize clicks (or find best add quickly)
+
+Adaptive Human-Robot Interaction
+- Arms = supportive strategies (e.g. suggest move, encouraging comment, …)
+- Arm Pulls = displaying a supportive strategy to human
+- Rewards = change in human affective state
+- Objective = maximize cumulative reward = maximize positive affective states (or find the most effective supportive strategy for a particular human)
+
+### Summary:
+
+![](Pictures/rl24.png)
+
+- Opportunities:
+    - Learn flexible policies without restrictive assumptions (model-free learning, Q & value functions)
+    - Solve a variety of real-world problems “from scratch"(no hand-crafted features; a common framework for different domains)
+    - Resolve exploration / exploitation tradeoff (automatically determine how much and where to explore)
