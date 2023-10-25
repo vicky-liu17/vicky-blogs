@@ -36,9 +36,13 @@
 ### RL Formulation
 - Still assume a Markov Decision Process(MDP):
     - State space S
+        - all possible states that an RL agent can encounter in the environment. The state space defines the universe of situations or configurations that the agent can perceive and interact with during its decision-making process.
     - Action space A
+        - In Reinforcement Learning (RL), the "action space," denoted as "A," is the set of all possible actions that an RL agent can take in a given state of the environment. 
     - Environment Transition model T
     - Reward Function R
+        - a "reward" is a numerical value or signal that an RL agent receives from its environment in response to the actions it takes. The reward serves as feedback to the agent, indicating how well it is performing in achieving its goals. The primary purpose of rewards in RL is to guide the learning process and help the agent make decisions that lead to desirable outcomes.
+        - A reward function in Reinforcement Learning (RL) is a mathematical function or rule that quantifies the desirability or quality of the outcomes achieved by an RL agent in a specific state of the environment. It assigns a numerical reward value to each state-action pair, indicating how favorable or unfavorable the agent's behavior is in that particular situation.
 
 - Still looking for a policy $\pi(s)$
 
@@ -54,3 +58,37 @@ $$\pi^*(s) = \arg \max_a \sum_{s'}p(s'|s,a)U(s')$$
     - Where U(s) satisfies Bellman optimality equation:
 
 $$U(s)=R(s)+\gamma \max_a \sum_{s'}p(s'|s,a)U(s')$$
+
+### Bellman Equation
+- "The utility of a state is the immediate reward for that state plus the expected discounted utility of the next state"
+
+![](Pictures/DecisionMaking04.png)
+
+$$U(s)=R(s)+\gamma \max_a \sum_{s'}p(s'|s,a)U(s')$$
+
+- R(S): immediate reward
+- $\gamma \max_a \sum_{s'}p(s'|s,a)U(s')$ : discounted expected utility of the next state, assuming optimal action
+
+$$p(s'|s,a)=T(s,a,s')$$
+
+![](Pictures/rl03.png)
+
+![](Pictures/rl04.png)
+
+
+### Model-Based Learning
+- Key intuition:
+    - Learn an approximate model based on experience
+    - Solve for values as if the learned model were correct
+    - After learning, the agent can make predictions about **T** and **R** before taking action 
+
+- Step 1: Learn empirical MDP 
+    - Count outcomes s' for each s, a $\hat{T}(s,a,s')$
+    - Normalize to give an estimate of $\hat{T}$
+    - Discover each $\hat{R}(s,a,s')$ when we experience(s,a,s')
+
+- Step 2: Solve the learned MDP
+    - For example, use value iteration, as before
+
+Model-Based Learning: Example
+
