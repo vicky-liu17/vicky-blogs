@@ -257,3 +257,5 @@ $$\pi(s)\gets \arg \max_a \sum_{s'\in \mathcal{S}}T(s,a,s')[R(s,a,s')+\gamma V(s
 - Assume belief state b, action a and new observation o
 - Update:
 $$b'(s')=\alpha O(s',0)\sum_s T(s,a,s')b(s)$$
+
+$\alpha$ is the normalization factor such that $\sum_(s')b'(s')=1$
