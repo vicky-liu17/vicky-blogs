@@ -207,3 +207,53 @@ $$V(s)=\sum_{s'\in \mathcal{S}}T(s,\pi(s),s')[R(s,\pi(s),s')+\gamma V(s')],\fora
 - Policy improvement: Given this value function, improve the policy for each state
 
 $$\pi(s)\gets \arg \max_a \sum_{s'\in \mathcal{S}}T(s,a,s')[R(s,a,s')+\gamma V(s')]$$
+
+#### Value Iteration vs. Policy iteration
+
+- Both value iteration and policy iteration compute the same thing (optimal policy). Both are dynamic programs for solving MDPs.
+- In value Iteration:
+    - Every iteration updates both the values and (implicitly) the policy
+    - We don’t track the policy, but taking the max over actions implicitly recomputes it
+- In policy Iteration:
+    - We do several passes that update utilities with fixed policy (each pass is fast because we consider only one action, not all of them)
+    - After the policy is evaluated, a new policy is chosen (slow like a value iteration pass)
+    - The new policy will be better (or we’re done)
+    - Can converge (much) faster under some conditions (large nr of actions but where max action doesn’t change much)
+
+    ### Optimal Quantities
+
+    - The value of a state s:
+        - $V^*(s)$ = expected utility starting in s and acting optimally
+
+    - The value of a q-state(s,a):
+        - $Q^*(s,a)$ =  expected utility starting out having taken action **a** from state **s** and (thereafter) acting optimally
+    
+    - The optimal policy:
+        - $\pi^*(s)$ = optimal action from state s
+
+![](Pictures/DecisionMaking10.png)
+
+### Partially observable environment
+- What if the environment is not observable?
+- (Remember: there are no sensors that let us see everything, so this is the normal case.)
+- Answer: cannot execute policy since the state is unknown
+- Results in a Partially Observable MDP also known as POMDP
+-  Sensors provide observations of the environment
+- Observation model O(s,o) gives probability of making observation o in state s
+
+#### Belief state
+- Idea: Use the belief state instead of the actual state
+- Definition: Belief state b is a probability distribution over possible states
+- b(s) is the probability of being in state s 
+
+![](Pictures/DecisionMaking11.png)
+
+#### Belief state update
+- Need to update the belief state as we go along
+- Assume belief **state b** and **action a**
+- Update?
+    - b'(s') = some function of b(s), a, s, and o
+
+- Assume belief state b, action a and new observation o
+- Update:
+$$b'(s')=\alpha O(s',0)\sum_s T(s,a,s')b(s)$$
