@@ -258,4 +258,23 @@ $$\pi(s)\gets \arg \max_a \sum_{s'\in \mathcal{S}}T(s,a,s')[R(s,a,s')+\gamma V(s
 - Update:
 $$b'(s')=\alpha O(s',0)\sum_s T(s,a,s')b(s)$$
 
-$\alpha$ is the normalization factor such that $\sum_(s')b'(s')=1$
+$\alpha$ is the normalization factor such that $\sum_{s'}b'(s')=1$
+
+Bayes rule with:
+- b(s)=p(s)(prior) 
+    - This is the previous belief state, representing the agent's belief (probability distribution) over the states before the action and observation.
+- b'(s')=p(s'|s,a,o)(posterior)
+    - This represents the updated belief state over the system states. After taking an action $a$ and receiving an observation $O(s', 0)$ (where $s'$ is the true underlying state and 0 indicates a specific observation outcome), the belief state is updated.
+- $\sum_s T(s,a,s')b(s)$ = p(s'|a,s)(prediction)
+    - $T(s, a, s')$: This is the transition probability, representing the probability of transitioning from state $s$ to state $s'$ after taking action $a$.
+    - $\sum_s T(s,a,s')b(s)$ can be regarded as p(s')
+- O(s',o)=p(o|s')=p(o|s',s,a){o indep of s and a, given s'}
+    - This is the observation model, representing the probability of observing outcome 0 (or no observation) given the true underlying state $s'$.
+
+
+Bayes Formula:
+$$P(A|B)=frac{P(B|A)P(A)}{P(B)}$$
+
+In this situation:
+P(A|B) = b'(s') = P(S'|O)
+P(B)=$\frac{1}{\alpha}$ = Pr(o|b,a)= $\sum_{s'\in S} O(o|s',a)$\sum_{s\in S}T(s',a,s')b(s)$
