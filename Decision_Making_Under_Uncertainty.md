@@ -390,8 +390,3 @@ P(A)=p(s')= $\sum_s T(s,a,s')b(s)$
 #### Mechanism design
 - A good design benefits both the individual and the system!
 - Can be applied to many areas of society as well
-
-
-### Recap
-
-![](Pictures/DecisionMaking18.png)
