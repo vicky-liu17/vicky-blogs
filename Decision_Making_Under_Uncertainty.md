@@ -282,3 +282,24 @@ $$P(B)=\frac{1}{\alpha} = Pr(o|b,a)= \sum_{s'\in S} O(o|s',a)\sum_{s\in S}T(s',a
 
 P(B|A)=P(o|s')=O(s',o)
 P(A)=p(s')= $\sum_s T(s,a,s')b(s)$
+
+### Solving POMDP
+
+- Key insight:
+    - optimal action depends on belief state and not actual state
+
+- Optimal policy $\pi^*(b)$
+
+- Decision cycle:
+    - Execute action: a= $\pi^*(b)$
+    - Receive observation
+    - Update belief state
+
+### Turn a POMDP into an MDP
+- Introduce
+    - $\tau(b,a,b')$ probability of reaching belief state b' from b given action a
+    - $\rho(b)$ = $\sum b(s)R(s)$
+
+- $\tau(b,a,b')$ and $\rho(b)$ define an observable MDP
+
+- Optimal MDP policy $\pi^*(b)$ is also optimal for the original POMDP
