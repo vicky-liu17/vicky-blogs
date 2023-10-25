@@ -303,3 +303,9 @@ P(A)=p(s')= $\sum_s T(s,a,s')b(s)$
 - $\tau(b,a,b')$ and $\rho(b)$ define an observable MDP
 
 - Optimal MDP policy $\pi^*(b)$ is also optimal for the original POMDP
+
+#### So it it simple?
+- Sounds "simple" at first, BUT...
+- Belief state is a probability distibution
+
+![](Pictures/DecisionMaking12.png)
