@@ -88,7 +88,7 @@ C --> E(Whew!)
 
 ![](Pictures/DecisionMaking08.png)
 
-- $T(s,a,s'):p(S_t+1=s'|s_t=s, a_t=a)$
+- $T(s,a,s'):p(s_{t+1}=s'|s_t=s, a_t=a)$
 - $R(s,a,s')$: immediate reward for transitioning from state $s$ to state $s'$ due to action $a$
 > frequently reward depends only on the state, so we usually write R(s)
 
@@ -197,4 +197,12 @@ $$U(s)=R(s)+\gamma\max_{a}\sum_{s'}T(s,a,s')U(s')$$
 - Choose an arbitrary policy
 - Loop until the policy does not change any more
     - Policy evaluation: Compute the value function $V(s)$ until convergence , given the fixed policy(not optimal values):
-$$V(s)=\sum_{s'\in \mathcal{S}}T(s,\pi(s),s')[R(s,\pi(s),s')+\gamma V(s')],\forall s \in mathcal{S}$$
+$$V(s)=\sum_{s'\in \mathcal{S}}T(s,\pi(s),s')[R(s,\pi(s),s')+\gamma V(s')],\forall s \in \mathcal{S}$$
+        - $T(s,a,s'):p(s_{t+1}=s'|s_t=s, a_t=a)$
+        - $R(s,a,s')$: immediate reward for transitioning from state $s$ to state $s'$ due to action $a$
+
+![](Pictures/DecisionMaking09.png)
+
+    - Policy improvement: Given this value function, improve the policy for each state
+
+$$\pi(s)\gets \arg \max_a \sum_{s'\in \mathcal{S}}T(s,a,s')[R(s,a,s')+\gamma V(s')]$$
