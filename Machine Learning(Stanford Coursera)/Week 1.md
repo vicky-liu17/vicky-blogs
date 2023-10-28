@@ -50,3 +50,25 @@ $\gets$ Practical advice for applyting learning algorithms (tools and skills to 
 ### Unsupervised Learning
 
 ![](Pictures/UnsupervisedLearning01.png)
+
+ - Clustering: a particular type of unsupervised learning, called a clustering algorithm. Because it places the unlabeled data, into different clusters and this turns out to be used in many applications.
+
+ - Unsupervised Learning: Data only comes with inputs x, but not output lables y. Algorithm has to find structure in the data.
+    - Clustering: Group similar data points together
+    - Anomaly Detection: Find unusual data points
+    - Dimensionality reduction: Compress data using fewer numbers
+
+### Linear Regression with One Variable
+
+![](Pictures/Regression01.png)
+
+![](Pictures/Regression02.png)
+
+Terminology:
+- Training set: Data used to train the model
+    - Notation: 
+        - x = "input" variable feature
+        - y = "output" varibale, "target" variable
+        - m = number of training examples
+        - (x,y) =  single training example
+        - $(x^{(i)},y^{(i)})$ = $i^{th}$ training example (1st, 2nd, 3rd,...)
