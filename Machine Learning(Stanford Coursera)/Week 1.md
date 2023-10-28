@@ -27,7 +27,6 @@ $\gets$ Practical advice for applyting learning algorithms (tools and skills to 
 | ad, user info     | click?(0/1)             | online advertising  |
 | image, radar info | positions of other cars | self-driving car    |
 
-SupervisedLearning01
 
 ![](Pictures/SupervisedLearning01.png)
 
@@ -45,5 +44,9 @@ SupervisedLearning01
 
 ![](Pictures/SupervisedLearning04.png)
 
+- Our goal: to find the boundary
+
 
 ### Unsupervised Learning
+
+![](Pictures/UnsupervisedLearning01.png)
