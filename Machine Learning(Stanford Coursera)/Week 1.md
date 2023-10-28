@@ -26,3 +26,24 @@ $\gets$ Practical advice for applyting learning algorithms (tools and skills to 
 | English           | Spanish                 | machine translation |
 | ad, user info     | click?(0/1)             | online advertising  |
 | image, radar info | positions of other cars | self-driving car    |
+
+SupervisedLearning01
+
+![](Pictures/SupervisedLearning01.png)
+
+##### Regression: Predict a numnber (infinitely many possible outputs)
+
+##### Classification: Breast Cancer Detection
+    - malignant（恶性）
+    - benign （良性）
+
+![](Pictures/SupervisedLearning02.png)
+
+![](Pictures/SupervisedLearning03.png)
+
+- Classification: predict categories (small number of possible outputs)
+
+![](Pictures/SupervisedLearning04.png)
+
+
+### Unsupervised Learning
