@@ -14,7 +14,5 @@ $\gets$ Practical advice for applyting learning algorithms (tools and skills to 
 
 ### Supervised Learning
 
-```mermaid
-graph LR;
-A[X(input)]--->B[y(output label)]
-```
+X $\to$  y
+input $\to$ output label
