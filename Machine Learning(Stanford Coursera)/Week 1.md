@@ -72,3 +72,30 @@ Terminology:
         - m = number of training examples
         - (x,y) =  single training example
         - $(x^{(i)},y^{(i)})$ = $i^{th}$ training example (1st, 2nd, 3rd,...)
+- $x^{(i)}$ is not $x^i$, not exponent. 
+
+![](Pictures/Regression03.png)
+
+
+How to represent $f$ ?
+ - If f is a straight line, $f_{w,b}(x)=wx+b$
+- Linear regression with one variable(single feature x)(e.g. size of the house)
+
+- Univariate(one variable) linear regression
+
+#### Cost Function
+- Model $f_{w,b}(x)=wx+b$
+- w,b: parameters(coefficients, weights)
+
+![](Pictures/Regression04.png)
+
+![](Pictures/Regression05.png)
+
+![](Pictures/Regression06.png)
+
+- We should choose w to minimize J(w)
+
+##### Cost function with 2 parameters
+
+
+![](Pictures/Regression07.png)
