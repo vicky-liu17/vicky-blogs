@@ -14,5 +14,15 @@ $\gets$ Practical advice for applyting learning algorithms (tools and skills to 
 
 ### Supervised Learning
 
-X $\to$  y
-input $\to$ output label
+- X $\to$  y
+- input $\to$ output label
+
+- The key characteristic of supervised learning is that you give your learning algorithms examples to learn from. That includes the right answers(The correct lable y for given input x), and is by seeing correct pairs of input x and desired output label y that the learning algorithm eventually learns to take just the input alone without the output label and gives a reasonably accurate prediction or guess of the output. 
+
+| Input(X)          | Output(Y)               | Application         |
+| ----------------- | ----------------------- | ------------------- |
+| email             | spam?(0/1)              | spam filtering      |
+| audio             | text teanscripts        | speech recognition  |
+| English           | Spanish                 | machine translation |
+| ad, user info     | click?(0/1)             | online advertising  |
+| image, radar info | positions of other cars | self-driving car    |
