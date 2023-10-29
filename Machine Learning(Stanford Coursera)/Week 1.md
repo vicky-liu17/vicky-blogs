@@ -103,3 +103,20 @@ How to represent $f$ ?
 ### Gradient Descent
 - Have some function $J(w,b)$ (for linear regression or any function)
 - Want $\min_{w,b}J(w,b)$ ( $\min_{w_{1},...w_{n},b}J(w_{1},w_{2},...,w_{n},b)$ )
+- Outline:
+    - Start with some w,b (In linear regression, it doesn't matter much what the initial value are)
+        - Initial guess: set w=0,b=0
+        - Keep changing w,b to reduce J(w,b)
+        - Until we settle at or near a minimum
+
+
+### Gradient Descent Algorithm
+
+$$w:=w-\alpha \frac{\partial}{\partial b}J(w,b)$$
+
+$$b:=b-\alpha \frac{\partial}{\partial b}J(w,b)$$
+
+- $\alpha$ : Learning rate
+- Simultaneously update w and b
+- Repeat until convergence
+
