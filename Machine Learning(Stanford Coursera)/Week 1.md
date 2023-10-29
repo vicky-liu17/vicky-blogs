@@ -119,4 +119,8 @@ $$b:=b-\alpha \frac{\partial}{\partial b}J(w,b)$$
 - $\alpha$ : Learning rate
 - Simultaneously update w and b
 - Repeat until convergence
-
+- Learning rate:
+    - If $\alpha$ is too small, gradient descent may be slow
+    - If $\alpha$ is too large, gradient descent may:
+        - Overshoot, never reach the minimum
+        - Fail to converge, diverge
