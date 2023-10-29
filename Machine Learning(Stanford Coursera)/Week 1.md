@@ -134,3 +134,15 @@ $$b:=b-\alpha \frac{\partial}{\partial b}J(w,b)$$
 ![](Pictures/LearningRate03.png)
 
 ![](Pictures/LearningRate04.png)
+
+![](Pictures/LearningRate05.png)
+
+![](Pictures/LearningRate06.png)
+
+- a convex function is of bowl-shaped function and it cannot have any local minima other than the single global minimum.
+
+![](Pictures/LearningRate07.png)
+
+- "Batch" gradient descent
+    - "Batch": Each step of gradient descent uses **all the training examples.**
+    - Other gradient descent: subsets
