@@ -126,3 +126,11 @@ $$b:=b-\alpha \frac{\partial}{\partial b}J(w,b)$$
         - Fail to converge, diverge
 
 ![](Pictures/LearningRate01.png)
+
+![](Pictures/LearningRate02.png)
+
+- If your parameters have already brought you to a local minimum, then further gradient descent steps to absolutely nothing. It doesn't change the parameters which is what you want because it keeps the solution at that local minimum. 
+
+![](Pictures/LearningRate03.png)
+
+![](Pictures/LearningRate04.png)
