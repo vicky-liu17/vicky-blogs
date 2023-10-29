@@ -99,3 +99,7 @@ How to represent $f$ ?
 
 
 ![](Pictures/Regression07.png)
+
+### Gradient Descent
+- Have some function $J(w,b)$ (for linear regression or any function)
+- Want $\min_{w,b}J(w,b)$ ( $\min_{w_{1},...w_{n},b}J(w_{1},w_{2},...,w_{n},b)$ )
