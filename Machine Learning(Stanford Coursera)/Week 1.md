@@ -124,3 +124,5 @@ $$b:=b-\alpha \frac{\partial}{\partial b}J(w,b)$$
     - If $\alpha$ is too large, gradient descent may:
         - Overshoot, never reach the minimum
         - Fail to converge, diverge
+
+![](Pictures/LearningRate01.png)
