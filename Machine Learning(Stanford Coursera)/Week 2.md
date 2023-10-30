@@ -41,3 +41,16 @@ $$\hat{price}=w_1x_1+w_2x_2+b$$
 - $x_2$ : number of bedrooms  range: 0-5
 
 - House: $x_1$ = 2000, $x_2$ = 5, price = $500k - one training example
+
+- size of the parameters $w_1$ and $w_2$ ?
+- example 1:
+    - $w_1$ = 50, $w_2$ = 0.1, b = 50
+    - $\hat{price}$ = 50*2000+0.1*5+50
+    - $\hat{price}$ = 100,050.5k
+- example 2:
+    - $w_1$ = 0.1, $w_2$ = 050, b = 50
+    - $\hat{price}$ = 0.1*2000 + 20*5+50
+    - $\hat{price}$ = 500k
+- Example 2 seems more reasonable. 
+
+![](Pictures/FeatureScaling01.png)
