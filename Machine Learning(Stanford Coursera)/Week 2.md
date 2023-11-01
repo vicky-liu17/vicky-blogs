@@ -78,4 +78,4 @@ $$\hat{price}=w_1x_1+w_2x_2+b$$
 
 - Automatic convergence test 
 - Let $epsilon$ be $10^{-3}$
-- if $J(\overrightarrow{w},b)$ decreases by $\ge \epsilon$ in one iteration, declare convergence. 
+- if $J(\overrightarrow{w},b)$ decreases by $\ge \epsilon$ in one iteration, declare convergence. (found parameters $\overrightarrow{w}$ , b to get close to global minimum)
