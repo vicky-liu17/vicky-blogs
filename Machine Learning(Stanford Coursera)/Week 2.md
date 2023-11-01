@@ -70,3 +70,12 @@ $$\hat{price}=w_1x_1+w_2x_2+b$$
 ![](Pictures/FeatureScaling06.png)
 
 #### Checking Gradient Descent for Convergence
+- Make sure gradient descent is working correctly 
+
+![](Pictures/IterationConverge01.png)
+
+- By 400 iterations, it looks like the curve has flattened out. This means that gradient descent has more or less converged because the curve is no longer decreasing. Looking at this learning curve, you can try to spot whether or not gradient descent is converging. By the way, the number of iterations that gradient descent takes a conversion can vary a lot between different applications. In one application, it may converge after just 30 iterations. For a different application, it could take 1,000 or 100,000 iterations. 
+
+- Automatic convergence test 
+- Let $epsilon$ be $10^{-3}$
+- if $J(\overrightarrow{w},b)$ decreases by $\ge \epsilon$ in one iteration, declare convergence. 
