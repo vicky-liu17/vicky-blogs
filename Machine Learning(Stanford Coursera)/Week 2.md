@@ -83,3 +83,12 @@ $$\hat{price}=w_1x_1+w_2x_2+b$$
 ![](Pictures/LearningRate08.png)
 
 - Values of $\alpha$ to try: ... 0.001, 0.003, 0.01, 0.03, 0.1, 0.3, 1...
+
+### Feature Engineering
+
+![](Pictures/FeatureEngineering01.png)
+
+### Polynomial Regression
+
+
+![](Pictures/Polynomial01.png)
