@@ -90,5 +90,6 @@ $$\hat{price}=w_1x_1+w_2x_2+b$$
 
 ### Polynomial Regression
 
-
 ![](Pictures/Polynomial01.png)
+
+![](Pictures/Polynomial02.png)
