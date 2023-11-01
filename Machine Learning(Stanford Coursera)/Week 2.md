@@ -54,3 +54,11 @@ $$\hat{price}=w_1x_1+w_2x_2+b$$
 - Example 2 seems more reasonable. 
 
 ![](Pictures/FeatureScaling01.png)
+
+![](Pictures/FeatureScaling02.png)
+
+![](Pictures/FeatureScaling03.png)
+
+![](Pictures/FeatureScaling04.png)
+
+![](Pictures/FeatureScaling05.png)
