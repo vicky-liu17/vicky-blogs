@@ -62,3 +62,11 @@ $$\hat{price}=w_1x_1+w_2x_2+b$$
 ![](Pictures/FeatureScaling04.png)
 
 ![](Pictures/FeatureScaling05.png)
+
+#### Feature Scaling
+- aim for about $-1\ge x_j\ge 1$ for each feature $x_j$
+- acceptable ranges: $-3\ge x_j\ge 3$ , $-0.3\ge x_j\ge 0.3$
+
+![](Pictures/FeatureScaling06.png)
+
+#### Checking Gradient Descent for Convergence
