@@ -27,3 +27,14 @@ $$f_{\overrightarrow{w},b}(\overrightarrow{x}) = \frac{1}{1+e^{-(\overrightarrow
 
 - $f_{\overrightarrow{w},b}(\overrightarrow{x}) = 0.7$
     - 70% chance that y is 1
+
+$$f_{\overrightarrow{w},b}(\overrightarrow{x}) = P(y=1|\overrightarrow{x};\overrightarrow{w},b)$$
+
+- probability that y is 1, given input $\overrightarrow{x}$, parameters $\overrightarrow{w}$, b.
+- P(y=0)+P(y=1)=1
+
+#### Decision Boundary
+
+![](Pictures/Classification05.png)
+
+![](Pictures/Classification06.png)
