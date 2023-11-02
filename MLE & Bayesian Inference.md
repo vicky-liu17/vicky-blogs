@@ -28,4 +28,7 @@ where $\binom{N}{k}\stackrel{\Delta}{=}\frac{N!}{(N-k)!k!}$ is the number of way
 
 - If the variable is discrete-valued, x $\in$ {1,...K}, we can use the categorical distribution:
 
-$$Cat(x|\theta)\stackrel{\Delta}{=} \prod_{k=1}^{K}\theta_k^{\mathbb{I}(x=k)}$$
+$$Cat(x|\mathrm{\theta})\stackrel{\Delta}{=} \prod_{k=1}^{K}\theta_k^{\mathbb{I}(x=k)}$$
+
+- theta is a vector
+- 
