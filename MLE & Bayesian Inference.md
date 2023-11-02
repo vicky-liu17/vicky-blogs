@@ -19,3 +19,8 @@ $$Bin(x|N,\mu) \stackrel{\Delta}{=} \binom{N}{x}\mu^x(1-\mu)^(N-x)$$
 
 where $\binom{N}{k}\stackrel{\Delta}{=}\frac{N!}{(N-k)!k!}$ is the number of ways to choose k items from N(that is known as the binomial coefficient, and is pronounced "N choose k"). If N = 1, the binomial distribution reduces to Bernoulli distribution.
 
+##### Categorical and multinomial distributions
+
+- If the variable is discrete-valued, x $\in$ {1,...K}, we can use the categorical distribution:
+
+$$Cat(x|\theta)\stackrel{\Delta}{=} \prod_{k=1}^{K}\theta_k^{\mathbb{I}(x=k)}$$
