@@ -37,3 +37,13 @@ $$Cat(x|\mathrm{\theta})\stackrel{\Delta}{=} \prod_{k=1}^{K}\theta_k^{\mathbb{I}
 - Alternatively, we can represent the K-valued variable x with the one hot binary vector **x**, which lets us write:
 
 $$Cat(x|\mathrm{\theta})\stackrel{\Delta}{=} \prod_{k=1}^{K}\theta_k^{x_k}$$
+
+- $x_k$ is the $k$-th element of the one-hot binary vector **x**. It is equal to 1 if category $k$ is the category represented by $x$, and it is 0 otherwise.
+
+> A one-hot binary vector is a binary vector (a vector of binary values, typically 0s and 1s) where only one element is set to 1 (hot), and all other elements are set to 0 (cold). It is often used to represent categorical variables or labels in machine learning and data analysis. The "hot" element corresponds to the category or label that is being represented.
+
+> e.g. Suppose you have a set of fruits: {Apple, Banana, Orange, Grape}. You can represent each of these fruits using a one-hot binary vector like this: 
+    - Apple: [1, 0, 0, 0] (1 in the first position)
+    - Banana: [0, 1, 0, 0] (1 in the second position)
+    - Orange: [0, 0, 1, 0] (1 in the third position)
+    - Grape: [0, 0, 0, 1] (1 in the fourth position)
