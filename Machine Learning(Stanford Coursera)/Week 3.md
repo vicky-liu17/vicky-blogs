@@ -38,3 +38,20 @@ $$f_{\overrightarrow{w},b}(\overrightarrow{x}) = P(y=1|\overrightarrow{x};\overr
 ![](Pictures/Classification05.png)
 
 ![](Pictures/Classification06.png)
+
+![](Pictures/Classification07.png)
+
+![](Pictures/Classification08.png) 
+
+#### Simplified loss function
+
+![](Pictures/Classification09.png) 
+
+![](Pictures/Classification10.png) 
+
+- maximum likelihood
+
+
+### Training logistic regression
+- Find $\overrightarrow{w}$ , b
+- Given new $\overrightarrow{x}$ , output $f_{\overrightarrow{w},b}(overrightarrow{x})=\frac{1}{1+e^{-(\overrightarrow{w}\cdot\overrightarrow{x}+b)}}$
