@@ -54,4 +54,20 @@ $$f_{\overrightarrow{w},b}(\overrightarrow{x}) = P(y=1|\overrightarrow{x};\overr
 
 ### Training logistic regression
 - Find $\overrightarrow{w}$ , b
-- Given new $\overrightarrow{x}$ , output $f_{\overrightarrow{w},b}(overrightarrow{x})=\frac{1}{1+e^{-(\overrightarrow{w}\cdot\overrightarrow{x}+b)}}$
+- Given new $\overrightarrow{x}$ , output $f_{\overrightarrow{w},b}(\overrightarrow{x})=\frac{1}{1+e^{-(\overrightarrow{w}\cdot\overrightarrow{x}+b)}}$
+
+![](Pictures/Classification11.png) 
+
+![](Pictures/Classification12.png) 
+
+### The Problem of overfitting
+
+![](Pictures/Overfit01.png) 
+
+![](Pictures/Overfit02.png) 
+
+- Technically we say that you want your learning algorithm to generalize well, which means to make good predictions even on brand new examples that it has never seen before.
+
+### Address Overfitting
+
+![](Pictures/Overfit03.png) 
