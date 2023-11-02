@@ -71,3 +71,26 @@ $$f_{\overrightarrow{w},b}(\overrightarrow{x}) = P(y=1|\overrightarrow{x};\overr
 ### Address Overfitting
 
 ![](Pictures/Overfit03.png) 
+
+![](Pictures/Overfit04.png) 
+
+![](Pictures/Overfit05.png) 
+
+- Options:
+    - Collect more data
+    - Select features
+        - Feature selection
+    - Reduce size of parameters
+        - "Regularization"
+
+![](Pictures/Overfit06.png) 
+
+![](Pictures/Overfit07.png) 
+
+-  what you want is some value of lambda that is in between that more appropriately balances these first and second terms of trading off, minimizing the mean squared error and keeping the parameters small.
+
+![](Pictures/Overfit08.png) 
+
+![](Pictures/Overfit09.png) 
+
+![](Pictures/Overfit10.png) 
