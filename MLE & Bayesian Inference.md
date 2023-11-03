@@ -81,4 +81,8 @@ $$ P(\theta|X)=\frac{P(X|\theta)P(\theta)}{P(X)}$$
 - Maximum Likelihood Estimation, MLE是频率学派常用的估计方法
 - 假设数据 $x_1, x_2, ..., x_n$是i.i.d.的一组抽样， $X=(x_1, x_2, ..., x_n)$, 其中i.i.d表示independent and identical distribution，独立同分布（每个变量的概率分布相同，且这些随机变量相互独立）。那么MLE对 $\theta$ 的估计方法可以如下推导：
 
-$$ \hat{\theta}_{MLE}$$
+$$\hat{\theta}_{MLE} = \arg\max P(X;\theta)$$
+
+(the expression \(\hat{\theta}_{MLE} = \arg\max P(X;\theta)\) tells you that the Maximum Likelihood Estimation for the parameter \(\theta\) is the value of \(\theta\) that maximizes the likelihood function, making the observed data \(X\) most probable. MLE is a method for finding the parameter value that best explains the observed data based on the assumed statistical model.)
+
+$$=\arg\max P(x_1;\theta)P(x_2;\theta)...P(x_n;\theta)$$
