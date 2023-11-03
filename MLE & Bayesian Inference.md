@@ -86,3 +86,9 @@ $$\hat{\theta}_{MLE} = \arg\max P(X;\theta)$$
 (the expression \(\hat{\theta}_{MLE} = \arg\max P(X;\theta)\) tells you that the Maximum Likelihood Estimation for the parameter \(\theta\) is the value of \(\theta\) that maximizes the likelihood function, making the observed data \(X\) most probable. MLE is a method for finding the parameter value that best explains the observed data based on the assumed statistical model.)
 
 $$=\arg\max P(x_1;\theta)P(x_2;\theta)...P(x_n;\theta)$$
+
+$$=\arg\max\log\prod_{i=1}^{n}P(x_i;\theta)$$
+
+$$=\arg\max\sum_{i=1}^{n} \log P(x_i;\theta)$$
+
+
