@@ -73,4 +73,12 @@ $$\mathcal{M}(x|N,\theta)\stackrel{\Delta}{=}\binom{N}{x_1....x_k}\prod_{k=1}^{K
 $$ P(\theta|X)=\frac{P(X|\theta)P(\theta)}{P(X)}$$
 
 - 以抛硬币为例，对一枚均匀硬币抛五次得到五次正面，如果先验认为大概率下这个硬币是均匀分布（例如最大值取在0.5处的beta分布），那么 P(head），即 $P(\theta|X)$ 是一个distribution，最大值会介于0.5-1之间，而不是武断地 $\theta=1$ 
+    - 随着数据量增加，参数分布会越来越向数据靠拢，先验的影响力会越来越少。
+    - 如果先验是uniform distribution，那么贝叶斯方法等价于频率方法，因为直观上讲，先验是uniform distribution本质上对事物没有任何预判。
 
+### MLE - 最大似然估计
+
+- Maximum Likelihood Estimation, MLE是频率学派常用的估计方法
+- 假设数据 $x_1, x_2, ..., x_n$是i.i.d.的一组抽样， $X=(x_1, x_2, ..., x_n)$, 其中i.i.d表示independent and identical distribution，独立同分布（每个变量的概率分布相同，且这些随机变量相互独立）。那么MLE对 $\theta$ 的估计方法可以如下推导：
+
+$$ \hat{\theta}_{MLE}$$
