@@ -72,5 +72,5 @@ $$\mathcal{M}(x|N,\theta)\stackrel{\Delta}{=}\binom{N}{x_1....x_k}\prod_{k=1}^{K
 
 $$ P(\theta|X)=\frac{P(X|\theta)P(\theta)}{P(X)}$$
 
-    - 以抛硬币为例，对一枚均匀硬币抛五次得到五次正面，如果先验认为大概率下这个硬币是均匀分布（例如最大值取在0.5处的beta分布），那么 P(head），即 $P(\theta|X)$ 是一个distribution，最大值会介于0.5-1之间，而不是武断地 $\theta=1$ 
+- 以抛硬币为例，对一枚均匀硬币抛五次得到五次正面，如果先验认为大概率下这个硬币是均匀分布（例如最大值取在0.5处的beta分布），那么 P(head），即 $P(\theta|X)$ 是一个distribution，最大值会介于0.5-1之间，而不是武断地 $\theta=1$ 
 
