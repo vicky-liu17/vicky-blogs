@@ -83,7 +83,7 @@ $$ P(\theta|X)=\frac{P(X|\theta)P(\theta)}{P(X)}$$
 
 $$\hat{\theta}_{MLE} = \arg\max P(X;\theta)$$
 
-(the expression $\hat{\theta}_{MLE} = \arg\max P(X;\theta)$ tells you that the Maximum Likelihood Estimation for the parameter \(\theta\) is the value of $\theta$ that maximizes the likelihood function, making the observed data X most probable. MLE is a method for finding the parameter value that best explains the observed data based on the assumed statistical model.)
+(the expression $\hat{\theta}_{MLE} = \arg\max P(X;\theta)$ tells you that the Maximum Likelihood Estimation for the parameter $\theta$ is the value of $\theta$ that maximizes the likelihood function, making the observed data X most probable. MLE is a method for finding the parameter value that best explains the observed data based on the assumed statistical model.)
 
 $$=\arg\max P(x_1;\theta)P(x_2;\theta)...P(x_n;\theta)$$
 
@@ -103,3 +103,22 @@ $$=\arg\min - \sum_{i=1}^{n}\log P(x_i;\theta)$$
 - 假设数据 $x_1, x_2, ..., x_n$ 是i.i.d的一组抽样，$X=(x_1,x_2,...,x_n)$ 。那么MAP对 $\theta$ 的估计方法可以如下推导：
 
 $$\hat{\theta}_{MLE}=\arg\max P(\theta|X)$$
+
+$$=\arg\min -\log P(\theta|X)$$
+
+$$=\arg\min - \log P(X|\theta) - \log P(\theta) + \log P(X)$$
+
+(贝叶斯定理)
+
+$$=\arg\min - \log P(X|\theta) - \log P(\theta)$$
+
+- (P(X)可以丢掉，因为与 $\theta$ 无关)
+
+- 注意， $-log P(X|\theta)$ 其实就是NLL，所以MLE和MAP在优化时的不同就是在于先验项 $-\log P(\theta)$
+
+
+### Poisson Distribution
+
+- Now suppose the state space is the set of all non-negative integers, so X $\in$ {0,1,2,...}. We say that a random variable has a **Poisson** distribution with parameter $\lambda >0$ , written $X ~ Poi(\lambda)$ , if its pmf(probability mass function) is 
+
+$$Poi(x|)
