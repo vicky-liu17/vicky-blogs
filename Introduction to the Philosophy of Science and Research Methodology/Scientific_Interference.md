@@ -283,3 +283,85 @@ Duhem-Quine Thesis:
 - The degree of confirmation, also known as the degree of support, is a concept used in the philosophy of science and the philosophy of probability to quantify how much evidence or data supports a particular hypothesis or theory. It is a measure of the strength of the evidence in favor of a hypothesis, indicating the extent to which the evidence makes the hypothesis more likely or probable.
 
 ![](Pictures/hd06.png)
+
+![](Pictures/hd07.png)
+
+##### Problems
+- can we meaningfully assign probabilities to hypotheses
+    - Frequentist statistics does not directly assign probabilities to hypotheses or make statements about the probability that a hypothesis is true or false. Instead, it quantifies the probability of observing data under the conditions specified by a hypothesis. The focus is on evaluating the evidence in terms of the data, rather than assessing the intrinsic probability of a hypothesis.
+    - Bayesian probability, on the other hand, allows for the direct assignment of probabilities to hypotheses, as it incorporates subjective beliefs and prior knowledge into the assessment of hypotheses. Bayesian methods enable the updating of beliefs about hypotheses based on observed data, providing a different approach to hypothesis testing and decision-making.
+
+
+
+- distinguish uncertainty and condidence
+    - Uncertainty: Uncertainty refers to the inherent lack of knowledge or predictability about an event or outcome. In the context of a fair coin toss, there is uncertainty because, even if the coin is fair, we can't predict the outcome of a specific toss. There is a degree of unpredictability or randomness associated with it. Uncertainty is a fundamental part of probabilistic events.
+    - Confidence: Confidence, on the other hand, relates to how much trust or assurance you have in a particular claim or statement. In the case of a fair coin, you can have a high level of confidence in the 50% probability of landing on tails because it's based on the principles of fairness and symmetry. However, this confidence does not eliminate the inherent uncertainty of any individual coin toss.
+
+C confirms H because H is compatible with C
+
+![](Pictures/hd08.png)
+
+- Solution: Introduce some criterion to measure this relevance. 
+
+![](Pictures/hd09.png)
+
+- many hypothesis are compatible with the observations.
+- Solution: select the simplist.(e.g. The polynomial curve of least degree that passes through the given data points while minimizing the error)
+- Not suitable for all circumstances. 
+
+- ~~C confirms H because H is compatible with C~~
+
+- C confirms H because
+- C would have been very unlikely if H had been fasle 
+
+- Deborah mayo - "severe test"
+
+- Problem 2: Double-counting evidence
+    - Double-counting evidence is a potential issue in statistical or scientific reasoning where the same evidence is counted or used more than once in support of a hypothesis or a claim. This can lead to an overestimation of the strength of the evidence and result in misleading or incorrect conclusions.
+
+
+- The police are issued new breathalyzers displaying false drunkenness in 5% of the cases in which the driver is sober However, the breathalyzers never fail to detect a truly drunk person. 0.1% of the population is driving drunk.
+
+- Suppose a police officer stops a driver at random, and force  the driver to take a breathalyzer test. It indicates that the driver is drunk. How confident should the officer be that the driver is drunk?
+
+- Correct answer: the probability that the stopped driver is actually drunk is about 2%.
+
+
+Let's define the following:
+
+- $A$: The event that the driver is drunk.
+- $B$: The event that the breathalyzer test indicates the driver is drunk.
+- $\neg A$: The event that the driver is sober (complement of $A$).
+- $\neg B$: The event that the breathalyzer test indicates the driver is sober (complement of $B$).
+
+We are given the following probabilities:
+
+- $P(\neg B | \neg A)$: The probability of a false negative (breathalyzer test indicates sober when the driver is drunk) is $0$ (the breathalyzer never fails to detect a truly drunk person).
+- $P(B | \neg A)$: The probability of a false positive (breathalyzer test indicates drunk when the driver is sober) is $0.05$ (5%).
+- $P(A)$: The prior probability that a driver is drunk is $0.001$ (0.1% of the population).
+
+We want to find $P(A | B)$, the probability that the driver is truly drunk given the positive breathalyzer result.
+
+Using Bayes' Theorem:
+
+$$P(A | B) = \frac{P(B | A) \cdot P(A)}{P(B)}$$
+
+We can calculate $P(B)$ using the law of total probability:
+
+$$P(B) = P(B | A) \cdot P(A) + P(B | \neg A) \cdot P(\neg A)$$
+
+Plugging in the values:
+
+$$P(B) = (1 \cdot 0.001) + (0.05 \cdot (1 - 0.001))$$
+
+$$P(B) = 0.001 + 0.04995$$
+
+$$P(B) = 0.05095$$
+
+Now we can calculate $P(A | B)$:
+
+$$P(A | B) = \frac{P(B | A) \cdot P(A)}{P(B)}$$
+
+$$P(A | B) \approx 0.0196$$
+
+So, the police officer should be approximately $1.96\%$ confident that the driver is truly drunk given the positive breathalyzer result. This low level of confidence reflects the fact that false positives can occur, and the prior probability of a driver being drunk is relatively low in the general population.
