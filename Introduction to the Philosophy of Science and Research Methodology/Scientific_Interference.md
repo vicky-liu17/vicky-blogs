@@ -272,3 +272,14 @@ Duhem-Quine Thesis:
     - 托勒密的本轮模型，采用了复杂的几何形状来描述行星的运动，包括了"差动" 和 "子午线轮"等概念，以解释观察到的行星逆行运动。The parameters for the sizes, positions, and speeds of epicycles and deferents were often adjusted to fit observational data without a clear physical explanation for why they had those specific values.
 - An ad-hoc hypothesis is a hypothesis added to a theory in order to save it from being falsified.
 - A modification is ad hoc if it reduces the falsifiability of the hypotheses in question
+
+### Hypothesis Confirmation
+
+- modus ponens and modus tollens are deductively valid inference rules
+- but they do not tell us what to so if C is true
+
+![](Pictures/hd05.png)
+
+- The degree of confirmation, also known as the degree of support, is a concept used in the philosophy of science and the philosophy of probability to quantify how much evidence or data supports a particular hypothesis or theory. It is a measure of the strength of the evidence in favor of a hypothesis, indicating the extent to which the evidence makes the hypothesis more likely or probable.
+
+![](Pictures/hd06.png)
