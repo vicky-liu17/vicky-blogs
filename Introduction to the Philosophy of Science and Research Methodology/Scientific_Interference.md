@@ -92,15 +92,6 @@ Example of particular inference rules:
 - Whenever you have observed at least 9 objects of kind X to have property R, then conclude that all objects of that kind have property R.
 - Whenever the probability of observing R, given that H is true, is smaller than a significance level of 0.05, then reject H. (use more frequently in scientific research)
 
-#### Distinguish:
-- Justification with an inference rule:
-    - Justifying the **conclusion** by pointing to the premise and the empolyed inference rule
-- Justification of an inference rule:
-    - What makes B a good inductive inference? Why not choose a lower significance level? or a higher one? 
-
-    The inference rule you mentioned is based on the principles of statistical hypothesis testing. Let me explain it with an example:
-
-
 ### Example:
 
 > Whenever the probability of observing R, given that H is true, is smaller than a significance level of 0.05, then reject H.
@@ -122,3 +113,32 @@ Example of particular inference rules:
 3. Decision: Since the probability of observing the results (R) under the null hypothesis is smaller than your significance level (p < α), you have evidence to reject the null hypothesis (H₀). This suggests that there is enough statistical evidence to conclude that Drug X is effective in treating the medical condition, and it is significantly better than a placebo (supporting the alternative hypothesis, H₁).
 
 In summary, the inference rule states that if the probability of observing the results (R) under the assumption that the null hypothesis (H) is true is smaller than your chosen significance level (0.05), then you should reject the null hypothesis. This approach helps researchers make decisions based on the strength of evidence in their data and determine whether there is enough statistical support to accept an alternative hypothesis in favor of the null hypothesis.
+
+#### Distinguish:
+- Justification with an inference rule:
+    - Justifying the **conclusion** by pointing to the premise and the empolyed inference rule
+- Justification of an inference rule:
+    - What makes B a good inductive inference? Why not choose a lower significance level? or a higher one? 
+
+### Hume's Problem of Induction
+
+An argument against the justifiability of induction
+1. every inference is either an induction or a deduction
+2. to justify an inductive inference rule **I**, the rule itself has to be inferred from some premises.
+3. **I** cannot be inferred deductively, because there are no necessary connection between past and future inferences. 
+4. Thus, **I** must be inferred inductively. 
+5. When inferring I inductively, we must appeal to another (inductive) inference rule **J** to justify this induction. But that raises the issue of how to justify **J**, which would require appealing to another inference rule K ... [infinite regress]
+
+##### Explaination:
+
+- Hume's problem of induction is a significant philosophical challenge that was introduced by the Scottish philosopher David Hume in the 18th century. It raises questions about the rational justification for making inductive inferences and the reliability of induction as a method for acquiring knowledge.
+
+- Induction is the process of generalizing from specific observations or experiences to make more general conclusions or predictions about the future. For example, if you have observed the sun rising every day of your life, you might inductively infer that the sun will rise again tomorrow. However, Hume's problem of induction challenges the philosophical foundation of such inferences.
+
+- Hume's central argument can be summarized as follows:
+
+    1. All inductive reasoning relies on the assumption that the future will resemble the past. In other words, it assumes that the laws of nature will continue to hold in the future as they have in the past.
+    2. However, we have no logical or deductive reason to believe that the future will resemble the past. No matter how many times you've observed the sun rising, you cannot logically prove that it will rise again tomorrow.
+    3. Therefore, the inference from past observations to future predictions (induction) is not based on reason or strict logical necessity. It is based on a habit of the mind, custom, or instinct rather than a rationally justified principle.
+
+- Hume's solution to this problem was skeptical in nature. He argued that induction is not based on reason but on custom and habit. We rely on induction because it has worked for us in the past, but we cannot provide a rational justification for its reliability in the future.
