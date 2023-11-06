@@ -194,12 +194,12 @@ stateDiagram
 
 ##### HD Step 2: Deduction
 
-- Deduce observable consequences { $[C_i]$ } from H
+- Deduce observable consequences $[C_i]$ from H
 
 - Requirements:
-    - { $[C_i]$ } must be observable directly or with the help of accurate measurements(e.g microscope, X-ray, etc.)
+    - $[C_i]$ must be observable directly or with the help of accurate measurements(e.g microscope, X-ray, etc.)
     - Deduction must be valid
-    - { $[C_i]$ } must be relevant for H
+    - $[C_i]$ must be relevant for H
 
 ##### Quiz Question:
 
@@ -217,9 +217,58 @@ stateDiagram
 
 ##### HD Step 3: Test
 
-- Determine whether { $[C_i]$ } is true or not.
+- Determine whether $[C_i]$ is true or not.
 
 ### Hypothesis falsification
 
-- If { $[C_i]$ } is false, infer that H is false. 
-- 
+- asymmetry between confirmation and falsification
+    - If $[C_i]$ is false, infer that H is **false**. 
+    - If $[C_i]$ is true, **increase confidence** in H. (we cannot infer that it is definitely true.)
+
+> No amount of experimentation can ever prove me right; a single experiment can prove me wrong. (Einstein)
+
+- Karl Popper's falsification
+    - Conjecture falsifiable hypotheses
+    - Seek to falsify these hypotheses with observable evidence
+    - Reject any falsified hypothesis as false
+    - Never accept any hypothesis as true - only maintain on-falsified hypotheses as so far not rejected.
+
+- Falsifiability: （可证伪性）
+    - Quality of a hypothesis: A good hypothesis has more observable consequences that sets it apart from rival hypothesis. (can determine it is true or false from observation)
+    - an indicator of "scientific"
+- Falsification:
+    - An event - the observation that an implication of a hypothesis is not true, which by modus tollens then implies the falsity of the hypothesis. 
+
+- Falsifibable hypotheses need not be falsified but hypotheses can only be falsified if they are falsifiable. 
+
+### Problems of Popper's falsification
+
+##### Problem 1: Hypotheses without confidence?
+- Many non-falsfified hypotheses at the same time (may include contradction, or observations that scientists made less)
+- can one reasonably treat them all as mere conjectures, without distinguishing some as morelikely to be true, and others less so ?
+- At odds with scientific practice: sciencts consider some non-falsified hypotheses as more confirmed than others. 
+
+##### Problem 2: Modus Tollens for Rejecting Hypotheses?
+- (observation may not be immediate, but may include experiment or measurement)
+- e.g.
+    - Hypotheses: this liquid contains 2 chemical substances
+    - Observable consequences:
+        - Distillation
+        - Chromatography
+
+![](Pictures/hd03.png)
+
+![](Pictures/hd04.png)
+
+Duhem-Quine Thesis:
+- We never test a single hypothesis alone, byt only in conjunction with various auxilliary hypothesis.
+- For falsifying the hypothesis: be confident that it's not the auxiliary hypotheses responsible for the falsity of the consequence
+- **No asymmetry** between falsification and confirmation
+
+##### Problem 3: Ad hoc Modification
+
+- Example: Phlogiston Theory（燃素说）
+    - The phlogiston theory is a superseded scientific theory that postulated the existence of a fire-like element called phlogiston contained within combustible bodies and released during combustion. 
+    - 托勒密的本轮模型，采用了复杂的几何形状来描述行星的运动，包括了"差动" 和 "子午线轮"等概念，以解释观察到的行星逆行运动。The parameters for the sizes, positions, and speeds of epicycles and deferents were often adjusted to fit observational data without a clear physical explanation for why they had those specific values.
+- An ad-hoc hypothesis is a hypothesis added to a theory in order to save it from being falsified.
+- A modification is ad hoc if it reduces the falsifiability of the hypotheses in question
