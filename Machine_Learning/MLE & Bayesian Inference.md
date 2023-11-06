@@ -151,4 +151,5 @@ Meanwhile:
 
 Then
 
-$$=\lim_{N \to \infty}(1 + \frac{1}{-\frac{N}{\lambda}})^{- frac{N}{\lambda}}$$
+$$\lim_{N \to \infty}(1 - \frac{\lambda}{N})^{N} =\lim_{N \to \infty}[(1 + \frac{1}{-\frac{N}{\lambda}})^{- \frac{N}{\lambda}}]^{-lambda} = e^{-lambda}$$
+
