@@ -81,3 +81,44 @@ In this argument form, P and Q are propositions or statements, and ¬P and ¬Q r
     - Modus Tollens
 - Explicate knowledge: order or rearrange our knowledge without adding to its content
 - Conclusion from good ("valid") deductive inferences and true premises are necessarily true
+
+### Paricular Inference Rules
+
+e.g. generalization type:
+
+![](Pictures/example03.png)
+
+Example of particular inference rules:
+- Whenever you have observed at least 9 objects of kind X to have property R, then conclude that all objects of that kind have property R.
+- Whenever the probability of observing R, given that H is true, is smaller than a significance level of 0.05, then reject H. (use more frequently in scientific research)
+
+#### Distinguish:
+- Justification with an inference rule:
+    - Justifying the **conclusion** by pointing to the premise and the empolyed inference rule
+- Justification of an inference rule:
+    - What makes B a good inductive inference? Why not choose a lower significance level? or a higher one? 
+
+    The inference rule you mentioned is based on the principles of statistical hypothesis testing. Let me explain it with an example:
+
+
+### Example:
+
+> Whenever the probability of observing R, given that H is true, is smaller than a significance level of 0.05, then reject H.
+
+- Suppose you are a researcher studying the effectiveness of a new drug (let's call it Drug X) in treating a specific medical condition. You have a null hypothesis (H₀) and an alternative hypothesis (H₁ or Ha) as follows:
+    - Null Hypothesis (H₀): Drug X has no effect or is no more effective than a placebo in treating the medical condition.
+    - Alternative Hypothesis (H₁): Drug X is effective in treating the medical condition, and it is significantly better than a placebo.
+
+- You set your significance level (α) at 0.05, which is a common choice in many scientific studies.
+
+- Now, you conduct a clinical trial to test the effectiveness of Drug X. You gather data from the trial, and your analysis leads to a probability, represented as P(R|H), which is the probability of observing the results (R) under the assumption that the null hypothesis (H) is true. In this context, "R" might represent the observed improvement in patients' conditions or some other relevant measure.
+
+- Here's how the inference rule works in this scenario:
+
+1. Calculate P(R|H): This probability quantifies how likely you would observe the results you obtained (R) if the null hypothesis (H₀) were true. In other words, it represents the probability of getting your data assuming that the drug has no effect (H₀ is true).
+
+2. Compare P(R|H) to the Significance Level (α): If the calculated probability (P(R|H)) is smaller than your pre-defined significance level (0.05), it means that the observed results are unlikely to occur by random chance alone under the assumption that the null hypothesis is true. In statistical terms, this is often represented as p < α.
+
+3. Decision: Since the probability of observing the results (R) under the null hypothesis is smaller than your significance level (p < α), you have evidence to reject the null hypothesis (H₀). This suggests that there is enough statistical evidence to conclude that Drug X is effective in treating the medical condition, and it is significantly better than a placebo (supporting the alternative hypothesis, H₁).
+
+In summary, the inference rule states that if the probability of observing the results (R) under the assumption that the null hypothesis (H) is true is smaller than your chosen significance level (0.05), then you should reject the null hypothesis. This approach helps researchers make decisions based on the strength of evidence in their data and determine whether there is enough statistical support to accept an alternative hypothesis in favor of the null hypothesis.
