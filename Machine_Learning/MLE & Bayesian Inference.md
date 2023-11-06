@@ -164,4 +164,4 @@ $$\lim_{N \to \infty }{\lambda^x}{x!}\cdot (1 - \frac{\lambda}{N})^{N-x} = e^{-\
 - 泊松分布要求观察结果相互独立，发生的概率 $\pi$ 不变。
     - 如，人群中传染性疾病首例出现后便成为传染源，会增加后续病例出现的概率，所以病例数的分部不能看做是泊松分布。
 
-![](Pictures/Poisson01.png)
+![](Pictures/Poisson01.jpg)
