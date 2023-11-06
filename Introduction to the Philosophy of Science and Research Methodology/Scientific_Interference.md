@@ -319,12 +319,15 @@ C confirms H because H is compatible with C
 - Problem 2: Double-counting evidence
     - Double-counting evidence is a potential issue in statistical or scientific reasoning where the same evidence is counted or used more than once in support of a hypothesis or a claim. This can lead to an overestimation of the strength of the evidence and result in misleading or incorrect conclusions.
 
+#### Question
 
 - The police are issued new breathalyzers displaying false drunkenness in 5% of the cases in which the driver is sober However, the breathalyzers never fail to detect a truly drunk person. 0.1% of the population is driving drunk.
 
 - Suppose a police officer stops a driver at random, and force  the driver to take a breathalyzer test. It indicates that the driver is drunk. How confident should the officer be that the driver is drunk?
 
-- Correct answer: the probability that the stopped driver is actually drunk is about 2%.
+##### Correct answer
+
+- the probability that the stopped driver is actually drunk is about 2%.
 
 
 Let's define the following:
