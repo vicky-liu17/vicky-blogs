@@ -168,4 +168,5 @@ An argument against the justifiability of induction
 ```mermaid
 stateDiagram
     s1 --> s2
+    s2 --> s1
 ```
