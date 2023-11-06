@@ -124,3 +124,6 @@ $$=\arg\min - \log P(X|\theta) - \log P(\theta)$$
 $$Poi(x|\lambda) = e^(-\lambda) \frac{\lambda^x}{x!}$$
 
 where $\lambda$ is the mean (and variance) of x. (The first term is just the normalization constant, required to ensure the distribution sum to 1). The Poisson distribution is often used as a model for counts of rare events like radioactive decay and traffic accidents. 
+
+$$Bin(x|N,\mu) \stackrel{\Delta}{=} \binom{N}{x}\mu^x(1-\mu)^(N-x)$$
+
