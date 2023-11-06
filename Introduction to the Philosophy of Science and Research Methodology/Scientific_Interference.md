@@ -172,3 +172,12 @@ stateDiagram
     s1 --> s2
     s2 --> s1
 ```
+
+### A Model of Scientific Inference Practice
+- The Hypothetico-Deductive(HD) Method (假设演绎法)
+    - Scientists begin by proposing(unproven) hypotheses
+    - They derive observable implication from these hypotheses
+    - Thet test these implications and consequently revise their condidence in thses hypotheses.
+
+
+![](Pictures/hd01.png)
