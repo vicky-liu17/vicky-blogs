@@ -41,3 +41,12 @@ finite number of examples have such a property ---> all of them have such a prop
 ##### Modus Ponens
 
 ![](Pictures/example04.png)
+
+Modus ponens is a valid deductive argument form in classical logic. It is often expressed as follows:
+
+- If P, then Q. (P → Q)
+- P is true.
+- Therefore, Q is true.
+
+
+In this argument form, P and Q are propositions or statements. Modus ponens is used to infer the truth of proposition Q based on the truth of proposition P and the conditional statement "If P, then Q." If P is true, and the conditional statement holds, then it follows logically that Q must also be true.
