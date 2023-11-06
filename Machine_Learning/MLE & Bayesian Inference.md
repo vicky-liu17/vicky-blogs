@@ -127,7 +127,7 @@ where $\lambda$ is the mean (and variance) of x. (The first term is just the nor
 
 $$Bin(x|N,\mu) \stackrel{\Delta}{=} \binom{N}{x}\mu^x(1-\mu)^{N-x}$$
 
-when $\mu \to 0$ , $n \to \infty$ , $np = \lambda$ , $p = \lambda /n$ , binomial distribution becomes Poisson distribution. 
+when $\mu \to 0$ , $n \to \infty$ , $n \mu = \lambda$ , $\mu = \lambda /n$ , binomial distribution becomes Poisson distribution. 
 
  $$\binom{N}{x}\mu^x(1-\mu)^{N-x} = \frac{N!}{x!(N-x)!} \cdot \frac{\lambda^x}{N^x} \cdot (1 - \frac{\lambda}{N})^{N-x}$$
 
@@ -139,4 +139,16 @@ when $\mu \to 0$ , $n \to \infty$ , $np = \lambda$ , $p = \lambda /n$ , binomial
 
  As a result:
 
- $$\lim_{N \to \infty } \frac{(N-1)(N-2)...(N-x+1)}{x!} \cdot \frac{\lambda^x}{N^x} \cdot (1 - \frac{\lambda}{N})^{N-x} = \frac{\lambda^x}{k!}\cdot (1 - \frac{\lambda}{N})^{N-x}$$
+ $$\lim_{N \to \infty } \frac{(N-1)(N-2)...(N-x+1)}{x!} \cdot \frac{\lambda^x}{N^x} \cdot (1 - \frac{\lambda}{N})^{N-x} = \frac{\lambda^x}{x!}\cdot (1 - \frac{\lambda}{N})^{N-x}$$
+
+Meanwhile:
+
+ $$\lim_{N \to \infty}(1 - \frac{\lambda}{N})^{N-x} = \lim_{N \to \infty}(1 - \frac{\lambda}{N})^{N}(1 - \frac{\lambda}{N})^{-x}=\lim_{N \to \infty}(1 - \frac{\lambda}{N})^{N}$$
+
+ According to 
+
+ $$\lim_{x \to \infty}(1+\frac{1}{x})^x = e$$
+
+Then
+
+$$=\lim_{N \to \infty}(1 + \frac{1}{-\frac{N}{\lambda}})^{- frac{N}{\lambda}}$$
