@@ -181,3 +181,45 @@ stateDiagram
 
 
 ![](Pictures/hd01.png)
+
+##### HD Step 1: hypothesis formulation
+
+- Formulate a hypothesis H
+
+- Criteria for a goood hypotheses:
+    - A statement that can be either true or false
+    - A statement that is not necessarily true or false
+    - A statement that either has some generality(e.g, "All X in domain D...") or that is about some unobservable(exclude statements like "this table is red")
+
+
+##### HD Step 2: Deduction
+
+- Deduce observable consequences { $[C_i]$ } from H
+
+- Requirements:
+    - { $[C_i]$ } must be observable directly or with the help of accurate measurements(e.g microscope, X-ray, etc.)
+    - Deduction must be valid
+    - { $[C_i]$ } must be relevant for H
+
+##### Quiz Question:
+
+- Hypothesis H:"If a card shows an even number on one face, then its opposite face is red".
+- Test whether H is *false*. Which consequences of H do you need to consider? - i.e. which cards do you need to turn over?
+
+![](Pictures/hd02.png)
+
+- H: "If a card shows an even number on one face, then its opposite face is red".
+- If E, then R.
+- When is this statement false?
+    - When E is true and when R is false. 
+        - H is falsified by observing a blue even-number card.
+    - need to turn over even-number cards and blue cards!
+
+##### HD Step 3: Test
+
+- Determine whether { $[C_i]$ } is true or not.
+
+### Hypothesis falsification
+
+- If { $[C_i]$ } is false, infer that H is false. 
+- 
