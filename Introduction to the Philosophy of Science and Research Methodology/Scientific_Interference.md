@@ -165,8 +165,7 @@ An argument against the justifiability of induction
 
 - Less severe inductive rules might not be the foundation of inductive practices, but could be the abstract descriptions of such practices. They may also solve as tools to connect the practices with each other. 
 
-```
+```mermaid
 stateDiagram
-Good inductive practices --> Inductive inference rules
-Inductive inference rules --> Good inductive practices
+    s1
 ```
