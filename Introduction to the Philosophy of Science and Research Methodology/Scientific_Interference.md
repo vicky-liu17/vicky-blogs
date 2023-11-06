@@ -50,3 +50,34 @@ Modus ponens is a valid deductive argument form in classical logic. It is often 
 
 
 In this argument form, P and Q are propositions or statements. Modus ponens is used to infer the truth of proposition Q based on the truth of proposition P and the conditional statement "If P, then Q." If P is true, and the conditional statement holds, then it follows logically that Q must also be true.
+
+##### Modus Tollens
+
+![](Pictures/example05.png)
+
+Modus tollens is another valid deductive argument form in classical logic. It is a way to establish the truth of a proposition by showing that its negation leads to a contradiction. Modus tollens is often expressed as follows:
+
+- If P, then Q. (P → Q)
+- Not Q. (¬Q)
+- Therefore, Not P. (¬P)
+
+
+In this argument form, P and Q are propositions or statements, and ¬P and ¬Q represent their negations. Modus tollens is used to conclude that if the consequent Q is not true (¬Q), then the antecedent P must also not be true (¬P), based on the conditional statement "If P, then Q."
+
+
+##### Inductive Inference Rules 归纳推理
+
+- Methods:
+    - Direct Inference
+    - Projection
+    - Generalization
+- Amplify knowledge: extend conclusions beyond knowledge we already have
+- Conlusions from good inductive inferences and true premises are fallible - they might be false
+
+##### Deductive Inference Rules 演绎推理
+
+- Methods:
+    - Modus Ponens
+    - Modus Tollens
+- Explicate knowledge: order or rearrange our knowledge without adding to its content
+- Conclusion from good ("valid") deductive inferences and true premises are necessarily true
