@@ -121,9 +121,12 @@ $$=\arg\min - \log P(X|\theta) - \log P(\theta)$$
 
 - Now suppose the state space is the set of all non-negative integers, so X $\in$ {0,1,2,...}. We say that a random variable has a **Poisson** distribution with parameter $\lambda >0$ , written $X ~ Poi(\lambda)$ , if its pmf(probability mass function) is 
 
-$$Poi(x|\lambda) = e^(-\lambda) \frac{\lambda^x}{x!}$$
+$$Poi(x|\lambda) = e^{-\lambda} \frac{\lambda^x}{x!}$$
 
 where $\lambda$ is the mean (and variance) of x. (The first term is just the normalization constant, required to ensure the distribution sum to 1). The Poisson distribution is often used as a model for counts of rare events like radioactive decay and traffic accidents. 
 
 $$Bin(x|N,\mu) \stackrel{\Delta}{=} \binom{N}{x}\mu^x(1-\mu)^{N-x}$$
 
+when $\mu \to 0$ , $n \to \infty$ , $np = \lambda$ , $p = \lambda /n$ , binomial distribution becomes Poisson distribution. 
+
+ $$\binom{N}{x}\mu^x(1-\mu)^{N-x} = \frac{N!}{x!(N-x)!} \cdot \frac{\lambda^x}{N^x} \cdot (1-frac{\lambda}{N})^{N-x}$$
