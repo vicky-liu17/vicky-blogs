@@ -167,6 +167,6 @@ An argument against the justifiability of induction
 
 ```mermaid
 stateDiagram;
-[Good inductive practices] --> [Inductive inference rules];
-[Inductive inference rules] --> [Good inductive practices];
+Good inductive practices --> Inductive inference rules;
+Inductive inference rules --> Good inductive practices;
 ```
