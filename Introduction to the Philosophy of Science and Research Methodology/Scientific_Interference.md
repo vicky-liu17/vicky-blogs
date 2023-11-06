@@ -129,6 +129,8 @@ An argument against the justifiability of induction
 4. Thus, **I** must be inferred inductively. 
 5. When inferring I inductively, we must appeal to another (inductive) inference rule **J** to justify this induction. But that raises the issue of how to justify **J**, which would require appealing to another inference rule K ... [infinite regress]
 
+- Consequently, no inductive inference rule can be justified. 
+
 ##### Explaination:
 
 - Hume's problem of induction is a significant philosophical challenge that was introduced by the Scottish philosopher David Hume in the 18th century. It raises questions about the rational justification for making inductive inferences and the reliability of induction as a method for acquiring knowledge.
@@ -142,3 +144,29 @@ An argument against the justifiability of induction
     3. Therefore, the inference from past observations to future predictions (induction) is not based on reason or strict logical necessity. It is based on a habit of the mind, custom, or instinct rather than a rationally justified principle.
 
 - Hume's solution to this problem was skeptical in nature. He argued that induction is not based on reason but on custom and habit. We rely on induction because it has worked for us in the past, but we cannot provide a rational justification for its reliability in the future.
+
+
+#### Is Hume right?
+
+- Are we irrational when we e.g. generalize in sceince, because our inductive inferences are not justified?
+
+- Scientists employ inductive inferences rules to justify their conclusions. 
+- These inducitve inferences rules themselves are not justified, because any search for a foundation leads to an infinite regress. 
+- scientistis employ unjustifed methods & Scinece is irrational. 
+
+### What Offeres Justification?
+
+- Foundationalism
+    - Identifying the **basic claims** from which the claims to be justified can be inferred. 
+- Coherentism
+    - The claims to be justified form a coherent system with the set of other claims already accepted.
+
+- Coherentist Anser to Hume's Problem
+
+- Less severe inductive rules might not be the foundation of inductive practices, but could be the abstract descriptions of such practices. They may also solve as tools to connect the practices with each other. 
+
+```mermaid
+stateDiagram;
+[Good inductive practices] --> [Inductive inference rules];
+[Inductive inference rules] --> [Good inductive practices];
+```
