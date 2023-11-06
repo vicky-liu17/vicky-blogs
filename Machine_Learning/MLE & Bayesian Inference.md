@@ -133,4 +133,10 @@ when $\mu \to 0$ , $n \to \infty$ , $np = \lambda$ , $p = \lambda /n$ , binomial
 
  $$\lim_{N \to \infty } \frac{N!}{x!(N-x)!} \cdot \frac{\lambda^x}{N^x} \cdot (1 - \frac{\lambda}{N})^{N-x}$$
 
- $$\lim_{N \to \infty } \frac{(N-1)(N-2)...(N-x+1)}{x!} \cdot \frac{\lambda^x}{N^x} \cdot (1 - \frac{\lambda}{N})^{N-x}$$
+ $$= \lim_{N \to \infty } \frac{(N-1)(N-2)...(N-x+1)}{x!} \cdot \frac{\lambda^x}{N^x} \cdot (1 - \frac{\lambda}{N})^{N-x}$$
+
+ $$\lim_{N \to \infty } \frac{(N-1)(N-2)...(N-x+1)}{N^x} = \lim_{N \to \infty } 1 \cdot (1-\frac{1}{n})(1-\frac{2}{n})...(1-\frac{x-1}{n}) = 1$$
+
+ As a result:
+
+ $$\lim_{N \to \infty } \frac{(N-1)(N-2)...(N-x+1)}{x!} \cdot \frac{\lambda^x}{N^x} \cdot (1 - \frac{\lambda}{N})^{N-x} = \frac{\lambda^x}{k!}\cdot (1 - \frac{\lambda}{N})^{N-x}$$
