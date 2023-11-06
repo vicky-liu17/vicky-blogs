@@ -31,3 +31,13 @@ A[Premise]--->|Inference|B[Conclusion];
     - Modeling: Projecting often requires the use of mathematical models or statistical techniques to capture patterns and relationships in historical data. These models can be used to make predictions or extrapolations into the future.
     - Trends and Patterns: Projecting relies on the assumption that historical trends or patterns will continue into the future, allowing for the creation of predictive models. These trends may be linear, exponential, cyclic, or follow other patterns.
     - Data-Driven: While projecting involves forecasting future values, it is still heavily data-driven. 
+
+##### Generalization
+
+![](Pictures/example03.png)
+
+finite number of examples have such a property ---> all of them have such a property
+
+##### Modus Ponens
+
+![](Pictures/example04.png)
