@@ -123,6 +123,9 @@ $$=\arg\min - \log P(X|\theta) - \log P(\theta)$$
 
 $$Poi(x|\lambda) = e^{-\lambda} \frac{\lambda^x}{x!}$$
 
+- x为观察单位内某稀有事件的发生次数
+- $\lambda = n\mu$  为Poisson分布的总体均数
+
 where $\lambda$ is the mean (and variance) of x. (The first term is just the normalization constant, required to ensure the distribution sum to 1). The Poisson distribution is often used as a model for counts of rare events like radioactive decay and traffic accidents. 
 
 $$Bin(x|N,\mu) \stackrel{\Delta}{=} \binom{N}{x}\mu^x(1-\mu)^{N-x}$$
@@ -153,4 +156,12 @@ Then
 
 $$\lim_{N \to \infty}(1 - \frac{\lambda}{N})^{N} =\lim_{N \to \infty}[(1 + \frac{1}{-\frac{N}{\lambda}})^{- \frac{N}{\lambda}}]^{-\lambda} = e^{-\lambda}$$
 
-$$\lim_{N \to \infty }{\lambda^x}{x!}\cdot (1 - \frac{\lambda}{N})^{N-x} = e^{-\lambda} \frac{\lambda^k}{k!}$$
+$$\lim_{N \to \infty }{\lambda^x}{x!}\cdot (1 - \frac{\lambda}{N})^{N-x} = e^{-\lambda} \frac{\lambda^x}{x!}$$
+
+- 泊松分布式一种离散型分布，用于描述单位时间、空间、面积等的罕见事件发生次数的概率分布。如：
+    - 每毫升水中的大肠杆菌数
+    - 每1000个新生儿中出现染色体异常等事件的例数
+- 泊松分布要求观察结果相互独立，发生的概率 $\pi$ 不变。
+    - 如，人群中传染性疾病首例出现后便成为传染源，会增加后续病例出现的概率，所以病例数的分部不能看做是泊松分布。
+
+![](Pictures/Poisson01.png)
