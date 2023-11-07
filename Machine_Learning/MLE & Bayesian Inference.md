@@ -165,3 +165,26 @@ $$\lim_{N \to \infty }{\lambda^x}{x!}\cdot (1 - \frac{\lambda}{N})^{N-x} = e^{-\
     - 如，人群中传染性疾病首例出现后便成为传染源，会增加后续病例出现的概率，所以病例数的分部不能看做是泊松分布。
 
 ![](Pictures/Poisson01.jpg)
+
+### Prior & Posterior
+
+##### 2 dices - Likelihood
+Example: This question pertains to a set of various fair dice, each having numbers on its sides. The task involves providing a sequence of numbers to determine which particular die is being used.
+
+- Data D = 14, 8, 28, 2, 36
+- Dice H = 20-sided with even numbers in [40]
+    - Likelihood $p(D|H) = (\frac{1}{20})^5$
+- Dice H' = 6-sided with numbers 14, 8, 28, 2, 36, 7
+    - Likelihood $p(D|H')=(\frac{1}{6})^5$
+- Dice that can explain the data & has least number of sides (among those wins)
+
+- Occam's Razor, also known as the principle of parsimony or the law of succinctness, is a philosophical and scientific principle that suggests that when considering multiple explanations for a phenomenon, the simplest one is usually the best. In other words, among competing hypotheses or theories, the one with the fewest assumptions and the least complexity is often favored. 
+
+#### Likelihood
+
+- A serious problem with likelihood is that it is a point estimate.
+    - In statistics, point estimation involves the use of sample data to calculate a single value (known as a point estimate since it identifies a point in some parameter space) which is to serve as a "best guess" or "best estimate" of an unknown population parameter (for example, the population mean). 
+    - Point estimation can be contrasted with interval estimation: such interval estimates are typically either confidence intervals, in the case of frequentist inference, or credible intervals, in the case of Bayesian inference. More generally, a point estimator can be contrasted with a set estimator. Examples are given by confidence sets or credible sets. A point estimator can also be contrasted with a distribution estimator. 
+    - Likelihood is a concept often used in statistical inference to assess how well a particular set of parameters (such as those of a statistical model) explains observed data. It quantifies how probable the observed data are under a specific set of parameter values.
+    - However, the problem with likelihood is that it provides a point estimate. This means that it gives a single value that represents the maximum likelihood estimate for the parameters, but it doesn't provide a measure of uncertainty or variability associated with those parameter estimates. In other words, likelihood doesn't tell us the range or distribution of possible parameter values; it only gives us the most likely point estimate.
+- That is, given a maximum likelihood solution and its likelihood, there is no direct way to anser the question "is there another almost as good solution"?
