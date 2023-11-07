@@ -188,3 +188,13 @@ Example: This question pertains to a set of various fair dice, each having numbe
     - Likelihood is a concept often used in statistical inference to assess how well a particular set of parameters (such as those of a statistical model) explains observed data. It quantifies how probable the observed data are under a specific set of parameter values.
     - However, the problem with likelihood is that it provides a point estimate. This means that it gives a single value that represents the maximum likelihood estimate for the parameters, but it doesn't provide a measure of uncertainty or variability associated with those parameter estimates. In other words, likelihood doesn't tell us the range or distribution of possible parameter values; it only gives us the most likely point estimate.
 - That is, given a maximum likelihood solution and its likelihood, there is no direct way to anser the question "is there another almost as good solution"?
+
+##### Prior-Posterior
+
+- 6-sided dice H' with numbers 14,8,28,2,36,7
+- pretty unnatural
+    - we give it prior probability $p(H')=(\frac{1}{10})^6$
+- Posterior probability(after observation)
+- In general 
+
+$$p(H'|D)= \frac{p(D|H')p(H')}{p(D)}=\frac
