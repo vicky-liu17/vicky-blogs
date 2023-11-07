@@ -61,3 +61,24 @@ there is still direct connection between your sense and the objects
 graph LR;
 A[Property of interest]---|Theoretical justification|B[Observed property];
 ```
+
+- Indirect Observation is always theory-dependent. (We should believe the theory is true while doing indirect observation)
+
+##### Aided Direct Observation Requires Theory
+
+- Galileo and telescope: 
+    - 月球表面的山脉和坑洞： 伽利略观察到月球表面并注意到了山脉、撞击坑以及其他特征，这证明了月球并不是完全光滑的天体。
+    - 木星的卫星： 伽利略发现了木星的四颗大型卫星，后来被称为伽利略卫星，这证明了天体不必围绕地球运转。
+    - 金星存在阴晴圆缺的位相变化： 这表明金星绕太阳运转，而不是绕地球。
+    - 他把新的发现写成《星界的报告》一书，这本书的出版引起了巨大的反响。然而，神学家们却咒骂望远镜是“魔鬼的发明”，伽利略也因宣传日心说而受到教会的迫害。
+
+- The telescope exhibit optical aberrations
+- When observing known objects("on earth"), telescope users can correct for these mistakes.
+- But when looking at unkown objects in unknown contexts("in the heaven"), it is uncertain what is phenomenon and what is aberration. (we can't really check whether the telescope depicts the right pictures of the heavenly bodies.)
+- To distinguish them, we need a theory of optics that explains abberations. Galileo did not have that, 
+
+
+$\Rightarrow $ At least some aided direct observations are theory-dependent.
+
+- we need to explain why optical abberation happens and how to divide abberations from the actual phenomenons. 
+    
