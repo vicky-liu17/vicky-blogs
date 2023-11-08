@@ -30,7 +30,7 @@ there is still direct connection between your sense and the objects
     - 气泡室（Bubble Chamber）是1952年美国物理学家唐纳德·格拉泽（Donald A. Glaser）发明，用以探测高能带电粒子径迹的一种有效的仪器
     - 气泡室是由一密闭容器组成，容器中盛有工作液体，液体在特定的温度和压力下进行绝热膨胀，由于在一定的时间间隔内（例如50ms）处于过热状态，液体不会马上沸腾，这时如果有高速带电粒子通过液体，在带电粒子所经轨迹上不断与液体原子发生碰撞而产生低能电子，因而形成离子对，这些离子在复合时会引起局部发热，从而以这些离子为核心形成胚胎气泡，经过很短的时间后，胚胎气泡逐渐长大，就沿粒子所经路径留下痕迹 。如果这时对其进行拍照，就可以把一连串的气泡拍摄下来，从而得到记录有高能带电粒子轨迹的底片。
 
-    ![](Pictures/observation03.png)
+![](Pictures/observation03.png)
 
 ##### Summary:
 - Different kinds of sensory experience
@@ -82,3 +82,13 @@ $\Rightarrow $ At least some aided direct observations are theory-dependent.
 
 - we need to explain why optical abberation happens and how to divide abberations from the actual phenomenons. 
     
+
+- We can't have observations as the foundations of theory, because some observations are theory-dependent. 
+
+#### Circularity in temperature measurement
+
+- Indirect observation: temperature - (cause)density of liquid
+- Assume: Linear relationship
+- What evidence do we have this relationship? Temperature measurements.
+
+![](Pictures/observation04.png)

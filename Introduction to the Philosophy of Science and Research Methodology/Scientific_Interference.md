@@ -368,3 +368,14 @@ $$P(A | B) = \frac{P(B | A) \cdot P(A)}{P(B)}$$
 $$P(A | B) \approx 0.0196$$
 
 So, the police officer should be approximately $1.96\%$ confident that the driver is truly drunk given the positive breathalyzer result. This low level of confidence reflects the fact that false positives can occur, and the prior probability of a driver being drunk is relatively low in the general population.
+
+
+Exerciese:
+
+- After collected data falsifies your hypothesis, you modify it so that this data no longer contrdicts the adjusted hypothesis. Can that hypothesis be ad hoc? - True
+
+- After collected data falsifies your hypothesis, you modify it so that the adjusted hypothesis makes stronger claims, but no longer contradicts the collected data. Can that hypothesis be ad hoc? - False
+        - Ad hoc: The modification of a claim is ad hoc if (i) the claim has previously been falsified, (ii) the modification saves the claim from this falsification and (iii) it makes the claim less falsifiable – i.e. it does not allow deriving any new testable consequences.
+    - A stonger claims is more falsifiable. 
+
+- Are there good ad hoc hypothesis? - No
