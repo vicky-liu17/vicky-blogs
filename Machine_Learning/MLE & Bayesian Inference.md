@@ -202,3 +202,14 @@ $$p(H'|D)= \frac{p(D|H')p(H')}{p(D)}=\frac{p(D|H')p(H')}{\sum_{H' \in \mathcal{H
 Here
 
 $$p(H'|D)=\frac{(\frac{1}{6})^5 10^{-6}}{p(D)}$$
+
+- 20-sided Dice H with even numbers in [40]
+    - fairly natural
+    - we give it prior probability $p(H)=\frac{1}{1000}$
+- Posterior probability
+
+$$p(H|D)= \frac{(\frac{1}{20})^5 10^{-3}}{p(D)}$$
+
+So
+
+$$\frac{p(H|D)}{p(H'|D)}= \frac{(\frac{1}{20})^5 10^{-3}}{(\frac{1}{6})^5 10^{-6}}$$
