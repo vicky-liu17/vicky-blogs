@@ -198,3 +198,7 @@ Example: This question pertains to a set of various fair dice, each having numbe
 - In general 
 
 $$p(H'|D)= \frac{p(D|H')p(H')}{p(D)}=\frac{p(D|H')p(H')}{\sum_{H' \in \mathcal{H'}}p(D|H')p(H')}$$
+
+Here
+
+$$p(H'|D)=\frac{(\frac{1}{6})^5 10^{-6}}{p(D)}$$
