@@ -232,6 +232,9 @@ stateDiagram
     - Seek to falsify these hypotheses with observable evidence
     - Reject any falsified hypothesis as false
     - Never accept any hypothesis as true - only maintain on-falsified hypotheses as so far not rejected.
+    - Asymmetry:
+        - falsification: deductively
+        - confirmation: inductively
 
 - Falsifiability: （可证伪性）
     - Quality of a hypothesis: A good hypothesis has more observable consequences that sets it apart from rival hypothesis. (can determine it is true or false from observation)
