@@ -78,7 +78,7 @@ A[Property of interest]---|Theoretical justification|B[Observed property];
 - To distinguish them, we need a theory of optics that explains abberations. Galileo did not have that, 
 
 
-$\Rightarrow $ At least some aided direct observations are theory-dependent.
+$\Rightarrow$ At least some aided direct observations are theory-dependent.
 
 - we need to explain why optical abberation happens and how to divide abberations from the actual phenomenons. 
     
@@ -92,3 +92,47 @@ $\Rightarrow $ At least some aided direct observations are theory-dependent.
 - What evidence do we have this relationship? Temperature measurements.
 
 ![](Pictures/observation04.png)
+
+
+#### Problem of Nomic Measurement
+1. We want to measure quantity X
+2. Quantity X is not directly observable, so we infer it from another quantity Y, which is direcly observable.
+3. For this inference we need an empirical regulariy that expresses X as a function of Y: X=f(Y)
+4. The form of this function f cannot be discovered or tested empirically, because that would involve knowing the value of both Y and X, and X is the unknown variable that we are trying to measure. 
+
+#### Henri Victor Regnault(1810-1878)
+
+- Compare stability of observation from thermometers filled with same liquids under varying conditions. 
+- Certain kinds of thermometers generate more consistent measurements than others.
+
+- He aims to avoid the circularity problem, which requires regularities or laws behind the measurement.
+
+#### Summary
+- Indirect observation always theory-dependent
+- Aided direct observation sometimes theory-dependent
+- Theory-dependence complicates empiricism
+- Threat of circularity of indirect observation
+
+### Operationalization
+
+Only a few of the examples we discussed earlier were not directly observable in principle:
+
+A. Comparative speed of two cars - timer & distance measrue
+B. Comparative speed of impulses traveling through a motor nerve
+C. Bacteria
+D. Temperature of a liquid -  Mercury column of thermometer
+E. Happiness of a person
+F. Stars of the Milky Way
+G. Acidity of a liquid - PH indicator
+
+- but we often prefer indirect observations
+    - direct observation is prone to error
+    - Direct observation typically gives only qualitative properties
+
+- To operationalize a property of interest is to provide a way of linking it to a directly observable effect. 
+    - Operationalization: To operationalize a property of interest is to provide a way of linking it to a directly observable effect through a correlational relationship or a hypothesised causal chain.
+    - Property of interest: The property that is to be measured.
+    - Hypothesized causal chain: The supposed link between the property of interest and what can be directly observed.
+
+
+![](Pictures/observation05.jpg)
