@@ -136,3 +136,27 @@ G. Acidity of a liquid - PH indicator
 
 
 ![](Pictures/observation05.jpg)
+
+![](Pictures/observation06.jpg)
+
+-  Using a spring scale to measure the mass of an object
+    -  on this spring scale it says kilograms. This is even imprinted on this device; it claims that it indicates mass.
+    - a direct proportionality between the mass of the object and the gravitational force exerted on the object is needed. That spring scale goes terribly wrong if we use it on the moon. Nor will that spring scale work if you use it on an accelerating train.
+
+![](Pictures/observation07.jpg)
+
+- people will sometimes try to conceal their true decisions and lie to the pollster.
+
+#### Conditions of good operationalizations:
+
+- Property of interest: Must be well defined to allow for valid inference
+    - properly define what the property of interest is
+        - e.g. happiness of an individual human, a emotional state, a judgement, a number of physical properties?
+- Valid relationship between the property and the effect(Must be valid according to our best knowledge)
+    - we must sure that there are not too many disturbing factors involved. e.g. the spring scales, there are too many factors disturb the proportionality between the mass and the behaviour of the spring scale
+    - Must be sufficently stable for practical purposes
+- Effect: Must be publicly observable with sufficent precision
+
+### Operationalism
+
+- definition: Operationalism is the view that even the most basic concepts are defined through the operations by which we observe/measure them.
