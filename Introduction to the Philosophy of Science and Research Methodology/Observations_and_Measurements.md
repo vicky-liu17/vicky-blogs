@@ -160,3 +160,12 @@ G. Acidity of a liquid - PH indicator
 ### Operationalism
 
 - definition: Operationalism is the view that even the most basic concepts are defined through the operations by which we observe/measure them.
+
+- Some arguments against Operationalism:
+    - We understand(empirical) concepts although for some measurement techniques are enormously complex (e.g. very small lengths) or impractical(large distances like light years)
+        - temperature measured with a mercury thermometer is not thesame concept as temperature measured with resistance thermometer
+        - length, measured on the nanoscale, with particular operations is not the same as length between galaxies, measured in very different operationalizations.So instead of length as one concept, we now need to differentiate length_nano, length_galaxy, length_mid-size, and so on.
+    - Often want to criticize a measurement for not capturing the intended concept
+        - by embracing operationalism, we lose an important ability to critically evaluate operationalisations. If we agree on a common (non-operationalist)definition of happiness, then there might be multiple ways how to operationalize the measurement of this property; and because they all aim to measure the same property, we can compare these variants with one another. The operationalists, in contrast, can always say, “Well, if you measure it this way, then that is just a different concept of happiness”. Then, we have as many happiness concepts as we have measurement processes, and no way to compare them.
+    - quality criteria for operationaliztions
+    - operationalism does not help crafting good operationalizations
