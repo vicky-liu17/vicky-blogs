@@ -181,7 +181,7 @@ G. Acidity of a liquid - PH indicator
 
 - In order to represent the results of measurement operation with numbers, we need a comparison that provides a unit. 
 
-![](Pictures/observation08.jpg)
+![](Pictures/observation08.png)
 
 - Requirements for good measures:
     - The comparison unit must realize the relevant property (e.g, extension, mass, etc.)
@@ -189,9 +189,9 @@ G. Acidity of a liquid - PH indicator
     - The measure must be sufficiently stable over time
     - Everybody should be able to have access to the same measure
 
-![](Pictures/observation09.jpg)
+![](Pictures/observation09.png)
 
 #### Internation system of Units(SI)
 - Since 2018, all seven SI base unit (in color) were defined by reference to natural constants. Until November last year, the kg was still defined by reference to an artifact - the international prototype. 
 
-![](Pictures/observation10.jpg)
+![](Pictures/observation10.png)
