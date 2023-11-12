@@ -187,6 +187,7 @@ G. Acidity of a liquid - PH indicator
     - The comparison unit must realize the relevant property (e.g, extension, mass, etc.)
     - How much of the property is in a unit is set conventionally
     - The measure must be sufficiently stable over time
+        - Stability: A unit remains unchanged over time.
     - Everybody should be able to have access to the same measure
 
 ![](Pictures/observation09.png)
@@ -195,3 +196,51 @@ G. Acidity of a liquid - PH indicator
 - Since 2018, all seven SI base unit (in color) were defined by reference to natural constants. Until November last year, the kg was still defined by reference to an artifact - the international prototype. 
 
 ![](Pictures/observation10.png)
+
+![](Pictures/observation11.png)
+
+### Different Scales Types
+- Nominal scale: Classifies objects without ordering them.
+    - e.g. assigning samples identifying numbers
+- Ordinal Scale(有次序的):  Orders objects according to a qualitative comparison with regard to a particular property
+    - Mohs scale for hardness (莫式硬度)
+- Interval scale: Orders objects, but also quantifies the distance between them
+    - e.g. temperature in Celsius
+    - It has equal intervals between the scale points, but it lacks a true zero point.
+    - The absence of a true zero means that ratios and proportions cannot be calculated.
+- Ratio/quotient scale:  Orders objects, quantifies the distance between them but also has zero point where zero represents an absence of the property.
+    - e.g. length, volume, temperature in kelvin
+    - A ratio scale is similar to an interval scale, but it has a true zero point.
+    - The true zero allows for the calculation of meaningful ratios and proportions.
+    - Ratios on a ratio scale are meaningful; for example, if one object has a weight of 10 units and another has a weight of 5 units, you can say the first object is twice as heavy as the second.
+- Absolute scale: A scale where the units or the upper and lower bounds of the scale are natural
+    - e.g. counting objects, probability
+
+
+#### What characterizes a scale type?
+
+- Different scales of the same type are mathematically distinct, but represent identical empirical structure. 
+- Example: Celsius and Fahrenheit
+
+![](Pictures/observation12.png)
+
+i.e. we can mathematically transform a scale without affecting the properties it represents
+
+![](Pictures/observation13.png)
+
+![](Pictures/observation14.png)
+
+##### Why meaningless?
+
+- Both F and C have an arbitrary zero point. To make claims about ratios of temperatures, we nned a measure about an absolute zero.
+
+$\Rightarrow$ Kelvin: 10K is indeed twice as warm as 5K. 
+
+##### Scales are distinguished by the kind of transformations they allow
+
+- Nominal scale: any that retains non-identity 
+- Ordinal scale: positive monotone transformation
+    - Mathematically, a function $f$ is considered a positive monotone transformation if, for any two values $X_1$ and $X_2$ where $X_1 < X_2$, the transformed values satisfy $f(X_1) < f(X_2)$ and are always positive.
+- Interval scale: positive linear transformation
+- Ratio/quotient scale: positve scalar transformation
+- Absolute scale: unique
