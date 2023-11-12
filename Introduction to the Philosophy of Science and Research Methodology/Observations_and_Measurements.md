@@ -169,3 +169,29 @@ G. Acidity of a liquid - PH indicator
         - by embracing operationalism, we lose an important ability to critically evaluate operationalisations. If we agree on a common (non-operationalist)definition of happiness, then there might be multiple ways how to operationalize the measurement of this property; and because they all aim to measure the same property, we can compare these variants with one another. The operationalists, in contrast, can always say, “Well, if you measure it this way, then that is just a different concept of happiness”. Then, we have as many happiness concepts as we have measurement processes, and no way to compare them.
     - quality criteria for operationaliztions
     - operationalism does not help crafting good operationalizations
+
+### Measurement
+- What is measurement?
+    - measurement expresses the result of an observation quantitatively i.e. represented by numbers
+    - a measurement process consists of four main steps
+        - Definition of concept to be measured
+        - Specification of measurement operations
+        - Specification of a measure and definition of a unit
+        - Representation by numbers
+
+- In order to represent the results of measurement operation with numbers, we need a comparison that provides a unit. 
+
+![](Pictures/observation08.jpg)
+
+- Requirements for good measures:
+    - The comparison unit must realize the relevant property (e.g, extension, mass, etc.)
+    - How much of the property is in a unit is set conventionally
+    - The measure must be sufficiently stable over time
+    - Everybody should be able to have access to the same measure
+
+![](Pictures/observation09.jpg)
+
+#### Internation system of Units(SI)
+- Since 2018, all seven SI base unit (in color) were defined by reference to natural constants. Until November last year, the kg was still defined by reference to an artifact - the international prototype. 
+
+![](Pictures/observation10.jpg)
