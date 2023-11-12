@@ -244,3 +244,42 @@ $\Rightarrow$ Kelvin: 10K is indeed twice as warm as 5K.
 - Interval scale: positive linear transformation
 - Ratio/quotient scale: positve scalar transformation
 - Absolute scale: unique
+
+
+### Measurement Error
+
+- Definition: The difference between a measured value of a quantity and its true value
+
+![](Pictures/observation15.png)
+
+- Systematic error: Errors caused by specific factors that confound the measurement process. It is also called bias or inaccuracy.
+
+- Random error: Errors caused by the fluctuations of measurements due to factors that cannot or that for practical reasons will not be controlled.
+
+- Precise measurements: Measurements that do not suffer from random errors.
+- Accurate measurements: Measurements that do not suffer from systematic error.
+
+- Random errors can be reduced by repeating measurements and averaging over outcomes, or by trying an alternative operationalization that might have lower random errors. 
+- If the cause of the systematic error can be identified, then it usually can be eliminated. 
+
+#### Identifying Systematic Error
+- Convergent validity: Different ways of measuring the same concept should give rise to similar results. (Convergent validity is a concept in research and psychometrics that assesses the degree to which different measures that are theoretically expected to be related are, in fact, observed to be related. 评估一个测量工具与理论上相关的其他测量工具之间关系的程度，以确保其测量的是相同的概念或属性。)
+- Divergent validity: Different ways of measuring different intended concepts should give rise to dissimilar results. 离散效度：用于评估一个测量工具与理论上不相关的其他测量工具之间关系的程度，以确保该工具测量的是独特的概念或属性。
+
+![](Pictures/observation16.png)
+
+### Avoiding Systematic Error:
+- Control for potentially disturbing factors
+    - Example: observer influence
+        - Insert a thermometer into an extremely cold liquid.
+        - This action influences the temperature of the liquid.
+        - Causal effect: The observation interacts with and alters the system.
+- Standardize & stabilize measures
+    - Avoid unit incompatibilities
+        - This implies the importance of using standardized units of measurement across various variables or parameters being observed. Using consistent units ensures compatibility and facilitates accurate comparisons and analyses.
+    - Avoid unit deterioration
+        - This may refer to maintaining the stability and reliability of the chosen units over time. Ensuring that units do not degrade or become less reliable is crucial for maintaining the integrity of measurements and the validity of data collected. It could involve periodic checks, updates, or adjustments to prevent any degradation in the accuracy of measurements.
+
+![](Pictures/observation17.png)
+
+![](Pictures/observation18.png)
