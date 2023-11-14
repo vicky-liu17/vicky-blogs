@@ -29,6 +29,8 @@
 
 - Narrow: A lexical definition is too narrow if there are things that its definiens does not apply to, shich is should. 
 
+- Stipulative definitions cannot be more or less accurate, because accuracy can only be estimated in relation to target. Stipulative definitions do not have targets.
+
 #### Vagueness and Ambiguity
 
 - Purpose dependent: the quality of a stipulative definition is dependent on its purpose and is therefore purpose dependent.
@@ -37,5 +39,10 @@
 
 - Vague: a word is vague if there is no clear-cut distinction between where the word can be applied and where it cannot. 
 
+- A lot of the time, the purpose of constructing a stipulative definition is to reduce vagueness.
 
--  vagueness should be distinguished from ambiguity.
+- vagueness should be distinguished from ambiguity.
+- The word space can refer to the distance between planets and stars as well as to the empty area in a room. Bridges, for example, can be found on violins, in songs and over rivers.
+- These words are ambiguous. 
+
+- Ambiguous: A word is ambiguous if there are two distinct meanings of the words, in the way they could be interpreted as two completely different words. 
