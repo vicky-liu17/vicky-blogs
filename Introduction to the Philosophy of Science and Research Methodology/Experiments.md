@@ -71,3 +71,33 @@
 - Construct the same background conditions in both treatment and control group(through manipulating the environment) varying only the intervention on the factor of interest. 
 
 - Laboratory experiment: An experiment where there is manipulation for intervention and where all or most relevant variables are controlled.
+
+> The difference between the lab and the field would then be how much we are engaged in manipulating the background conditions.
+
+#### Simulation Experiments
+
+![](Pictures/experiment02.png)
+
+Simulation experiment: A model study where the model is created as to mimic an experiment, but where the variable that is intervened on is only represented, rather than actually present.
+
+> An experiment is a controlled observation in which the observer manipulates the real variables that are believed to infulence the outcome, both for the purpose of intervention and control. 
+
+## Errors in experiment
+
+- Failed Experiments?
+
+- The Michelson-Morley experiment(1887)
+    - 迈克尔逊－莫雷实验(Michelson-Morley Experiment)，是1887年迈克尔逊和莫雷在美国克利夫兰做的用迈克尔逊干涉仪测量两垂直光的光速差值的一项著名的物理实验。但结果证明光速在不同惯性系和不同方向上都是相同的，由此否认了以太（绝对静止参考系）的存在。
+
+![](Pictures/experiment03.png)
+
+![](Pictures/experiment04.png)
+
+- Productive “failure”
+
+- Non-Productive "failure"
+    - Experimental observations are powerful evidence only if the process is designed correctly
+    - Mill's Method of Difference: justifies conclusion only if assumptions about process are correct 
+    - Most important: all relevant factors are controlled
+    - Confirmation bias / interpretation problem: The observation is registered incorrectly due to psychological properties of the observer.
+    - Observer effect / influence problem: The act of observation changes what is observed.
