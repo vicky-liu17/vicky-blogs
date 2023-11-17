@@ -7,5 +7,7 @@ Models as ...
 - purpose dependent
 - things to manipulate
 
+```mermaid
 stateDiagram
-    s1 --> s2: A transition
+    Model --> Target: A transition
+```
