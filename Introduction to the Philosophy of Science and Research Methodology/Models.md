@@ -9,5 +9,5 @@ Models as ...
 
 ```
 stateDiagram
-Model --> Target: Represents
+    s1 --> s2: A transition
 ```
