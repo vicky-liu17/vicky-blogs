@@ -224,3 +224,13 @@ Evidential hierarchies: A ranking of types of evidence based on the processes th
 - we cannot apply the RCT Results to another sample drawn from this population. 
 
 ![](Pictures/experiment16.png)
+
+- Randomization is not random sampling from population. 
+
+#### Summary
+- Good reasons for randomization 
+- Randomizing not necessary for these objectives
+- Randomization not a guaratee for control of known or unknown background factors
+- RCT results cannot be generalized without further argument
+- Good RCTs require background knowledge
+- RCTs not better evidence in principle than other experiment
