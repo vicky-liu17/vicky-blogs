@@ -101,3 +101,126 @@ Simulation experiment: A model study where the model is created as to mimic an e
     - Most important: all relevant factors are controlled
     - Confirmation bias / interpretation problem: The observation is registered incorrectly due to psychological properties of the observer.
     - Observer effect / influence problem: The act of observation changes what is observed.
+    - Placebo Effect: The therapeutic effect that an inert substance or treatment, designed to have no therapeutic value, has on a patient.
+    - Selection Bias:  A factor influences the selection of the sample, or the division into test and control group, which one did not aim to create.
+
+![](Pictures/experiment05.png)
+
+#### Internal Validity:
+- The above errors compromise the process of experimentation:
+    - Control of background variable
+    - Intervention only on target variable
+    - Correct observation
+- Only if such errors are absent can an experimental observation justify accepting or rejecting a hypothesis. In that cases: conclusion from experimental observation are internally valid. 
+
+### Detecting Experimental Errors:
+
+- apply all the relevant knowledge we know
+- investigate previously performed experiments
+- Repetition:
+    - An experiment is repeatable if there is enough information available about an experiment so that a component person other than the original experimenter can repeat the experimental procedures. 
+- Reproduction:
+    - An experimental result is reproduces if a competent repetition of the original experiment yields the same result. 
+- Replication:
+    - An experimental result is replicated if a comptetent independent experimrnt, in the spirit of the original experiment, with independent data, analytical methods, laboratories, and instruments, yields the same result. 
+
+![](Pictures/experiment06.png)
+
+## How to implement experimental control?
+
+- Experimental control consist in 
+    - accurately identifying the features that are relevant for an experimental result
+    - being able to infulence these features in such a way that alternative explanations of the experimental result can be ruled out. 
+
+1. Divide experimental sujects/objects into treatment and control group
+
+![](Pictures/experiment07.png)
+
+![](Pictures/experiment08.png)
+
+![](Pictures/experiment09.png)
+
+2. Holding things constant
+    - Finding situations with same background variables.
+    - Constructing situations with same background variables
+
+3. Eliminating disturbing factors
+    - vacuum
+    - faraday cage
+    - outer space
+
+### Special case of elimination: Blinding
+
+- Blinding: Eliminating observer effect or the influence problem through limiting information about the study to participants 
+or observers.
+
+- Single blinding / subject blinding: Blinding the participants in a study, for instance about whether they are in the test or control group. (Sujects do not know which treatment they are getting)
+
+- Experimenter blinding: Blinding the observers in a study, for instance about which subjects are in the test and control group.
+
+- Double blinding: A study is double blind if both subject blinding and experimenter blinding are implemented.(Experimenters do not know which treatments are administered to what subjects.)
+
+4. Separating factors
+
+- "separation" refers to the technique of isolating or distinguishing the influence of a specific factor from other factors in an experiment. The idea is that while it may not always be possible to completely eliminate the impact of a certain factor, researchers can deliberately separate it from other variables and observe its effects independently. The example provided involves the Gravity Probe experiment, where the intervention (placing a hydrogen maser in a weaker gravitational field) introduced an unavoidable Doppler shift in the treatment group. Despite this, the researchers were able to separately measure the Doppler Effect and then statistically account for it in their analysis, allowing them to isolate the impact of the weaker gravitational field (time dilation) as the main result of the experiment.
+
+![](Pictures/experiment10.png)
+
+
+## Ramdomised Experiments
+
+#### Randomised Controlled Trial(RCT)
+
+![](Pictures/experiment11.png)
+
+- Randomization: Using a random process to divide into test and control, for instance by flipping a coin.
+- Random sampling: Using a random process to collect a sample from the population. Not to be confused with randomization.
+- Note that randomization in RCTs refers only to the division process, not the sampling process.
+- That is, an experiment is randomized if the division of the sample relies on a random process, even though the way you sampled from the population might be non-random and even highly biased!
+
+#### Importance of RCTs
+
+"Hierarchy of Evidence" 
+
+![](Pictures/experiment12.png)
+
+Evidential hierarchies: A ranking of types of evidence based on the processes that produced this evidence.
+
+- Randomization eliminate selection bias. (eliminate bias in the control/treatment assignments.)
+- Randomization helps convince others that you have not rigged the treatment/control division in favor of the outcome you want
+- Randomization facilitate blinding og the identity of treatments from investigators, participants and assessors. 
+
+#### Ramdomizatio helpful, but not necessary. 
+- Avoid selection bias by other controlled assignment procedures
+- Other controlled assignment procedures are also arguments against rigging selection
+- Many other available blinding procedures that do not require randomization
+
+#### Debunking stronger claims for RCTs
+- Claim: Randomization ensures that background factors are equally distibuted in treatment and control group. (False)
+    - We must therefore conclude that RCTs do not guarantee equal distributions of background factors in the control and the treatment groups.
+
+> "Most experimenters on carrying out a random assignment will be shocked to find how far form equally the plots distribute themselves. Fisher(1926)
+
+![](Pictures/experiment13.png)
+
+![](Pictures/experiment14.png)
+
+- Any particular randomization might yield differing dstributions in treatment and control
+- Claim only true in infinite sequence
+- But experimenters only randomize once, not repeatedly
+
+### How to avoid such imbalances?
+
+1. Check for imbalances in known factors post-randomization
+2. Stratified randomization
+
+![](Pictures/experiment15.png)
+
+- For the above two balancing strategies, factors to be balanced need to be known
+- Consequence: randomization does not guarantee control of unkown factors
+
+#### Transfering RCT Results
+
+- we cannot apply the RCT Results to another sample drawn from this population. 
+
+![](Pictures/experiment16.png)
