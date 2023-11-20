@@ -34,3 +34,26 @@ stateDiagram
 
 - A model has certain properties, and a target has certain properties. Despite models being representations of targets, there are always differences between a model and its corresponding target. **This is what is meant by idealization: a model is an idealization of a target if the model is supposed to represent that target, but model and target differ in some of their properties.**
 
+
+- Idealization is a characteristic of models that distinguish them from theory.
+
+
+### Models are Purpose-dependent
+
+- **Purpose dependence**: A model can only be justified on the basis of how useful it is for fulfilling a certain purpose
+
+- Same target, two different models
+
+![](Pictures/model01.png)
+
+- quantum mechanic model
+    - more precise
+    - more similar in relevant properties
+- Structure Model
+    - simpler
+    - more transparent(easier to work with and understand)
+    - theoretically more tractable(functional group analysis)
+
+#### Models as things to be manipulate
+
+![](Pictures/model02.png)
