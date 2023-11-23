@@ -79,12 +79,104 @@ stateDiagram
 ### Models vs. Experiments
 
 - Similarities
-    - In a model & parameters - cf. experimental control 
+    - In a model we set variables & parameters - cf. experimental control
+    - We manipulate a model - cf. experimental manipulation
+    - we observe results of model manipulation - cf. exp. Observation
+
+- Differences
+    - Internal validity less of a problem for models than for experiment
+    - Justifying neutral analogies is a problem for all models but only for some experiments
+
+### Summary
+- Models are things to manipulate 
+- They provide neutral analogies
+- Source of errors distinguished modelling from experimenting
+
+
+### Must models be Similar to their targets?
+
+#### What are potential quality criteria for good modeling?
+
+- What makes a good model?
+    - No fixed scheme... but many ingredients that need to be balanced/
+- Similarity to target
+- Robustness
+- Precision
+- Simplicity
+- Theoretical tractability
+- Transparency
+
+
+### Similarity
+- How similar is the model to the target
+
+![](Pictures/model04.png)
+
+- A model M is a good representation of a target X if and only if M is similar to X with repect to properties P to the degree $d^P$
+
+
+- Similarity: The degree to which the model has several properties which the target also has (there are multiple positive analogies) that are relevant for the modelling purpose.
+
+- According to the above definition, can we ever exclude any model as a bad representation of any given target?
+- Reduce the question of good representation to the question of similarity
+- That's not what suffices to say that it is a good representation.
+
+- Similarity: The degree to which the model has several properties which the target also has (there are multiple positive analogies) that are **relevant for the modelling purpose.**
+
+- similarity itself is not a criterion of good representation. We should consider the modelling purpose
+
+![](Pictures/model05.png)
+
+### Model Virtues: what makes a good model?
+
+- Epistemic virtues of models: Types of properties of models that determine the quality of a model, given a specific purpose
+
+#### Robustnes
+- A model result is robust (with repect to some condition) if changing this condition does not change the model result.
+
+![](Pictures/model06.png)
+
+#### Precision
+- A model M1 is more precise(with respect to a parameter P) than another model M2 if the parameter specifications of M1 imply the parameter specifications of M2. (Parameter Precision)
+
+- Parameter precision: One model has higher parameter precision than another model, if the specifications of the parameters of the first model implies the parameter specifications of the second.
+
+- Consider the following examples. Model 1 describes the rate of change only as a function of N: M1=f(N). Model 2, in contrast, describes this as a linear function of N: M2=a+b*N. Clearly, the description of M2 implies the description of M1. If something is a linear function of N, then it is also a function of N. Therefore, M2 is more precise than M1 in its parameter.
+
+
+#### Simplicity
+
+- Simplicity: One model is simpler than another model if it contains less parameters than another model.(Contains less details)
+
+- The map of the London Underground is an excellent example. Through numerous iterations, its makers have honed the map to only those details that are relevant for the purpose of assisting traveling the city underground. Details like distance between metro stations, curvature of the rail lines, locations of streets and monuments are all omitted. This makes the map easier to use and helps to quickly and correctly apply it for its intended purpose. However, these simplifications simultaneously make the map useless for other purposes, such as if, for example, hapless tourists try to use it to find their way around the city on foot.
+
+- A Model M1 is simpler than another model M2 if (i)M1 processes less varibales than M2 (ii) M1 contains less parameters than M2, and (iii) M1 uses fewer operations than M2
+
+- Simplicity is only about the model, not the target. 
+
+#### Tractability
+
+- A model is tractable (with repsect to some general set of rules), if the relevant model result can be obtained by applying these principles to the model. 
+
+- Tractability: A model is computationally tractable only if its result can be computed in polynomial time. A model is analytically tractable only if the model result can be obtained through valid deduction, from the model assumptions alone. A model is theoretically tractable only if the model is either computationally or analytically tractable, and some of the necessary 
+computational or deductive steps are justified with reference to a background theory.
 
 
 
+模型的可处理性指的是在特定的约束或规则下，通过将这些原则应用于模型，可以获得模型相关结果的可管理性和可解性。
 
 
+**可处理性的类型：**
+1. **计算可处理性：**
+   - 如果模型的结果可以在多项式时间内计算，则该模型在计算上是可处理的。这意味着获取结果所需的计算资源最多与输入规模呈多项式关系。例如，如果运行一个天气模拟模型所需的时间与模拟的复杂性成比例，那么它在计算上是可处理的。
+
+2. **分析可处理性：**
+   - 如果模型的结果仅基于模型假设通过有效的推导获得，则该模型在分析上是可处理的。这涉及通过逻辑推理在不需要大量计算工作的情况下得出结论。例如，如果经济模型对市场行为的预测可以从一组明确定义的假设中逻辑推导出来，那么它在分析上是可处理的。
+
+3. **理论可处理性：**
+   - 如果模型在计算上或分析上是可处理的，并且一些必要的计算或推导步骤是基于背景理论合理的，那么该模型在理论上是可处理的。这确保了模型的解与已建立的理论原则一致。例如，如果物理模型预测粒子行为的计算基于已建立的物理定律，那么它在理论上是可处理的。
+
+总之，在建模中，可处理性涵盖了通过计算方法、分析推导或两者的结合高效获取结果的能力，同时通过与相关理论框架的合理步骤来保证模型解的可靠性。
 
 ### Exercise
 1. When is a model robust?
