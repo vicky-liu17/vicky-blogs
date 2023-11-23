@@ -178,6 +178,72 @@ computational or deductive steps are justified with reference to a background th
 
 总之，在建模中，可处理性涵盖了通过计算方法、分析推导或两者的结合高效获取结果的能力，同时通过与相关理论框架的合理步骤来保证模型解的可靠性。
 
+![](Pictures/model07.png)
+
+#### Transparency
+- A model is epistemically transparent if the model user is cognitively capable of understanding how the model result is produced.
+
+
+![](Pictures/model08.png)
+
+#### Trading off Virtues
+
+- Increasing one epistemic virtue in a model often means decreasing another one.
+- e.g. precision - transparency, similarity - simplicity
+- Buidling a model means finding the trade-off best for **your purpose**!
+
+
+## learning from and with models: models as mirrors
+- as mirrors of the real world 
+- as isolations
+
+Mirror models: A model with high similarity to target
+
+![](Pictures/model09.png)
+
+![](Pictures/model10.png)
+
+![](Pictures/model11.png)
+
+- FEA Model:  Finite Element Analysis (FEA).
+
+![](Pictures/model12.png)
+
+
+#### models as mirrors: limitation
+
+Models as mirrors might function as ideal, but comes at a cost
+- high similarity to a target, precision
+- lack of simpkicity, tractability, transparency
+- ...but not sufficient to avoid external validity issues
+
+![](Pictures/model13.png)
+
+### Learning from models: models as isolations
+
+- Isolation model: A model with high simplicity.
+
+![](Pictures/model14.png)
+
+![](Pictures/model15.png)
+
+
+Can a model be similar to its target and still be simple
+- Isolating models pick out some aspect of the  target, ignoring all the others
+- They represent the workings of that factor accurately
+
+
+#### Isolating Models: Limitations
+
+- System must be dividable this way
+    - component must be truly independent
+- Difficult to validate isolated models
+    - Result of valid isolating models might not look like anything in the real world - because real-world phenomena are combination of effects, while isolating model only represent one such effect.
+    - Validation either through sythesis - but that gives rise to a new version of Duhem-Quine problem
+    - Or by carefully construcing isolating experiments
+
+
+
 ### Exercise
 1. When is a model robust?
 2. What model problem is robustness trying to address? Think of an example.
