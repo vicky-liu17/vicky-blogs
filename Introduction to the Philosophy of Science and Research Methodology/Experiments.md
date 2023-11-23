@@ -234,3 +234,35 @@ Evidential hierarchies: A ranking of types of evidence based on the processes th
 - RCT results cannot be generalized without further argument
 - Good RCTs require background knowledge
 - RCTs not better evidence in principle than other experiment
+
+
+### Exercise 1
+1. The term validity applies to experimental designs: an experiment is either valid or invalid. 
+    - False: inference or result is valid or invalid, not the experiment iteself. 
+2. Certain inferences about an experiment might be valid, while others, about the same experiment, are not valid.
+    - True
+3. One can be more or less confident in the internal and external validity of an inference.
+    - True(experiment provides evidence for the validity of the inference)
+4. External validity concerns the inference about the experiment alone, excluding its application to any target system.
+    -  False: When determining the external validity, we typically consider the similarity between the test setup and the real target we are interested in, for instance if we have a sample that is representative of the population, if the intervention made in the study is similar to the intervention in the real case, and if the control of the background variables have made the test situation different from the real case in an important sense.
+5. Internal validity is improved through improved control.
+    - True
+6. Improving internal validity also improves external validity. 
+    - False
+
+### Exercise 2:
+1. What is the defining distinction between experiment and observational studies?
+    - intervention(active manipulation of variables)
+2. Why did snow(the doctor in Soho) not perform an experiement?
+    - cannot perform manipulation and cannot intervene on the target variable
+    - background factors: found equally distributed
+3. Why is that distinction so important? Is there something that we can learn from experiment that is difficult to learn from observational studies?
+    - 
+4. What property would an observational study have to have so one could learn as much form it as form an experiment?
+
+
+- intervention: change a variable in the environment
+- manipulation: we might perform to change or maintain factors(including background factors)
+
+
+

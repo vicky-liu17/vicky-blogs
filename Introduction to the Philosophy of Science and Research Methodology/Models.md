@@ -57,3 +57,42 @@ stateDiagram
 #### Models as things to be manipulate
 
 ![](Pictures/model02.png)
+
+- Analogy: Inference by analogy is to state that a conclusion in one case applies to another case due to there being relevant similarities between the cases.
+
+- Positive Analogy: Similarity between model and target.
+
+- Negative analogy: Dissimilarity between model and target.(idealisations)
+
+- Neutral analogy: Property of model, whose occurrence in target is not known.
+
+![](Pictures/model03.png)
+
+-  The positive analogies between rats and humans include similar basic physiology, similar organs, and similar hormones.
+-  The negative analogies between rats and humans include the difference in size and in lifespan between humans and rats.
+- One neutral analogy between humans and rats is the rats’ reaction to a newly synthesized drug. 
+    - let’s say rats are capable of ingesting it, it doesn’t poison them, and it cures a particular kind of cancer, while scientists don’t know how humans react to it (because they are not legally allowed to test it directly on humans, say). (This is just hypothese, until the condidence grows to make it a posive hypotheses--need extraexperimental evidence). By analogy, one then infers from the rat model that humans will react similarly to this new drug.
+
+- we must choose our material models not just with respect to the positive analogies that they offer to the desired target, but also with respect to the interesting ways we can manipulate them and learn about new model properties that provide the material for new neutral analogies. Pretty much the same reasoning can be applied also to computational and mathematical models.
+
+
+### Models vs. Experiments
+
+- Similarities
+    - In a model & parameters - cf. experimental control 
+
+
+
+
+
+
+### Exercise
+1. When is a model robust?
+2. What model problem is robustness trying to address? Think of an example.
+3. If some apsects of a model are changed and yield the same results, would that not imply that the model is imprecise or inaccurate rather than robust?
+
+1. A model is robust with respect to an assumption if changing this assumption does not change the model result. (changing the parameters, the result remains unchanged).
+
+2. Robustness in the context of modeling is primarily addressing the problem of overfitting and the potential lack of generalization to new, unseen data.
+
+3. It might indicate that the model lacks sensitivity to those particular changes, but it doesn't necessarily imply that the model is imprecise or inaccurate. This situation could be a characteristic of robustness, especially if the changes pertained to elements that the model is designed to handle or is inherently insensitive to.
