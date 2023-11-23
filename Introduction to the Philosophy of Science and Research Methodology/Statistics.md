@@ -5,6 +5,10 @@ graph TD;
 A["Data"]-->B["describes and summarizes"] & C["infers to population"];
 ```
 
+- Descriptive statistics: In descriptive statistics, one aims to display data and conclusions accurately. 
+
+- Inferential statistics: In inferential statistics, one aims to draw a justified conclusion from data. 
+
 > There are three kinds of lies: lies, damned lies, statistics. (Mark Twain)
 
 
@@ -67,3 +71,43 @@ Methodology of descriptive statistics
 
 
 ### Why should one use statistics to evaluate hypotheses?
+
+- Stochastic hypothesis: A hypothesis whose implications come in the form of a probability distribution. 
+- Deterministic hypothesis: A hypothesis all of whose implications are certain.
+
+- 1st Reason: Stochstic Implications of H
+
+- 2st Reason: Determinstic hypotheses, e.g, "Amyloid plaque is the only cause of Alzheimer's disease". 
+
+![](Pictures/statistics05.png)
+
+- Amyloid Plaque identified through tissue staining with enzymes. These enzymes（酶） are capable of catalyzing reactions that give a colored product. This is detactable by light microscopy（光学显微镜）.
+
+- Measurement error
+
+![](Pictures/statistics06.png)
+
+- Quantifying errors:
+    - How probable is it to not observe plaque, even if there is Amyloid plaque?
+    - How probable is it to observe plaque, even if ther is no Amyloid plaque?
+
+- 3rd Reasons: Quantifying Confidence
+    - Observing truth of any implication of H does not justify conluding that H is true, but only that we are more confident in H. 
+    - Bayesian Statistics
+    - Statistical tests of deterministic hypotheses are weakening of(non-statistical) accounts of confimation and falsification.
+
+
+- Often for legitimate reasons:
+    - stochastic hypotheses
+    - Quantify error
+    - Degrees of confirmation
+
+## Error Statistic
+
+- Fisher's Significance Testing
+
+![](Pictures/statistics07.png)
+
+![](Pictures/statistics08.png)
+
+![](Pictures/statistics09.png)
