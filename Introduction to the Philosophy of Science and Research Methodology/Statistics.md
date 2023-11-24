@@ -155,3 +155,26 @@ Methodology of descriptive statistics
 - Power of a test: The probability of correctly rejecting a false hypothesis Hi.
 
 ![](Pictures/statistics13.png)
+
+### Summary:
+- Fisher's Significance Testing
+- p-value, significance level
+- Ways how to manipulate testing procedure
+- Evidence for p-value abuse
+- Neyman- Pearson Hypothesis Testing
+- Type-I and Type-II errors
+
+
+### Bayesian Statistics
+
+![](Pictures/statistics14.png)
+
+- Bayesian statistics: Posterior probability of a hypothesis is calculated based on the prior probabilities for this hypothesis together with the observed outcome, using Bayes’ theorem.
+
+![](Pictures/statistics15.png)
+
+![](Pictures/statistics16.png)
+
+![](Pictures/statistics17.png)
+
+![](Pictures/statistics18.png)
