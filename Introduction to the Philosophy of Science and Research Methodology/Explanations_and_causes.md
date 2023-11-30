@@ -167,7 +167,7 @@ In this case, we have causal relationship without any correlations.
 
 ![](Pictures/explanation16.png)
 
-##### Strategy @: Instrumental Variable Analysis
+##### Strategy 2: Instrumental Variable Analysis
 - For detecting causes for observational data
 
 ![](Pictures/explanation17.png)
