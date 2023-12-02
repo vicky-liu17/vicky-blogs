@@ -69,3 +69,9 @@ The intentional stance: Attributing mental states like beliefs and desires to an
     - Decide to treat the object whose behavior is to be predicted as a rational agent.
     - Figure out what belief & desires that agent ought to have, given its place in the world and its purpose. 
     - Decide what the agent ought to do, given the attributed beliefs and desires. 
+
+### Qualitative Methods
+
+- Are qualitative and quantitative data types fundamentally different?
+    - Data types share at least some information content
+    - qualitative data often can be quantified
