@@ -75,3 +75,16 @@ The intentional stance: Attributing mental states like beliefs and desires to an
 - Are qualitative and quantitative data types fundamentally different?
     - Data types share at least some information content
     - qualitative data often can be quantified
+
+
+#### Quantification often narrows focus
+
+- Go back to our three stones. If I were to ask you (which I have done in the classroom) what sort of properties you are observing, someone usually comes up with an altogether new property that they are observing in these stones. Something interesting, exotic, an unusual perspective on them. If I start out by asking you to quantify certain properties, then I am focusing you on these properties, and that narrows what we can extract from your responses.
+-  let us say in a focus group, is that people can freely express their evaluative or attitudinal perspective. We again can gather that into a qualitative data set and then we might identify a number of separable properties, each of which we might then proceed to quantify. So here, you see another rationale for a mixed method that first focuses on the qualitative and then proceeds to the quantitative.
+
+#### Construct validity
+
+```mermaid
+graph LR;
+A[mental Attitude]-->|valid and stable relationship?|B[Linguistic response to our question];
+```
