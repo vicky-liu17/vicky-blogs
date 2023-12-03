@@ -88,3 +88,46 @@ The intentional stance: Attributing mental states like beliefs and desires to an
 graph LR;
 A[mental Attitude]-->|valid and stable relationship?|B[Linguistic response to our question];
 ```
+
+#### COnditions for good operationalization:
+1. The concept to be observed is defined
+2. The property of interst is connected with an observable property
+3. The connection between property of interest and observable pproperty is valid according to our best knowledge
+4. The connection between property of interest and observable property is sufficiently stable for practical purpose
+5. The observable property is observable with sufficient precision in practice
+
+#### Can the validity of qualitative data be evaluated?
+
+```mermaid
+graph LR;
+A[Subject]-->|Observation process|B[Qualitative data];
+```
+
+### Ensure repeatability - Procedural rigor
+- Document techniques of data collection
+- Make forms of data analysis transparent
+
+### Control observer effect
+- CANNOT: control group, blinding(qustioning in interview/survey is the only intervention)
+- minimize/eliminate effect observer on subject
+
+### Control observer bias - Reflexivity
+- Describe the influence of relation between researcher, topic & subjects
+- Describe researchers' sociocultural position
+
+### Robustness - Triangulation
+- Use multiple methods of observation
+- e.g. combine revealed and stated preference analysis
+
+### Quality Criteria for interpretative methods
+
+##### The problem
+
+- Interpreting a single case: one input, one behavior, many mental states assignments
+- Multiplicity of plausible models
+- ad hoc and hence not science?
+
+#### Avoiding interpretation
+- Be a (Methodological) Behaviorist where you can!
+    - Stimulus-reponse relations
+    - Relations between social not individual properties
