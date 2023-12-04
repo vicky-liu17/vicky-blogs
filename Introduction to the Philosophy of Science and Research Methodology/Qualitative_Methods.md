@@ -131,3 +131,43 @@ A[Subject]-->|Observation process|B[Qualitative data];
 - Be a (Methodological) Behaviorist where you can!
     - Stimulus-reponse relations
     - Relations between social not individual properties
+    - Relations between physiological properties(brain states, hormonal levels) and behavior
+
+#### Improving Interpretation
+- Minimize scope of interpretation
+- Find more evidence for uncovering mental states and process
+- Ensure observer competence
+- Check for coherence
+    - attention check(some one pick the choices in the survey randomly)
+    - Repeat questions
+    - Respondent validation
+- use intersubjective checks
+
+
+### Conclusion
+- Interpretation is a fallible method
+- Interpretation is widely practiced outside of science
+- Interpretation studies can be more or less reliable
+- Interpretation results can be more or less valid
+- The more systematically we employ the strategies, the more confidence we have in the validity of the interpretation
+
+
+## Case studies
+
+Case study: A study characterized by using a small number of cases that are chosen for some specific reason and display the same outcome. The study typically does not involve experimental manipulations. The goal of the study is to understand a specific case.
+
+![](Pictures/qualitative01.png)
+
+### Why perform case studies?
+- Falsification
+- Analytical narratives 
+- Qualitative comparative analyses
+- Process tracing
+
+### Analytic narratives
+The method involves:
+- Make explicit research question
+- select cases
+- the use of narrative to elucidate the principal players, their preferences, rhe key decision points and possibilities
+- The evaluation of the model through the testable implications the model generates
+- consider alternative narratives
