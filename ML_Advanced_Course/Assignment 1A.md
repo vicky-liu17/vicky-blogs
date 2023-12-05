@@ -53,19 +53,13 @@ The probability density function (PDF) of the Gamma distribution in exponential 
 
 $$p(x|\alpha, \beta) = \frac{1}{\Gamma(\alpha)} (\beta x)^{\alpha - 1} e^{-\beta x}$$
 
-This distribution can be expressed in the general exponential family form:
+Taking the natural logarithm of both sides:
 
-$$p(x|\theta) = h(x) \exp\left(\eta(\theta) \cdot T(x) - A(\eta)\right)$$
+$$\log p(x|\alpha, \beta) = \log\left(\frac{1}{\Gamma(\alpha)} (\beta x)^{\alpha - 1} e^{-\beta x}\right)$$
 
-- $\theta = [\alpha, \beta]$
+$$\log p(x|\alpha, \beta) = \log\left(\frac{1}{\Gamma(\alpha)}\right) + (\alpha - 1)(\log(\beta) + \log(x)) - \beta x$$
 
-- $\eta(\theta) = [\theta_1 - 1, -\theta_2]$
 
-- $h(x) = 1$
-
-- $T(x) = [\log x, x]$
-
-- $A(\eta) = \log \Gamma(\eta_1 + 1) - (\eta_1 + 1) \log(-\eta_2)$
 
 The Gamma distribution can be expressed in the exponential family form as:
 
