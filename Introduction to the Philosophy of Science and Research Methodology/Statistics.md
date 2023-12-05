@@ -178,3 +178,16 @@ Methodology of descriptive statistics
 ![](Pictures/statistics17.png)
 
 ![](Pictures/statistics18.png)
+
+- The problem of priors: Bayesianism does not offer a clear way to determine prior probabilities.
+
+- The principle principle: A subject’s prior probability should be assigned on the basis of objective probability, if it is known.
+
+- The principle of indifference: A subject’s prior probabilities should be assigned equally to the possible outcomes, if there is no information about the objective probabilities.
+
+- The problem of slow convergence: If two subjects assign sufficiently different prior probabilities to the same hypothesis, it is possible that their respective posterior probabilities will not converge even though Bayes’ theorem has been applied to large amounts of data.
+
+- The problem of old evidence: The problem of determining what evidence that has been previously used to determine posterior probabilities.
+
+- The problem of uncertain evidence: Bayesianism does not take uncertainty 
+about evidence into account.
