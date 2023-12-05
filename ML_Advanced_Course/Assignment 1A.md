@@ -20,19 +20,21 @@ Below we provide five different distributions from exponential-family. Show whic
 
 The expression for the probability mass function of a Poisson random variable is as follows:
 
-$$p(x|\lambda)=\frac{\lambda^x e^{-lambda}}{x!}$$
+$$p(x|\lambda)=\frac{\lambda^x e^{-\lambda}}{x!}$$
 
 Rewrite the expression:
 
-$$p(x|\lambda)=\frac{1}{x!}exp{x\log\lambda - \lambda}$$
+$$p(x|\lambda)=\frac{1}{x!}exp(x\log\lambda - \lambda)$$
 
 Therefore, the Poisson distribution is an exponential family distribution:
 
-$$\eta = \log\lambda$$
+$\theta = \lambda$
+
+$$\eta (\theta) = \log\lambda = \log(\theta)$$
 
 $$T(x)=x$$
 
-$$A(\eta)=\lambda=\e^{\eta}$$
+$$A(\eta)=\lambda=e^{\eta}$$
 
 $$h(x)=\frac{1}{x!}$$
 
