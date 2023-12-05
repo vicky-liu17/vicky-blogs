@@ -28,7 +28,7 @@ $$p(x|\lambda)=\frac{1}{x!}exp(x\log\lambda - \lambda)$$
 
 Therefore, the Poisson distribution is an exponential family distribution:
 
-$\theta = \lambda$
+$$\theta = \lambda$$
 
 $$\eta (\theta) = \log\lambda = \log(\theta)$$
 
@@ -37,4 +37,13 @@ $$T(x)=x$$
 $$A(\eta)=\lambda=e^{\eta}$$
 
 $$h(x)=\frac{1}{x!}$$
+
+
+#### Question 1.1.2:
+
+- $\theta = [\alpha, \beta]$
+- $\eta(\theta)=[\theta_{1} -1, - \theta_{2}]$
+- $h(x)=1$
+- $T(x)=[\log x, x]$
+- $A(\eta)=\log \Gamma(\eta_1 +1) - (\eta_1 +1)log(- \eta_2)$
 
