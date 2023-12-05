@@ -16,7 +16,7 @@ Below we provide five different distributions from exponential-family. Show whic
 - $T(x)=x$
 - $A(\eta)=e^{\eta}$
 
-##### Answer: The Poisson distribution
+**Answer:** The Poisson distribution
 
 The expression for the probability mass function of a Poisson random variable is as follows:
 
@@ -46,4 +46,30 @@ $$h(x)=\frac{1}{x!}$$
 - $h(x)=1$
 - $T(x)=[\log x, x]$
 - $A(\eta)=\log \Gamma(\eta_1 +1) - (\eta_1 +1)log(- \eta_2)$
+
+**Answer:** The Gamma distribution
+
+The probability density function (PDF) of the Gamma distribution in exponential family form is given by:
+
+$$p(x|\alpha, \beta) = \frac{1}{\Gamma(\alpha)} (\beta x)^{\alpha - 1} e^{-\beta x}$$
+
+This distribution can be expressed in the general exponential family form:
+
+$$p(x|\theta) = h(x) \exp\left(\eta(\theta) \cdot T(x) - A(\eta)\right)$$
+
+- $\theta = [\alpha, \beta]$
+
+- $\eta(\theta) = [\theta_1 - 1, -\theta_2]$
+
+- $h(x) = 1$
+
+- $T(x) = [\log x, x]$
+
+- $A(\eta) = \log \Gamma(\eta_1 + 1) - (\eta_1 + 1) \log(-\eta_2)$
+
+The Gamma distribution can be expressed in the exponential family form as:
+
+$$p(x|\theta) = \frac{1}{\Gamma(\alpha)} (\beta x)^{\alpha - 1} e^{-\beta x} = \exp\left((\alpha - 1) \log(\beta x) - \beta x - \log(\Gamma(\alpha))\right)$$
+
+So, the distributions described above correspond to the Gamma distribution.
 
