@@ -159,15 +159,48 @@ Case study: A study characterized by using a small number of cases that are chos
 ![](Pictures/qualitative01.png)
 
 ### Why perform case studies?
-- Falsification
-- Analytical narratives 
+- Falsification(when doing falsification, a single case is enough)
+- Analytical narratives(some phenomenons are sufficiently complex)
 - Qualitative comparative analyses
-- Process tracing
+- Process tracing(How a cause operate an effect)(This kind of questions cannot be answered by population studies)
 
 ### Analytic narratives
-The method involves:
-- Make explicit research question
-- select cases
-- the use of narrative to elucidate the principal players, their preferences, rhe key decision points and possibilities
-- The evaluation of the model through the testable implications the model generates
-- consider alternative narratives
+
+- Analytical narrative: A kind of case study where a narrative is presented to clarify the important actors and main decision points.
+- The method involves:
+    - Make explicit research question
+    - select cases
+    - the use of narrative to elucidate the principal players, their preferences, rhe key decision points and possibilities
+    - The evaluation of the model through the testable implications the model generates
+    - consider alternative narratives
+
+### Qualitative comparative analysis: 
+Analysis of cases performed in order to learn about necessary causes and thus better understand the boundaries of the underlying population. The results can be applied in a multivariate analysis.
+
+### Process Tracing
+
+Process tracing: A kind of case study that emphasises cause-effect relations in a single case vs. Cause-effect relations as mean effect size in the population
+
+
+- Formulate hypotheses about alternative mechanisms.
+- Work out differences in empirical implications.
+- Check case data for these mechanistic fingerprints.
+- Conclude which mechanisms it is. 
+
+### How to select cases?
+- Information-oriented vs. representative sampling
+
+
+### How to generalise from case studies?
+
+Ways to imprive upon this transferability?
+- Does the model yield other predictions that can be tested on this case?
+- Out-of-sample tests: perform another case study and check whether model from first study applies.
+
+#### How to improve case studies?
+- Specify research question
+- Specify theory background and hypothesis
+- Clarify: What constitutes a case unit?
+- Make case slection explicit.
+- If multiple cases: what makes cases comparable?
+- Investigate all implications of your theo
