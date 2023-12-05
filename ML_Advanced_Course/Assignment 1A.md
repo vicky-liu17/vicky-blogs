@@ -29,7 +29,10 @@ $$p(x|\lambda)=\frac{1}{x!}exp{x\log\lambda - \lambda}$$
 Therefore, the Poisson distribution is an exponential family distribution:
 
 $$\eta = \log\lambda$$
+
 $$T(x)=x$$
+
 $$A(\eta)=\lambda=\e^{\eta}$$
+
 $$h(x)=\frac{1}{x!}$$
 
