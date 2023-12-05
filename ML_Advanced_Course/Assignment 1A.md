@@ -4,4 +4,4 @@
 
 A number of common distributions can be rewritten as exponential-family distributions with natural parameters, in the following form:
 
-$$p(x|\theta)
+$$p(x|\theta) = h(x)exp(\eta(\theta)\cdot T(x) - A(\eta))$$
