@@ -59,7 +59,15 @@ $$\log p(x|\alpha, \beta) = \log\left(\frac{1}{\Gamma(\alpha)} (\beta x)^{\alpha
 
 $$\log p(x|\alpha, \beta) = \log\left(\frac{1}{\Gamma(\alpha)}\right) + (\alpha - 1)(\log(\beta) + \log(x)) - \beta x$$
 
+The terms involving $x$ are $(\alpha - 1)\log(x) - \beta x$, so:
 
+$$\eta(\theta) = [\theta_1 - 1, -\theta_2]$$
+
+Therefore, if $\theta = [\alpha, \beta]$, then $\eta(\theta) = [\alpha - 2, -\beta]$
+
+$$T(x) = [\log(x), x]$$
+
+$$\log p(x|\alpha, \beta) = 
 
 The Gamma distribution can be expressed in the exponential family form as:
 
