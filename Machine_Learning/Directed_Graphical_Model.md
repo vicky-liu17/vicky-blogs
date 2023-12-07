@@ -25,3 +25,9 @@ for all x, y and z.
 - X is an ancestor of Y if there is a directed path from X to Y(or X=Y). We also say that Y is a descendant of X.
 
 ![](Pictures/DGM02.png)
+
+- The collider property is path dependent. In Figure 18.4. Y is a collider on the path {X,Y,Z} but it is a non-collider on the path {X,Y,W}
+
+![](Pictures/DGM03.png)
+
+- 
