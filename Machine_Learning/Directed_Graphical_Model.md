@@ -37,3 +37,5 @@ for all x, y and z.
 Let G be a DAG with vertices $V=(X_1,..., X_d)$ . For notational simplicity, we sometimes represent V={1,...d}. If P is a distribution for V with probability function p(x), we say that P is Markov to G, or that G represents P, if
 
 $$p(x)=\prod_{j=1}^{d}p(x_j|\pi_{x_j})$$
+
+where $\pi_{x_j}$ is the set of parent nodes of $X_j$ . The set of distributions represented by G is denoted by $\mathcal{M}(G)$ .
