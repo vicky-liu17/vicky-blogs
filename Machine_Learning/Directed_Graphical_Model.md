@@ -57,3 +57,19 @@ $$p(overweight, smoking, heart disease, cough) = p(overweight)\times p(smoking)\
 - The following theorem says that $P\inmathcal{M}(G)$ if and only if the Markov condition holds. Roughly speaking, the Markov condition means that every variable W is independent of the "past" given its parents.
 
 ### Theorem
+
+Fot a graph G = (V,E), a distribution $P\inmathcal{M}(G)$ if and only if the Markov condition holds: for every variable W,
+
+$$W ⫫ \widetilde{W}|\pi_W$$
+
+where $\widetilde{W}$ denotes all the other varables except the parents and decendants of W.
+
+### Example
+
+Some statistical models can naturally be written in layers and are called hierarchical models or random effects models. For example, suppose we sample k counties and then we sample $n_i$ people in the i-th county. We count the number $Y_i$ that test positive for some disease. Then $Y_i\sim Binomial(n_i, \theta_i)$ . The $theta_i$ 's can also be regarded as random variables sampled from some distribution $p(\theta; \phi)$ . For example, we might have $\theta_i \sim Beta(\alpha, \beta)$ so that $phi=(\alpha, \beta)$ . The model can be written as
+
+$$theta_i \sim Beta(\alpha, \beta)$$
+
+$$Y_i|\theta_i \sim Binomial(n_i, \theta_i)$$
+
+![](Pictures/DGM06.png)
