@@ -30,4 +30,10 @@ for all x, y and z.
 
 ![](Pictures/DGM03.png)
 
-- 
+- When the variables pointing into a collider are not adjacent, we say that the collider is **unshielded**. A directed path that starts and ends at the same variable is called a cycle. A directed graph is **acyclic** if it has no cycles. In this case we say that graph is a **directed acyclic** graph or DAG.
+
+### Probability and DAGs
+
+Let G be a DAG with vertices $V=(X_1,..., X_d)$ . For notational simplicity, we sometimes represent V={1,...d}. If P is a distribution for V with probability function p(x), we say that P is Markov to G, or that G represents P, if
+
+$$p(x)=\prod_{j=1}^{d}p(x_j|\pi_{x_j})$$
