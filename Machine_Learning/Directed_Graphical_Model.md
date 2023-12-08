@@ -39,3 +39,21 @@ Let G be a DAG with vertices $V=(X_1,..., X_d)$ . For notational simplicity, we 
 $$p(x)=\prod_{j=1}^{d}p(x_j|\pi_{x_j})$$
 
 where $\pi_{x_j}$ is the set of parent nodes of $X_j$ . The set of distributions represented by G is denoted by $\mathcal{M}(G)$ .
+
+### Example
+
+![](Pictures/DGM04.png)
+
+The above figure shows a DAG with four varibales. The probability function takes the following decomposition:
+
+$$p(overweight, smoking, heart disease, cough) = p(overweight)\times p(smoking)\times p(heart disease| overweight,smoking)\times p(cough|smoking)$$
+
+### Example
+
+![](Pictures/DGM05.png)
+
+- For the DAGin Figure 18.6, $P\inmathcal{M}(G)$ if and only if its probability function p(x) has the form $p(x,y,z,w)=p(x)p(y)p(z|x,y)p(w|z).
+
+- The following theorem says that $P\inmathcal{M}(G)$ if and only if the Markov condition holds. Roughly speaking, the Markov condition means that every variable W is independent of the "past" given its parents.
+
+### Theorem
