@@ -66,7 +66,7 @@ where $\widetilde{W}$ denotes all the other varables except the parents and dece
 
 ### Example
 
-Some statistical models can naturally be written in layers and are called hierarchical models or random effects models. For example, suppose we sample k counties and then we sample $n_i$ people in the i-th county. We count the number $Y_i$ that test positive for some disease. Then $Y_i\sim Binomial(n_i, \theta_i)$ . The $theta_i$ 's can also be regarded as random variables sampled from some distribution $p(\theta; \phi)$ . For example, we might have $\theta_i \sim Beta(\alpha, \beta)$ so that $phi=(\alpha, \beta)$ . The model can be written as
+Some statistical models can naturally be written in layers and are called hierarchical models or random effects models. For example, suppose we sample k counties and then we sample $n_i$ people in the i-th county. We count the number $Y_i$ that test positive for some disease. Then $Y_i\sim Binomial(n_i, \theta_i)$ . The $\theta_i$ 's can also be regarded as random variables sampled from some distribution $p(\theta; \phi)$ . For example, we might have $\theta_i \sim Beta(\alpha, \beta)$ so that $phi=(\alpha, \beta)$ . The model can be written as
 
 $$theta_i \sim Beta(\alpha, \beta)$$
 
