@@ -109,3 +109,61 @@ To choose morally is to fulfill relevant rules and duties.
 ##### Advantages over consequentialism:
 
 - Use of chechlist - no need to consider all possible consequences
+- For the deontologist, there are acts that are neither morally wrong demanded, or praiseworthy. ( Not everything is a moral question. There seem to be areas where we just do not worry about morality.)
+
+- Leaves space for agents to give special concerns to their projects. 
+
+##### Problems
+
+- Problem 1: compliance with deontological norms might bring about disastrous consequences. 
+- Problem 2: all rights and duties are categorical. No systematic way of distinguishing degrees of wrongness. 
+
+### Virtue Ethics
+- Virtue ethics: Morality consists in having and exemplifying good character traits (i.e. virtues)
+
+![](Pictures/ethics01.png)
+
+
+#### Advantages:
+- Over consequentialism: avoids "overdemandingness"(no need to consider moralty in every action)
+- Over deontology: explains what motivates people to behave morally.
+
+#### Problems:
+- Doesn't give clear guidence how to behave in particular situation. 
+- Difficult to resolve moral conflicts. 
+
+### Summary:
+- Consequentialism:
+    - CHoices are to be morally assessed solely by their consequences.
+- Deontology:
+    - To choose morally is to fulfill relevant rules and duties.
+- Virtue ethics:
+    - Morality consits in having and developing good character traits.
+
+## Morality and experimental design
+
+-  Morally Permissible Experiments
+
+#### Informed Consent
+Informed consent: a prospective participant is (i) informed, (ii) participating voluntary, and (iii) decision-capacitated.
+
+- Informed: a research subject is informed if she has recieved all relevant information about the purpose of the research project, how it will be carried out, and in what way it will affect her. 
+
+- Voluntary: her consent is voluntary if she is not forced to participate, and if her choice is sufficiently free from negative influences such as social and economic pressure. 
+
+- Desisionally-capacitated consent: the subject has decisional capacity to assess the information provided, appreciate in what way it concerns her, as well as make and communicate a decision in facor of participating. 
+
+### Why informed consent?
+
+- Consequentialism:
+    - Individuals know best what is good for them
+    - establish and maintain trust in science
+- Deontology:
+    - don't lie
+    - treat others as autonomous beings
+- Virtue ethics:
+    - sincerity
+    - reflexivity
+    - respectfulness
+
+![](Pictures/ethics02.png)
