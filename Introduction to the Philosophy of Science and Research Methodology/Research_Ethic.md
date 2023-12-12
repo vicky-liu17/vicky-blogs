@@ -167,3 +167,17 @@ Informed consent: a prospective participant is (i) informed, (ii) participating 
     - respectfulness
 
 ![](Pictures/ethics02.png)
+
+### Morality and scientific misconduct
+
+##### Scientific Incompetence vs. Misconduct
+
+- Why is scientific misconduct not admissible?
+
+![](Pictures/ethics03.png)
+
+##### Scientific Misconduct - Main Instances
+
+- Fabrication: making up data or results
+- Falsification: manipulating research materials, equipment, or processes, ot changing or omitting data or results such that the research is not accurately represented in the research record.
+- Plagiarism: the appropriation of another person's ideas, processes, results, ot words. without giving appropriate credit.  
