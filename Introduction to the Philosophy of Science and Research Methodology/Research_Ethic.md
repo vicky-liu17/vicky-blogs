@@ -264,3 +264,32 @@ contributions, which is not an easy feat. In any way, such a determination clear
 #### Some research create risks:
 - What if the main goal is good but there are risky side-effects?
 
+- e.g. dual use technology
+- Dual use goods are products adn technologies normally used for civilian purposes but which may have military application. 
+
+#### Dangerous Research Projects
+
+- Deontologists & virtue ethicists focus on individual's intention or direct causal link - often unclear with dual use technologies
+- Consequentialist: assess all possible consequences, inrrespective of whether you intend them to happen or not. 
+
+#### Frivolous Research Projects
+
+- Frivolous research: Research conducted (at least as far as can be determined) purely for the fun of it.
+
+###### Biggest challenges of our time
+- Food security 
+- Equality in economic growth 
+- The future of work 
+- Climate change
+- Gender equality
+- Future of healthcare
+
+![](Pictures/ethics09.png)
+
+###### Deontological counterargument
+
+> A human life is not just a means to produce outcomes, it is an end in itself. (Immanuel Kant)
+
+> Consequentialist framework does not allow showing partiality to one's own projects - a profoundly alienating and perhaps self-effacing moral theory. (Bernard Williams)
+
+![](Pictures/ethics10.png)
