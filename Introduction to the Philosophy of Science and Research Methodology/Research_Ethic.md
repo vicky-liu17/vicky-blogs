@@ -251,4 +251,16 @@ Another tricky issue is to determine the order in which co-authors are named. A 
 contributions, which is not an easy feat. In any way, such a determination clearly is a dynamic process, and should never be based on a pre-determined decision. It also should include all individuals involved in the study!
 
 
-#### Morality and choosing one's research topic and career
+### Morality and choosing one's research topic and career
+
+##### Choosing Research Projects & Careers
+
+- Dangerous Research Projects
+    - Some research create risks
+        - Environmental dangers
+        - Health risks
+        - economic, social or cultural harms.
+
+#### Some research create risks:
+- What if the main goal is good but there are risky side-effects?
+
