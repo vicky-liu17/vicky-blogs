@@ -204,3 +204,26 @@ When one does not know the probabilities of outcomes, each outcome is assigned t
 - Disallows disproportionate avoidance of high-probability risks for particular individuals. 
 
 -  To summarize, because they insist of proportionality, expected utility-utilitarians prohibit what might be morally reasonable standpoints on risk taking and risk distribution.
+
+#### Deontological Approach
+- People have certain rights, which must be respected
+- Certain intentions are not permissible. 
+
+> Imposing how slight a probability of a harm that violates someone's rights also violates his rights? (Nozick, 1974)
+
+#### Critique of the Deontological Approach to Risk
+
+- Deontological Approach: stakeholders
+    - The right not to be exposed to a risk can at least sometimes legitimately overridden. But under what condtions?
+        - Intentional vs. unintentional risk exposure
+        - Voluntary risk-taking vs. risks imposed on a person who does not accept them
+        - Exposure to self-produced risks vs. to risks produced by others
+        - benefits from risk exposure vs. no benefits. 
+
+- Benefits-decides-exposed
+
+### Summary
+- Ethical considerations should have influence in risk management
+- Utilitarian vs. deontogolical approach
+- Mere application of EU Maximization for moral purposes not sufficient
+- Complex considerations of people's rights and how their role as different stakeholders might void these rights.
