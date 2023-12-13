@@ -172,6 +172,8 @@ Informed consent: a prospective participant is (i) informed, (ii) participating 
 
 ##### Scientific Incompetence vs. Misconduct
 
+- When producing empirical data, when developing ideas, or when testing hypotheses, scientists do not always make the right choices. This might be an issue of competence; sometimes scientists unintentionally fail to control an important background factor in an experiment, or unintentionally employ an inappropriate statistical tool to make an inference. Such failures of reasoning or lack of relevant knowledge might lead one to question the competence of such scientists, but the failures do not typically lead to moral blame.
+
 - Why is scientific misconduct not admissible?
 
 ![](Pictures/ethics03.png)
@@ -181,3 +183,72 @@ Informed consent: a prospective participant is (i) informed, (ii) participating 
 - Fabrication: making up data or results
 - Falsification: manipulating research materials, equipment, or processes, ot changing or omitting data or results such that the research is not accurately represented in the research record.
 - Plagiarism: the appropriation of another person's ideas, processes, results, ot words. without giving appropriate credit.  
+
+### Scientific Misconduct - Difficult cases
+
+It is difficult to find out wheter the intentional fabrication or falsification has occurred.
+- Black-Boxed science(It is very difficult for outsiders to gain 
+insight into how a researcher arrived at her results.)
+- Importance of peer review
+- Treat from predatory publisher (predatory journals指纯粹以商业盈利为目的而发行的低品质期刊)
+
+
+##### Scientific transparency: 
+Freely sharing the material from which the conclusions were drawn.
+
+##### Scientific Misconduct - Prevalence
+##### Scientific Misconduct - Countermeasures
+- Responsibility of coauthors
+- Responsibilities of research institutions
+- Responsibilities of scientific colleagues
+- Responsibility of journals
+
+#### Whistleblowing 
+person who exposes any kind of information or activity that is deemed illegal, unethical, or not correct within an organization that is either private or public. 
+
+### Morality and scientific authorship
+
+Authorship establishes both credit and responsibilities. 
+
+##### Author: 
+A person is an author of an article if the person has made a substantial contribution to (1) the conception of the work, (2) drafting the work, as well as (3) is involved in the approval of the final version, and finally (4) agrees to be accountable to all aspects of the work.
+
+![](Pictures/ethics04.png)
+
+#### Ethical Reasons for Authorship Criteria
+
+![](Pictures/ethics05.png)
+
+
+> Plagiarism: "the action or practice of taking someone's work, idea, etc., and passing it off as one's own; literary theft."
+
+#### Self-Plagiarism
+
+The use of one's own previous work in another context without citing that is was used previously. 
+- The self-plagiarizer is blameworthy because she deceives her 
+audience.
+
+#### Ghost Author
+A person who writes paper but is not listed among the authors.
+
+###### Why is ghost authorship not permissable?
+
+Apply arguments form each of the three ethical frameworks.
+
+![](Pictures/ethics06.png)
+
+
+#### Honorary or Gift Authorship
+- A person is presented as co-author but who does not satify the authorship criteria. 
+
+![](Pictures/ethics07.png)
+
+![](Pictures/ethics08.png)
+
+### Order of Co-authors
+
+Another tricky issue is to determine the order in which co-authors are named. A standard view is that the author who has made the most substantial contribution should be credited to be the first author, but this requires measuring and weighing the different co-authors' 
+contributions, which is not an easy feat. In any way, such a determination clearly is a dynamic process, and should never be based on a pre-determined decision. It also should include all individuals involved in the study!
+
+
+#### Morality and choosing one's research topic and career
