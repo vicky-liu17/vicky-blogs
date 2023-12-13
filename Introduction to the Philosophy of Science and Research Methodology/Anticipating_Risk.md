@@ -147,3 +147,60 @@ E=1/2*2+1/4*4+...
 
 
 ## Deciding under ignorance & Deep Uncertainty
+
+#### Managing Ignorance
+
+- Principle of Insufficient Reason
+When one does not know the probabilities of outcomes, each outcome is assigned the same probability.
+
+#### MaxiMin
+- Identify the worst outcome of each option and choose that option with the least worst outcome
+- Minimax: Choosing the action where the worst possible outcome is the least bad, compared to the other actions
+
+
+#### Managing Deep Uncertainty
+- What if not all possibilities are known?
+
+- Safety factos in engineering
+    - 比如说，一座桥必须承受负载X。然后我们规定物体结构能够承受的最大预期负载的倍数。所以，如果我们假设安全系数为2，那么它应该能够承受两倍的负载X。它必须抵抗它在实际中将面临的最大负载的两倍。
+- Why safety factors:
+    - Intended to compensate for five major types of sources of failure
+        - Higher loads than those foreseen
+        - Worse material properties than foreseen
+        - Inperfect theory of the failure mechanism in question
+        - Possibily unkown failure mechanisms
+        - Human error
+
+
+#### Precautionary Principle
+
+- Precautionary principle: if an action or policy has the suspected risk of causing harm, in the absence of scientific consensus whether this action is harmful or not, the burden of proof that it is not harmful in the way that some people claim, lies with those that intend to take action or to propose to perform this particular action or policy. 
+
+#### Arguments for qualitative risk modelling
+- Computational costs
+- simplicity
+- lack of accuracy
+- Security
+
+
+### Summary: qualitative model of risk
+- Motivated by lack of information
+- Strategies for ignorance
+- Strategies for deep uncertainty
+- Probabilistic risk models only one tool of several for risk assessment. Not a sure source of final answers!
+- Choice of models produce different results, thus have a substantial influence on risk assessment. Choice requries justification!
+
+## Ethical Dimensions of Risk Management
+
+#### Utilitarian Approach 
+- Actualist: the goodness of an action with uncertain outcomes is defined as the utility of the outcome tha actually materializes.
+
+- EU Maximization: the goodness of an action with uncertain outcomes is defined as the probability-weighted average of the utilites of these outcomes. 
+
+- Utilitarianism is a particular version of consequentialism which says that the moral value of an action is determined exclusively by the moral value of its outcome.
+
+#### Critique of the Utilitarian Approach to Risk
+- Disallow disproportionate avoidance of large disasters.
+- Disallows disproportionate avoidance of high-probability risks for particular individuals. 
+
+-  To summarize, because they insist of proportionality, expected utility-utilitarians prohibit what might be morally reasonable standpoints on risk taking and risk distribution.
