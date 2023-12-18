@@ -17,7 +17,7 @@ In Bayesian probability theory, if the posterior distribution is in the same fam
 - 共轭分布的定义
     - 在贝叶斯统计中，如果后验分布与先验分布属于同类（分布形式相同），则先验与后验分布被称为共轭分布，而先验分布被称为似然函数的共轭先验。
 
-![](Pictures/bayes02.jpg)
+![](Pictures/bayes02.png)
 
 ## Conjugate Priors - Exercise
 1.1 Let $X=(X_1, ..., X_N)$ be i.i.d where $X_n|P,m \sim Binomial(m,P)$ and $P\sim Beta(\alpha,\beta)$ . Show that the posterior p(P|X,m) follows a Beta-distribution, i.e. that the Beta is conjugate prior to the Binomial with known m. What are the parameters of the posterior?
