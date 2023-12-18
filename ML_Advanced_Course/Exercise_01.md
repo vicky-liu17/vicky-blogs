@@ -13,5 +13,5 @@ where $p(X|\theta)$ is refereed to as the likelihood function, $p(\theta)$ the p
 In Bayesian probability theory, if the posterior distribution is in the same family of the prior distribution, then the prior and posterior are called conjugate distributions, and the prior is called the conjugate prior to the likelihood function.
 
 ## Conjugate Priors - Exercise
-1.1 Let $X=(X_1, ..., X_N)$ be i.i.d where $$X_n|P,m \sim Binomial(m,P)$ and $P\sim Beta(\alpha,\beta)$ . Show that the posterior p(P|X,m) follows a Beta-distribution, i.e. that the Beta is conjugate prior to the Binomial with known m. What are the parameters of the posterior?
+1.1 Let $X=(X_1, ..., X_N)$ be i.i.d where $X_n|P,m \sim Binomial(m,P)$ and $P\sim Beta(\alpha,\beta)$ . Show that the posterior p(P|X,m) follows a Beta-distribution, i.e. that the Beta is conjugate prior to the Binomial with known m. What are the parameters of the posterior?
 
