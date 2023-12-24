@@ -52,13 +52,13 @@ $$p(overweight, smoking, heart disease, cough) = p(overweight)\times p(smoking)\
 
 ![](Pictures/DGM05.png)
 
-- For the DAGin Figure 18.6, $P\inmathcal{M}(G)$ if and only if its probability function p(x) has the form $p(x,y,z,w)=p(x)p(y)p(z|x,y)p(w|z).
+- For the DAGin Figure 18.6, $P\in \mathcal{M}(G)$ if and only if its probability function p(x) has the form $p(x,y,z,w)=p(x)p(y)p(z|x,y)p(w|z).
 
-- The following theorem says that $P\inmathcal{M}(G)$ if and only if the Markov condition holds. Roughly speaking, the Markov condition means that every variable W is independent of the "past" given its parents.
+- The following theorem says that $P\in \mathcal{M}(G)$ if and only if the Markov condition holds. Roughly speaking, the Markov condition means that every variable W is independent of the "past" given its parents.
 
 ### Theorem
 
-Fot a graph G = (V,E), a distribution $P\inmathcal{M}(G)$ if and only if the Markov condition holds: for every variable W,
+Fot a graph G = (V,E), a distribution $P\in \mathcal{M}(G)$ if and only if the Markov condition holds: for every variable W,
 
 $$W ⫫ \widetilde{W}|\pi_W$$
 
@@ -73,3 +73,4 @@ $$theta_i \sim Beta(\alpha, \beta)$$
 $$Y_i|\theta_i \sim Binomial(n_i, \theta_i)$$
 
 ![](Pictures/DGM06.png)
+
