@@ -74,3 +74,20 @@ $$Y_i|\theta_i \sim Binomial(n_i, \theta_i)$$
 
 ![](Pictures/DGM06.png)
 
+### Representing and working with distributions 
+
+- For all but the smallest n, the explicit represrntation of the joint distribution is unmanageable from every perspective.
+    - computationally, is is very expensive to manipulate and generally too large to store in memory. 
+    - Cognitively, it is impossible to acquire so many numbers from a human expert; Moreover, the numbers are very small and do not correspond to events that people can reasonably contemplate. 
+    - Statistically, if we want to learn the distribution form data, we would need ridiculously large amounts of data to estimate this many parameters robustly. 
+- These problems were the main barrier to the adoption of probalistic methods or expert system until the development of the methodologies we now will consider.
+
+![](Pictures/DGM07.png)
+
+Terminology
+- Parent
+- Child
+- Family
+- Root
+- Leaf
+- Neighbors
