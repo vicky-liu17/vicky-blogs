@@ -128,4 +128,4 @@ $$L(\theta | \mathcal{D}) or L(\theta : \mathcal{D} )$$
 
 - The parameters that maximize the likelihood are known as the maximum likelihood estimate:
 
-$$\theta^{*} = \arg \max_{\theta} L(\theta | mathcal{D})$$
+$$\theta^{*} = \arg \max_{\theta} L(\theta | \mathcal{D})$$
