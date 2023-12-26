@@ -135,3 +135,16 @@ $$\theta^{*} = \arg \max_{\theta} L(\theta | \mathcal{D})$$
 ![](Pictures/DGM12.png)
 
 ![](Pictures/DGM13.png)
+
+![](Pictures/DGM14.png)
+
+![](Pictures/DGM15.png)
+
+![](Pictures/DGM16.png)
+
+
+### Parameter Learning for Bayesian Networks
+
+![](Pictures/DGM17.png)
+
+![](Pictures/DGM18.png)
