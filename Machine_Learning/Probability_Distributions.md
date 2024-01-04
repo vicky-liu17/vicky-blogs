@@ -98,3 +98,11 @@ In Bayesian statistics, a prior distribution is considered conjugate to a likeli
 First, we employ the Bayesian theorem and discard p(X) since it is a multiplicative constant w.r.t.(with respect to) our variable of interest, $\theta$ :
 
 $$p(\theta|X)=\frac{p(X,\theta)}{p(X)}\propto p(X,\theta) = p(X|\theta)p(\theta)= \prod_{n=1}^{N} p(X_n|\theta)p(\theta)$$
+
+The likelihood function is given by the product of the individual Binomial probabilities:
+
+$$P(x |\theta) = \prod_{n=1}^{N} \binom{m}{x_n} \theta^{x_n} (1 - \theta)^{m - x_n}$$
+
+The prior is given by the pdf of Beta distribution:
+
+$$p(\theta)= \frac{\Gamma(\alpha) \cdot \Gamma(\beta)}{\Gamma(\alpha + \beta)}\theta^{\alpha-1}(1-\theta)^{\beta-1}$$
