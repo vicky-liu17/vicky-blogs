@@ -89,3 +89,8 @@ $$P(\theta | X) = \frac{P(X | \theta) \cdot P(\theta)}{P(X)}$$
 
 
 In Bayesian statistics, a prior distribution is considered conjugate to a likelihood function if the resulting posterior distribution belongs to the same family of distributions as the prior. More formally, if the prior distribution $P(\theta)$ is conjugate to the likelihood function $P(X|\theta)$, then the posterior distribution $P(\theta|X)$ also belongs to the same family of distributions as the prior.
+
+### Exercises
+
+1.1: Let $X = (X_1, ..., X_N)$ be i.i.d. where $X_n|P,m \sim Binomial(m,P)$ and $P \sim Beta(\alpha, \beta)$ . Show that the posterior p(P|X,m) follows a Beta-distribution, i.e. that the Beta is conjugate prior to the Binomial with known m. What are the parameters of the posterior?
+
