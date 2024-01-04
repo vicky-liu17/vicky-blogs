@@ -110,7 +110,7 @@ $$P(P | x, m) \propto \prod_{n=1}^{N} \binom{m}{x_n} P^{x_n} (1 - P)^{m - x_n} \
 
 Combining like terms, we get:
 
-$$P(P | x, m) \propto P^{\sum_{n=1}^{N} x_n + \alpha - 1} (1 - P)^{N \cdot m - \sum_{n=1}^{N} x_n + \beta - 1}$$
+$$P(P | x, m) \propto P^{\sum_{n=1}^{N} x_n + \alpha - 1} (1 - P)^{N \cdot \sum_{n=1}^{N} (m-x_n) + \beta - 1}$$
 
 This expression has the form of the kernel of a Beta distribution. By comparing with the probability density function (PDF) of the Beta distribution, we can identify the parameters of the posterior:
 
