@@ -179,4 +179,4 @@ Here, $x$ is the random variable, $\alpha$ is the shape parameter, $\beta$ is th
 
 The likelihood function is given by the product of the individual Poisson probabilities:
 
-\[ P(D | \lambda) = \prod_{n=1}^{N} \frac{e^{-\lambda} \lambda^{d_n}}{d_n!} \]
+$$P(D | \lambda) = \prod_{n=1}^{N} \frac{e^{-\lambda} \lambda^{d_n}}{d_n!}$$
