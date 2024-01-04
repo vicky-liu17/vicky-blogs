@@ -75,3 +75,17 @@ $$\mathcal{M}(x|N,\theta)\stackrel{\Delta}{=}\binom{N}{x_1....x_k}\prod_{k=1}^{K
 
 - $\binom{N}{x_1, x_2, \ldots, x_K}$ represents the multinomial coefficient, which calculates the number of ways to arrange $N$ trials into $x_1$ for category 1, $x_2$ for category 2, and so on, up to $x_K$ for category $K$. It accounts for the different ways these counts can be distributed within the $N$ trials.
 - $\prod_{k=1}^{K} \theta_k^{x_k}$ is the product term that specifies the probability of observing category $k$ exactly $x_k$ times in each individual trial.
+
+
+### Conjugate priors 共轭先验
+
+##### Bayes formula:
+
+$$P(\theta | X) = \frac{P(X | \theta) \cdot P(\theta)}{P(X)}$$
+
+- Prior(先验): $P(\theta)$
+- Likelihood(似然): $P(X|\theta)$
+- Posterior(后延): $P(\theta|X) \propto P(X | \theta) \cdot P(\theta)$
+
+
+In Bayesian statistics, a prior distribution is considered conjugate to a likelihood function if the resulting posterior distribution belongs to the same family of distributions as the prior. More formally, if the prior distribution $P(\theta)$ is conjugate to the likelihood function $P(X|\theta)$, then the posterior distribution $P(\theta|X)$ also belongs to the same family of distributions as the prior.
