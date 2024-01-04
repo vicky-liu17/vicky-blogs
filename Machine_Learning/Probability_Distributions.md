@@ -202,3 +202,19 @@ This expression has the form of the kernel of a Gamma distribution. By comparing
 $$P(\lambda | D) \propto \text{Gamma}(\lambda | \alpha + \sum_{n=1}^{N} d_n, N + \beta)$$
 
 Therefore, the posterior distribution $P(\lambda | D)$ follows a Gamma distribution with parameters $\alpha + \sum_{n=1}^{N} d_n$ and $N + \beta$ . This confirms that the Gamma distribution is indeed a conjugate prior to the Poisson distribution.
+
+
+1.3: Let $X=(X_1,..., X_N)$ be i.i.d with $X_n|\mu,\tau \sim Normal(\mu, \frac{1}{\tau})$ and $(\mu, \tau) \sim NormalGamma(\mu_0, \lambda, \alpha, \beta)$ . Show that the posterior $p(\mu, \tau|X)$ follows a NormalGamma-distribution, i.e. that the NormalGamma is conjugate prior to the Normal distribution with unknown mean and precision. What are the parameters of the posterior?
+
+
+The probability density function (PDF) of the Normal distribution with mean $\mu$ and precision $\tau$ is given by:
+
+$$f(x | \mu, \tau) = \sqrt{\frac{\tau}{2\pi}} \exp\left(-\frac{\tau}{2} (x - \mu)^2\right)$$
+
+Here:
+- $x$ is the random variable.
+- $\mu$ is the mean of the distribution.
+- $\tau$ is the precision, which is the inverse of the variance.
+
+The precision is often denoted by $\tau = \frac{1}{\sigma^2}$, where $\sigma$ is the standard deviation. If you are given the standard deviation directly, you can use $\tau = \frac{1}{\sigma^2}$ in the formula above.
+
