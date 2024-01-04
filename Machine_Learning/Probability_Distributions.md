@@ -255,6 +255,3 @@ $$\log p(\mu, \tau | X) \propto \sum_{n=1}^{N}log[\sqrt{\frac{\tau}{2\pi}} \exp\
 
 $$\log p(\mu, \tau | X) \propto \frac{1}{2}\log\tau - \frac{\tau}{2}(x_n-\mu)^2 + (\alpha - \frac{1}{2})\log\tau - \beta\tau - \frac{\lambda\tau}{2}(\mu - \mu_0)^2$$
 
-Now, we recognize that this is in the form of a Normal-Gamma distribution, i.e., it is proportional to the Normal-Gamma distribution:
-
-$$\text{constant} \cdot \tau^{\alpha - \frac{1}{2}} \exp\left(-\beta \tau\right) \exp\left(-\frac{\lambda \tau}{2} (\mu - \mu_0)^2\right)$$
