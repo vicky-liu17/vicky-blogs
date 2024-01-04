@@ -168,4 +168,4 @@ $$P(P | x, m) \propto \text{Beta}(P | \alpha + \sum_{n=1}^{N} x_n, \beta + N \cd
 
 Therefore, the posterior distribution $P(P | x, m)$ follows a Beta distribution with parameters $\alpha + \sum_{n=1}^{N} x_n$ and $\beta + N \cdot m - \sum_{n=1}^{N} x_n$ . This confirms that the Beta distribution is indeed conjugate to the Binomial likelihood with known m.
 
-1.2: Let $D=(d_1,..., d_N)$ be i.i.d with $d_n|\lambda \sim Poisson(\)
+1.2: Let $D=(d_1,..., d_N)$ be i.i.d with $d_n|\lambda \sim Poisson(\lambda)$ and $\lambda ~ Gamma(\alpha, \beta)$
