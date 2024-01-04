@@ -218,3 +218,37 @@ Here:
 
 The precision is often denoted by $\tau = \frac{1}{\sigma^2}$, where $\sigma$ is the standard deviation. If you are given the standard deviation directly, you can use $\tau = \frac{1}{\sigma^2}$ in the formula above.
 
+
+The probability density function (PDF) of the Normal-Gamma distribution for $(\mu, \tau)$ is given by:
+
+$$p(\mu, \tau | \mu_0, \lambda, \alpha, \beta) = \frac{\beta^\alpha}{\Gamma(\alpha)} \sqrt{\frac{\lambda}{2\pi}} \tau^{\alpha - 1/2} \exp\left(-\beta \tau\right) \exp\left(-\frac{\lambda\tau}{2} (\mu - \mu_0)^2\right)$$
+
+Here:
+- $\mu$ is the mean of the Normal distribution.
+- $\tau$ is the precision (inverse of the variance) of the Normal distribution.
+- $\mu_0$ is the mean parameter of the Normal prior.
+- $\lambda$ is a precision parameter of the Normal prior.
+- $\alpha$ and $\beta$ are shape and rate parameters of the Gamma prior.
+- $\Gamma(\cdot)$ is the gamma function.
+
+This formula includes the constant terms necessary for normalization, ensuring that the total probability integrates to 1. The gamma function \(\Gamma(\cdot)\) is used in the normalization, and it accounts for the \(\frac{\beta^\alpha}{\Gamma(\alpha)}\) term. The other terms are as discussed earlier, representing the Normal and Gamma components of the distribution.
+
+
+
+Given:
+1. Likelihood: $X_n | \mu, \tau \sim \text{Normal}(\mu, \frac{1}{\tau})$
+2. Prior: $(\mu, \tau) \sim \text{NormalGamma}(\mu_0, \lambda, \alpha, \beta)$
+
+
+We want to find the posterior distribution:
+
+$$p(\mu, \tau | X) \propto p(X | \mu, \tau) \cdot p(\mu, \tau)$$
+
+Expanding this using the likelihood and prior:
+
+$$p(\mu, \tau | X) \propto \left(\prod_{n=1}^{N} \frac{\sqrt{\tau}}{\sqrt{2\pi}} \exp\left(-\frac{\tau}{2}(X_n - \mu)^2\right)\right) \cdot \left(\frac{\beta^\alpha}{\Gamma(\alpha)} \sqrt{\frac{\lambda}{2\pi}} \tau^{\alpha - \frac{1}{2}} \exp\left(-\beta \tau\right) \exp\left(-\frac{\lambda \tau}{2} (\mu - \mu_0)^2\right)\right)$$
+
+
+Taking the logarithm and grouping terms, we get:
+
+$$\log p(\mu, \tau | X) = \sum_{n=1}^{N}log[\sqrt{\frac{\tau}{2\pi}} \exp\left(-\frac{\tau}{2} (x - \mu)^2\right)]+log[\frac{\beta^\alpha}{\Gamma(\alpha)} \sqrt{\frac{\lambda}{2\pi}} \tau^{\alpha - 1/2} \exp\left(-\beta \tau\right) \exp\left(-\frac{\lambda\tau}{2} (\mu - \mu_0)^2\right)]$$
