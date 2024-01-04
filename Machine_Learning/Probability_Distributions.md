@@ -175,3 +175,8 @@ The probability density function (PDF) of the Gamma distribution is given by:
 $$f(x; \alpha, \beta) = \frac{\beta^\alpha x^{\alpha - 1} e^{-\beta x}}{\Gamma(\alpha)}$$
 
 Here, $x$ is the random variable, $\alpha$ is the shape parameter, $\beta$ is the rate parameter, and $\Gamma(\alpha)$ is the gamma function.
+
+
+The likelihood function is given by the product of the individual Poisson probabilities:
+
+\[ P(D | \lambda) = \prod_{n=1}^{N} \frac{e^{-\lambda} \lambda^{d_n}}{d_n!} \]
