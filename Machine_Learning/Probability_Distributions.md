@@ -168,5 +168,10 @@ $$P(P | x, m) \propto \text{Beta}(P | \alpha + \sum_{n=1}^{N} x_n, \beta + N \cd
 
 Therefore, the posterior distribution $P(P | x, m)$ follows a Beta distribution with parameters $\alpha + \sum_{n=1}^{N} x_n$ and $\beta + N \cdot m - \sum_{n=1}^{N} x_n$ . This confirms that the Beta distribution is indeed conjugate to the Binomial likelihood with known m.
 
-1.2: Let $D=(d_1,..., d_N)$ be i.i.d with $d_n|\lambda \sim Poisson(\lambda)$ and $\lambda ~ Gamma(\alpha, \beta)$ . Show that the posterior p(\lambda|D) follows a Gamma-distribution, i.e. that the Gamma is conjugate prior to the Poisson distrinbution. What are the parameters of the posterior? 
+1.2: Let $D=(d_1,..., d_N)$ be i.i.d with $d_n|\lambda \sim Poisson(\lambda)$ and $\lambda \sim Gamma(\alpha, \beta)$ . Show that the posterior $p(\lambda|D)$ follows a Gamma-distribution, i.e. that the Gamma is conjugate prior to the Poisson distrinbution. What are the parameters of the posterior? 
 
+The probability density function (PDF) of the Gamma distribution is given by:
+
+$$f(x; \alpha, \beta) = \frac{\beta^\alpha x^{\alpha - 1} e^{-\beta x}}{\Gamma(\alpha)}$$
+
+Here, $x$ is the random variable, $\alpha$ is the shape parameter, $\beta$ is the rate parameter, and $\Gamma(\alpha)$ is the gamma function.
