@@ -180,3 +180,25 @@ Here, $x$ is the random variable, $\alpha$ is the shape parameter, $\beta$ is th
 The likelihood function is given by the product of the individual Poisson probabilities:
 
 $$P(D | \lambda) = \prod_{n=1}^{N} \frac{e^{-\lambda} \lambda^{d_n}}{d_n!}$$
+
+The prior distribution on $\lambda$ is given by $P(\lambda) = \text{Gamma}(\lambda | \alpha, \beta)$ .
+
+
+The posterior distribution is proportional to the product of the likelihood and the prior:
+
+$$P(\lambda | D) \propto P(D | \lambda) \cdot P(\lambda)$$
+
+Now, let's simplify this expression:
+
+$$P(\lambda | D) \propto \prod_{n=1}^{N} \frac{e^{-\lambda} \lambda^{d_n}}{d_n!} \cdot \frac{\beta^\alpha}{\Gamma(\alpha)} \lambda^{\alpha - 1} e^{-\beta \lambda}$$
+
+Combining like terms and removing constant factors, we get:
+
+$$P(\lambda | D) \propto \lambda^{\sum_{n=1}^{N} d_n + \alpha - 1} e^{-(N + \beta)\lambda}$$
+
+
+This expression has the form of the kernel of a Gamma distribution. By comparing with the probability density function (PDF) of the Gamma distribution, we can identify the parameters of the posterior:
+
+$$P(\lambda | D) \propto \text{Gamma}(\lambda | \alpha + \sum_{n=1}^{N} d_n, N + \beta)$$
+
+Therefore, the posterior distribution $P(\lambda | D)$ follows a Gamma distribution with parameters $\alpha + \sum_{n=1}^{N} d_n$ and $N + \beta$ . This confirms that the Gamma distribution is indeed a conjugate prior to the Poisson distribution.
