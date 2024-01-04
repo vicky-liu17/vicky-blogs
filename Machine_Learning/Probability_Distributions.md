@@ -35,7 +35,7 @@ Here, $\Gamma$ denotes the gamma function. The gamma function is defined as:
 
 $$\Gamma(n) = (n-1)!$$
 
-Substituting the expression for \(B(\alpha, \beta)\) into the PDF, we get:
+Substituting the expression for $B(\alpha, \beta)$ into the PDF, we get:
 
 $$f(x; \alpha, \beta) = \frac{x^{\alpha-1} \cdot (1 - x)^{\beta-1} \cdot \Gamma(\alpha + \beta)}{\Gamma(\alpha) \cdot \Gamma(\beta)}$$
 
@@ -94,15 +94,26 @@ In Bayesian statistics, a prior distribution is considered conjugate to a likeli
 
 1.1: Let $X = (X_1, ..., X_N)$ be i.i.d. where $X_n|P,m \sim Binomial(m,P)$ and $P \sim Beta(\alpha, \beta)$ . Show that the posterior p(P|X,m) follows a Beta-distribution, i.e. that the Beta is conjugate prior to the Binomial with known m. What are the parameters of the posterior?
 
+Let's denote the observed data as $x = (x_1, \ldots, x_N)$, where $x_n$ is the outcome of the $n$-th trial. The likelihood function is given by the product of the individual Binomial probabilities:
 
-First, we employ the Bayesian theorem and discard p(X) since it is a multiplicative constant w.r.t.(with respect to) our variable of interest, $\theta$ :
+$$P(x | P, m) = \prod_{n=1}^{N} \binom{m}{x_n} P^{x_n} (1 - P)^{m - x_n}$$
 
-$$p(\theta|X)=\frac{p(X,\theta)}{p(X)}\propto p(X,\theta) = p(X|\theta)p(\theta)= \prod_{n=1}^{N} p(X_n|\theta)p(\theta)$$
+The prior distribution on $P$ is given by $P(P) = \text{Beta}(P | \alpha, \beta)$ .
 
-The likelihood function is given by the product of the individual Binomial probabilities:
+The posterior distribution is proportional to the product of the likelihood and the prior:
 
-$$P(x |\theta) = \prod_{n=1}^{N} \binom{m}{x_n} \theta^{x_n} (1 - \theta)^{m - x_n}$$
+$$P(P | x, m) \propto P(x | P, m) \cdot P(P)$$
 
-The prior is given by the pdf of Beta distribution:
+Now, let's simplify this expression:
 
-$$p(\theta)= \frac{\Gamma(\alpha) \cdot \Gamma(\beta)}{\Gamma(\alpha + \beta)}\theta^{\alpha-1}(1-\theta)^{\beta-1}$$
+$$P(P | x, m) \propto \prod_{n=1}^{N} \binom{m}{x_n} P^{x_n} (1 - P)^{m - x_n} \cdot P^{\alpha - 1} (1 - P)^{\beta - 1}$$
+
+Combining like terms, we get:
+
+$$P(P | x, m) \propto P^{\sum_{n=1}^{N} x_n + \alpha - 1} (1 - P)^{N \cdot m - \sum_{n=1}^{N} x_n + \beta - 1}$$
+
+This expression has the form of the kernel of a Beta distribution. By comparing with the probability density function (PDF) of the Beta distribution, we can identify the parameters of the posterior:
+
+$$P(P | x, m) \propto \text{Beta}(P | \alpha + \sum_{n=1}^{N} x_n, \beta + N \cdot m - \sum_{n=1}^{N} x_n)$$
+
+Therefore, the posterior distribution $P(P | x, m)$ follows a Beta distribution with parameters $\alpha + \sum_{n=1}^{N} x_n$ and $\beta + N \cdot m - \sum_{n=1}^{N} x_n$ . This confirms that the Beta distribution is indeed conjugate to the Binomial likelihood with known m.
