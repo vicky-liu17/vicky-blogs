@@ -94,3 +94,7 @@ In Bayesian statistics, a prior distribution is considered conjugate to a likeli
 
 1.1: Let $X = (X_1, ..., X_N)$ be i.i.d. where $X_n|P,m \sim Binomial(m,P)$ and $P \sim Beta(\alpha, \beta)$ . Show that the posterior p(P|X,m) follows a Beta-distribution, i.e. that the Beta is conjugate prior to the Binomial with known m. What are the parameters of the posterior?
 
+
+First, we employ the Bayesian theorem and discard p(X) since it is a multiplicative constant w.r.t.(with respect to) our variable of interest, $\theta$ :
+
+$$p(\theta|X)=\frac{p(X,\theta)}{p(X)}\propto p(X,\theta) = p(X|\theta)p(\theta)= \prod_{n=1}^{N} p(X_n|\theta)p(\theta)$$
