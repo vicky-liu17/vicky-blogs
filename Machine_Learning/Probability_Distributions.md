@@ -260,3 +260,8 @@ $$=\frac{N}{2}\log\tau - \frac{\tau}{2} \sum_{n=1}^{N}(x_n^2 - 2x_n\mu + \mu^2) 
 $$=(\frac{N}{2} + \alpha - \frac{1}{2})\log\tau - \beta\tau - \frac{\tau}{2}[\mu^2(N+\lambda)-2\mu( \sum_{n=1}^{N}x_n + \mu_0 \lambda) + (\sum_{n=1}^{N} x_n^2 + \lambda\mu_0^2)]$$
 
 $$= (\frac{N}{2} + \alpha - \frac{1}{2})\log\tau - \beta\tau - \frac{\tau}{2}(N+\lambda)[\mu^2-\frac{2\mu}{(N+\lambda)}( \sum_{n=1}^{N}x_n + \mu_0 \lambda) + \frac{(\sum_{n=1}^{N} x_n^2 + \lambda\mu_0^2)}{N+\lambda}]$$
+
+
+To complete this and show that the posterior follows a Normal-Gamma distribution, we need to simplify it further into the form of the logarithm of a Normal-Gamma distribution. The Normal-Gamma distribution has the form:
+
+$$\text{log Normal-Gamma} \propto (\alpha' - \frac{1}{2})\log\tau - \beta'\tau - \frac{\tau}{2}(\lambda'(\mu - \mu')^2 + \nu')$$
