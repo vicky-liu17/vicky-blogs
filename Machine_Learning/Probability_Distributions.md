@@ -284,5 +284,10 @@ Thus, the posterior distribution $p(\mu, \tau | X)$ follows a Normal-Gamma distr
 #### Dirichlet Distribution
 
 The Dirichlet distribution is a continuous multivariate probability distribution that is often used as a prior distribution in Bayesian statistics, particularly in the context of modeling the distribution of categorical data. 
+
+
 The Dirichlet distribution is parameterized by a vector of positive real numbers, often denoted as $\boldsymbol{\alpha} = (\alpha_1, \alpha_2, \ldots, \alpha_K)$ is given by:
+
+
+$$f(\mathbf{x}; \boldsymbol{\alpha}) = \frac{\Gamma(\sum_{i=1}^{K} \alpha_i)}{\prod_{i=1}^{K} \Gamma(\alpha_i)} \prod_{i=1}^{K} x_i^{\alpha_i - 1}$$
 
