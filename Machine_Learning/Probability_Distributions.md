@@ -291,3 +291,8 @@ The Dirichlet distribution is parameterized by a vector of positive real numbers
 
 $$f(\mathbf{x}; \boldsymbol{\alpha}) = \frac{\Gamma(\sum_{i=1}^{K} \alpha_i)}{\prod_{i=1}^{K} \Gamma(\alpha_i)} \prod_{i=1}^{K} x_i^{\alpha_i - 1}$$
 
+
+Here:
+- $\mathbf{x} = (x_1, x_2, \ldots, x_K)$ is a vector in the $K$ -dimensional probability simplex, where $0 \leq x_i \leq 1$ and $\sum_{i=1}^{K} x_i = 1$ .
+- $\boldsymbol{\alpha} = (\alpha_1, \alpha_2, \ldots, \alpha_K)$ is a vector of positive parameters.
+- $\Gamma(\cdot)$ is the gamma function.
