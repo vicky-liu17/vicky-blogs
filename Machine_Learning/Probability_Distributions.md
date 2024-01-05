@@ -265,3 +265,12 @@ $$= (\frac{N}{2} + \alpha - \frac{1}{2})\log\tau - \beta\tau - \frac{\tau}{2}(N+
 To complete this and show that the posterior follows a Normal-Gamma distribution, we need to simplify it further into the form of the logarithm of a Normal-Gamma distribution. The Normal-Gamma distribution has the form:
 
 $$\text{log Normal-Gamma} \propto (\alpha' - \frac{1}{2})\log\tau - \beta'\tau - \frac{\tau}{2}(\lambda'(\mu - \mu')^2 + \nu')$$
+
+Comparing the two forms, we can identify the parameters for the posterior Normal-Gamma distribution:
+
+$$\alpha' = \frac{N}{2} + \alpha - \frac{1}{2}$$
+
+$$\beta' = \beta$$
+$$\lambda' = N + \lambda$$
+$$\mu' = \frac{\lambda \mu_0 + \sum_{n=1}^{N}x_n}{\lambda + N}$$
+$$\nu' = \frac{1}{2}\left(\sum_{n=1}^{N} x_n^2 + \lambda\mu_0^2 - \frac{\lambda(\sum_{n=1}^{N}x_n + \mu_0\lambda)^2}{\lambda + N}\right)$$
