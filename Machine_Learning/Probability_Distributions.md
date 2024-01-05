@@ -259,4 +259,4 @@ $$=\frac{N}{2}\log\tau - \frac{\tau}{2} \sum_{n=1}^{N}(x_n^2 - 2x_n\mu + \mu^2) 
 
 $$=(\frac{N}{2} + \alpha - \frac{1}{2})\log\tau - \beta\tau - \frac{\tau}{2}[\mu^2(N+\lambda)-2\mu( \sum_{n=1}^{N}x_n + \mu_0 \lambda) + (\sum_{n=1}^{N} x_n^2 + \lambda\mu_0^2)]$$
 
-$$= (\frac{N}{2} + \alpha - \frac{1}{2})\log\tau - \beta\tau - \frac{\tau}{2}(N+\lambda)[\mu^2-\frac{2\mu}{(N+\lambda)}( \sum_{n=1}^{N}x_n + \mu_0 \lambda) + frac{(\sum_{n=1}^{N} x_n^2 + \lambda\mu_0^2)}{N+\lambda}]$$
+$$= (\frac{N}{2} + \alpha - \frac{1}{2})\log\tau - \beta\tau - \frac{\tau}{2}(N+\lambda)[\mu^2-\frac{2\mu}{(N+\lambda)}( \sum_{n=1}^{N}x_n + \mu_0 \lambda) + \frac{(\sum_{n=1}^{N} x_n^2 + \lambda\mu_0^2)}{N+\lambda}]$$
