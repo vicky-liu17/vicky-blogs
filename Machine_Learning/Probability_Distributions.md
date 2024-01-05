@@ -306,3 +306,12 @@ $$B(\boldsymbol{\alpha}) = \frac{\prod_{i=1}^{K} \Gamma(\alpha_i)}{\Gamma(\sum_{
 With this notation, you can write the Dirichlet distribution's PDF as:
 
 $$f(\mathbf{x}; \boldsymbol{\alpha}) = \frac{\Gamma(\sum_{i=1}^{K} \alpha_i)}{\prod_{i=1}^{K} \Gamma(\alpha_i)} \prod_{i=1}^{K} x_i^{\alpha_i - 1} = \frac{1}{B(\boldsymbol{\alpha})} \prod_{i=1}^{K} x_i^{\alpha_i - 1}$$
+
+
+- 被beta distribution描述的prior经过bayes formula前后还是一个beta distribution；这种不改变函数本身所属family的特性，叫共轭(conjugate)。
+- dirichlet distribution就是由2种结果bernoulli trial导出的beta distribution外推到k种的generalization 
+
+![](Pictures/Dirichlet01.png)
+
+![](Pictures/Dirichlet02.png)
+
