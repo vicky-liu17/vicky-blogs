@@ -296,3 +296,13 @@ Here:
 - $\mathbf{x} = (x_1, x_2, \ldots, x_K)$ is a vector in the $K$ -dimensional probability simplex, where $0 \leq x_i \leq 1$ and $\sum_{i=1}^{K} x_i = 1$ .
 - $\boldsymbol{\alpha} = (\alpha_1, \alpha_2, \ldots, \alpha_K)$ is a vector of positive parameters.
 - $\Gamma(\cdot)$ is the gamma function.
+
+The product term $\prod_{i=1}^{K} x_i^{\alpha_i - 1}$ represents the likelihood of observing the vector $\mathbf{x}$ given the parameter vector $\boldsymbol{\alpha}$. The term $\frac{\Gamma(\sum_{i=1}^{K} \alpha_i)}{\prod_{i=1}^{K} \Gamma(\alpha_i)}$ is a normalizing constant that ensures the distribution integrates to 1 over the probability simplex.
+
+In this context, $B(\boldsymbol{\alpha})$ typically refers to the normalizing constant and is known as the multivariate Beta function. It is given by:
+
+$$B(\boldsymbol{\alpha}) = \frac{\prod_{i=1}^{K} \Gamma(\alpha_i)}{\Gamma(\sum_{i=1}^{K} \alpha_i)}$$
+
+With this notation, you can write the Dirichlet distribution's PDF as:
+
+$$f(\mathbf{x}; \boldsymbol{\alpha}) = \frac{\Gamma(\sum_{i=1}^{K} \alpha_i)}{\prod_{i=1}^{K} \Gamma(\alpha_i)} \prod_{i=1}^{K} x_i^{\alpha_i - 1} = \frac{1}{B(\boldsymbol{\alpha})} \prod_{i=1}^{K} x_i^{\alpha_i - 1}$$
