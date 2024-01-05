@@ -230,3 +230,7 @@ $$=\arg\min - \log P(X|\theta) - \log P(\theta)$$
 - (compare a priori)
 - $MAP = \arg \max_H p(H|D)$
 
+
+
+
+
