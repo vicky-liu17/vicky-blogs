@@ -279,3 +279,10 @@ $$\mu' = \frac{\lambda \mu_0 + \sum_{n=1}^{N}x_n}{\lambda + N}$$
 $$\nu' = \frac{1}{2}\left(\sum_{n=1}^{N} x_n^2 + \lambda\mu_0^2 - \frac{\lambda(\sum_{n=1}^{N}x_n + \mu_0\lambda)^2}{\lambda + N}\right)$$
 
 Thus, the posterior distribution $p(\mu, \tau | X)$ follows a Normal-Gamma distribution with parameters $\alpha'$, $\beta'$, $\lambda'$, $\mu'$, and $\nu'$ . This completes the demonstration that the Normal-Gamma distribution is a conjugate prior for the Normal distribution with unknown mean and precision.
+
+
+#### Dirichlet Distribution
+
+The Dirichlet distribution is a continuous multivariate probability distribution that is often used as a prior distribution in Bayesian statistics, particularly in the context of modeling the distribution of categorical data. 
+The Dirichlet distribution is parameterized by a vector of positive real numbers, often denoted as $\boldsymbol{\alpha} = (\alpha_1, \alpha_2, \ldots, \alpha_K)$ is given by:
+
