@@ -69,4 +69,7 @@ Why do we often need to use an approximate inference methods(such as variational
 - We cannot compute the posterior for may interesting models. 
 - For example for the Bayesian mixture of Gaussian, we draw $z_i \sim Categorical(\pi)$ and $x_i \sim \mathcal{N}(\mu_{z_i}, \sigma^2)$
 
-$$p(\mu_{1:K},z_{1:n}|x_{1:n})=\frac{}{}$$
+$$p(\mu_{1:K},z_{1:n}|x_{1:n})=\frac{\prod_{k}p(\mu_k)\prod_{i}p(\z_i)p(x_i|z_i, \mu_{1:K})}{\int_{\mu_{1:k}}\sum_{z_{1:N}}\prod_{k}p(\mu_k)\prod_{i}p(z_i)p(x_i|z_i,\mu_{1:K})}$$
+
+
+
