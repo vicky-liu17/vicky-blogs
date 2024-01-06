@@ -69,7 +69,32 @@ Why do we often need to use an approximate inference methods(such as variational
 - We cannot compute the posterior for may interesting models. 
 - For example for the Bayesian mixture of Gaussian, we draw $z_i \sim Categorical(\pi)$ and $x_i \sim \mathcal{N}(\mu_{z_i}, \sigma^2)$
 
-$$p(\mu_{1:K},z_{1:n}|x_{1:n})=\frac{\prod_{k}p(\mu_k)\prod_{i}p(\z_i)p(x_i|z_i, \mu_{1:K})}{\int_{\mu_{1:k}}\sum_{z_{1:N}}\prod_{k}p(\mu_k)\prod_{i}p(z_i)p(x_i|z_i,\mu_{1:K})}$$
+$$p(\mu_{1:K},z_{1:n}|x_{1:n})=\frac{\prod_{k}p(\mu_k)\prod_{i}p(z_i)p(x_i|z_i, \mu_{1:K})}{\int_{\mu_{1:k}}\sum_{z_{1:N}}\prod_{k}p(\mu_k)\prod_{i}p(z_i)p(x_i|z_i,\mu_{1:K})}$$
 
 
+This expression is derived using Bayes' theorem. The derivation steps are as follows:
+
+Firstly, according to Bayes' theorem:
+
+$$ p(\mu_{1:K},z_{1:n}|x_{1:n}) \propto p(x_{1:n}|\mu_{1:K},z_{1:n}) \cdot p(\mu_{1:K},z_{1:n}) $$
+
+Here, we consider all parameters $\mu_{1:K}$ and latent variables $z_{1:n}$. Using the law of total probability, we can expand the likelihood term $p(x_{1:n}|\mu_{1:K},z_{1:n})$:
+
+$$ p(x_{1:n}|\mu_{1:K},z_{1:n}) = \prod_{i=1}^{n} p(x_i | \mu_{1:K},z_i) $$
+
+Here, $p(x_i | \mu_{1:K},z_i)$ represents the probability density function of observing data point $x_i$ given parameters $\mu_{1:K}$ and latent variable $z_i$.
+
+Now, substituting the above likelihood term and the prior term $p(\mu_{1:K},z_{1:n})$ into Bayes' theorem:
+
+$$ p(\mu_{1:K},z_{1:n}|x_{1:n}) \propto \prod_{i=1}^{n} p(x_i | \mu_{1:K},z_i) \cdot p(\mu_{1:K},z_{1:n}) $$
+
+Here, $p(\mu_{1:K},z_{1:n})$ is the prior probability. Next, we decompose the prior probability into the product of its components:
+
+$$ p(\mu_{1:K},z_{1:n}|x_{1:n}) \propto \prod_{k=1}^{K} p(\mu_k) \cdot \prod_{i=1}^{n} p(z_i) \cdot \prod_{i=1}^{n} p(x_i | \mu_{1:K},z_i) $$
+
+Substituting this expression into Bayes' theorem, we obtain the final expression for the posterior distribution:
+
+$$ p(\mu_{1:K},z_{1:n}|x_{1:n}) = \frac{\prod_{k=1}^{K} p(\mu_k) \cdot \prod_{i=1}^{n} p(z_i) \cdot \prod_{i=1}^{n} p(x_i | \mu_{1:K},z_i)}{p(x_{1:n})} $$
+
+Here, the denominator $p(x_{1:n})$ is a normalization constant ensuring that the posterior distribution sums to 1. This constant is often calculated by integrating or summing over the entire space of the numerator, making it challenging, especially when the dimensions of parameters and latent variables are large.
 
