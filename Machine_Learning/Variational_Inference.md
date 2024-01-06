@@ -57,7 +57,7 @@ The posterior can be written as,
 
 $$p(z|x,\alpha)=\frac{p(z,x|\alpha)}{\int_{z}p(z,x|\alpha)}$$
 
-**Posterior Distribution ( $p(z|x, \alpha)$ ):**
+**Posterior Distribution $p(z|x, \alpha)$ :**
 
 - This is the distribution of the latent variables z given the observed data x and any additional parameters $\alpha$ .
 
