@@ -67,17 +67,6 @@ Why do we often need to use an approximate inference methods(such as variational
 
 
 - We cannot compute the posterior for may interesting models. 
+- For example for the Bayesian mixture of Gaussian, we draw $z_i \sim Categorical(\pi)$ and $x_i \sim \mathcal{N}(\mu_{z_i}, \sigma^2)$
 
-- Consider the Bayesian mixture of Gaussians:
-    - Draw $\mu_k \sim \mathcal{N}(0, \tau^2)$ for k = 1...K. 
-    - For i = 1 ... n:
-        - (a) Draw $z_i \sim Mult(\pi)$ .
-        - (b) Draw $x_i \sim \mathcal{N}(\mu_{z_i}, \tau^2)$ .
-
-整体而言，这个贝叶斯混合高斯模型描述了如何从多个高斯分布中随机生成数据点。具体而言：
-
-- $\mu_k$ 是每个高斯分量的均值，服从均值为0、方差为 $\tau^2$ 的正态分布。
-  
-- $z_i$ 是一个多项式分布随机变量，决定数据点 $x_i$ 属于哪个高斯分量。
-  
-- $x_i$ 是从由 $z_i$ 确定的高斯分量中生成的数据点，具体而言，是从均值为$\mu_{z_i}$ 、方差为 $\tau^2$ 的正态分布中抽取的。
+$$p(\mu_{1:K},z_{1:n}|x_{1:n})=\frac{}{}$$
