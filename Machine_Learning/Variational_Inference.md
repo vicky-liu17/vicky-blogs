@@ -61,5 +61,15 @@ $$p(z|x,\alpha)=\frac{p(z,x|\alpha)}{\int_{z}p(z,x|\alpha)}$$
 
 - This is the distribution of the latent variables z given the observed data x and any additional parameters $\alpha$ .
 
+- As we saw earlier, the posterior links the data and a model. It is used in all downstream analyses, such as for the predi
 
-Why do we often need to use an approximate inference methods(such as variational Bayes)
+Why do we often need to use an approximate inference methods(such as variational Bayes) to compute the posterior distribution over nodes in our graphical model? It is because we cannot directly compute the posterior distribtion for many interesting models. (i.e. the posterior density is in an intractable form, often involving integrals) which cannot be easily analytically solved. 
+
+
+- We cannot compute the posterior for may interesting models. 
+
+- Consider the Bayesian mixture of Gaussians:
+    - Draw $\mu_k \sim \mathcal{N}(0, \tau^2)$ for k = 1...K. 
+    - For i = 1 ... n:
+        (a) Draw $z_i \sim Mult(\pi)$ .
+        (b) Draw $x_i \sim \mathcal{N}(\mu_{z_i}, \tau^2)$ .
