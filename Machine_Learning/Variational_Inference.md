@@ -110,11 +110,32 @@ $$KL(q||p)=E_q[\log\frac{q(Z)}{p(Z|x)}]$$
 
 $$\mathbb{KL}(q||p)=\sum_{Z,\Theta}q(Z,\Theta)\log\frac{q(Z,\Theta)}{p(Z,\Theta|X)}$$
 
+Intuitively, there are three cases of importance:
+-  If q is high and p is high, then we are happy (i.e. low KL divergence).
+- If q is high and p is low then we pay a price (i.e. high KL divergence).
+- If q is low then we dont care (i.e. also low KL divergence, regardless of p).
+
+
+
+
+### Evidence Lower Bound
+
+To do variational Bayes, we want to minimize the KL divergence between our approximation q and our posterior p. However, we cant actually minimize this quantity (we will show why later), but we can minimize a function that is equal to it up to a constant. This function is known as the evidence lower bound (ELBO).
+
+
+To derive the Evidence Lower Bound, we introduce Jensens inequality(applied to random variables X) here:
+
+![](Pictures/Variational04.png)
+
+![](Pictures/Variational05.png)
+
 If we call the set of latent variables and parameters, $Psi$ , we can rewrite the equation as:
 
 (4)
 
 $$\sum_{\Psi}q(\Psi)\log\frac{q(\Psi)}{p(\Psi|X)} = - E_{\Psi}[\log_p(X,\Psi)] + E_{\Psi}[\log_q(\Psi)] + \log p(X)$$
+
+
 
 We cannot actually minimize KL divergence in Equation 3 but since we have Equation 4, we maximize lower bound of log marginal likelihood, the Evidence Lower Bound(ELBO)
 
