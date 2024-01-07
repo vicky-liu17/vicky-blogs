@@ -144,6 +144,12 @@ $$ELBO(q)= E_{\Psi}[\log_p(X,\Psi)] - E_{\Psi}[\log_q(\Psi)]$$
 Note that we can use ELBO for convergence test at each iteration i.e. the difference of the ELBO of current value and the previous one should be smaller than some small epsilon. 
 
 
+We often cannot compute posterior, and so we need to approximate them, using variational methods. In variational Bayes, we'd like to find an approximation within some family that minizes the KL divergence to the posterior, but we cannpt directly minimize this. Therefore, we defined the ELBO, which we can mximize, and this is equavalent to minimizing the KL divergence. 
+
+
+The difference between the ELBO and the KL diveregnce is the log normalizer(i.e. the evidence), which is the quantity the the ELBO bounds. 
+
+
 In mean field Variational Inference, we assume that the variational family factorizes,
 
 $$q(Z_1, ..., Z_n, \Theta_1, ..., \Theta_K)=\prod_{i}q(Z_i)\prod_{k}q(\Theta_k)$$
