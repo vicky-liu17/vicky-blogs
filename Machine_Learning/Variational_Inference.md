@@ -95,7 +95,7 @@ $$p(Z,\theta |X) \approx q(Z, \theta)$$
 
 如下图所示，我们希望在集合Q中找到 $q^{*}(z)$ 使得其与 p(z|x) 只见的KL散度尽可能小。
 
-![](Pictures/Variational03.png)
+![](Pictures/variational03.png)
 
 ### Kullback-Leibler Divergence
 
@@ -125,9 +125,9 @@ To do variational Bayes, we want to minimize the KL divergence between our appro
 
 To derive the Evidence Lower Bound, we introduce Jensens inequality(applied to random variables X) here:
 
-![](Pictures/Variational04.png)
+![](Pictures/variational04.png)
 
-![](Pictures/Variational05.png)
+![](Pictures/variational05.png)
 
 If we call the set of latent variables and parameters, $Psi$ , we can rewrite the equation as:
 
