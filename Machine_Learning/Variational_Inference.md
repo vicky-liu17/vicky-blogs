@@ -103,6 +103,8 @@ $$p(Z,\theta |X) \approx q(Z, \theta)$$
 
 $$KL(q||p)=E_q[\log\frac{q(Z)}{p(Z|x)}]$$
 
-$$\mathbb{KL}(q||p)=\sum_{Z,\Theta}(Z,\Theta)\log\frac{q(Z,\Theta)}{p(Z,\Theta|X)}$$
+$$\mathbb{KL}(q||p)=\sum_{Z,\Theta}q(Z,\Theta)\log\frac{q(Z,\Theta)}{p(Z,\Theta|X)}$$
 
-If we call the set of latent variables and parameters, $Psi$ , we can 
+If we call the set of latent variables and parameters, $Psi$ , we can rewrite the equation as:
+
+$$\sum_{\Psi}q(\Psi)\log\frac{q(\Psi)}{p(\Psi|X)} = - E_{\Psi}[\log_p(X,\Psi)] + E_{\Psi}[\log_q(\Psi)] + \log p(X)$$
