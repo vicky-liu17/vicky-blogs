@@ -16,35 +16,6 @@ $$\int y(x,\theta)p(\theta|\mathcal{D})d\theta$$
     - Technique for approximating a posterior
 
 
-### KL-Divergence
-
-KL divergence, short for Kullback-Leibler divergence, is a measure of how one probability distribution diverges from a second, expected probability distribution. It is used to quantify the difference between two probability distributions and is a fundamental concept in information theory.
-
-
-For two discrete probability distributions P and Q over the same sample space, the KL divergence from Q to P is defined as:
-
-$$D_{\text{KL}}(P || Q) = \sum_{i} P(i) \log\left(\frac{P(i)}{Q(i)}\right)$$
-
-For continuous distributions, the sum is replaced by an integral.
-
-
-For two discrete probability distributions P and Q over the same sample space, the KL divergence from Q to P is defined as:
-
-$$D_{\text{KL}}(P || Q) = \sum_{i} P(i) \log\left(\frac{P(i)}{Q(i)}\right)$$
-
-For continuous distributions, the sum is replaced by an integral.
-
-Key points about KL divergence:
-
-1. **Non-negativity:** $D_{\text{KL}}(P || Q) \geq 0$. It is always non-negative, and it is equal to zero if and only if P and Q are the same distribution.
-
-2. **Not symmetric:** $D_{\text{KL}}(P || Q) \neq D_{\text{KL}}(Q || P)$ . In other words, the order of the arguments matters.
-
-3. **Interpretation:** $D_{\text{KL}}(P || Q)$ can be interpreted as the extra amount of information, in average bits, needed to encode data from P using the optimal code for Q.
-
-4. **Not a metric:** KL divergence is not a true metric because it does not satisfy the triangle inequality.
-
-
 ### Motivation
 
 In modern machine learning, variational(Bayesian) inference, which we will refer to here as variational Bayes, is most often used to infer the conditional distribution over the latent variables given the observations(and parameters). This is also known as the posterior distribution over the latent variables. 
@@ -98,3 +69,36 @@ $$ p(\mu_{1:K},z_{1:n}|x_{1:n}) = \frac{\prod_{k=1}^{K} p(\mu_k) \cdot \prod_{i=
 
 Here, the denominator $p(x_{1:n})$ is a normalization constant ensuring that the posterior distribution sums to 1. This constant is often calculated by integrating or summing over the entire space of the numerator, making it challenging, especially when the dimensions of parameters and latent variables are large.
 
+
+- The numerator（分子） is easy to compute for any configuration of the hidden variables. The problem is the denominator. 
+
+![](Pictures/Variational02.png)
+
+- This situation arises in most interesting models. This is why approximate posterior inference is one of the central problems in Bayesian statistics.
+
+
+### Main Idea
+
+- The EM-algorithm is used for point estimate for the model parameters; now we want to find the posterior distribution for the unknown model parameters and hidden variables. 
+
+- For a DGM with observations X, hidden variables Z and model parameters $\Theta$ , we want to pick an approximation q(Z, \Theta)$ to the distribution from some tractable family, and then try to make this approximation as close as possible to the true posterior. 
+
+$$p(Z,\theta |X) \approx q(Z, \theta)$$
+
+
+由于p（z|x）通常非常复杂，难以直接求解，因此变分推断使用分布q(z)来近似p(z|x)，并通过限制q(z)的形式，得到一种局部最优、但句哟确定解的近似后验分布。其中q(z)即为变分分布（variational distribution), q(z)与p(z|x)之间的相似度通过KL散度来衡量。
+
+如下图所示，我们希望在集合Q中找到 $q^{*}(z)$ 使得其与 p(z|x) 只见的KL散度尽可能小。
+
+![](Pictures/Variational03.png)
+
+### Kullback-Leibler Divergence
+
+- We measure the closeness of the two distributions with Kullback-Leibler(KL) divergence. 
+- This comes form information theory, a field that has deep links to statistics and machine learning. 
+
+- The KL-divergence for variational inference is 
+
+$$KL(q||p)=E_q[\log\frac{q(Z)}{p(Z|x)}]$$
+
+$$\mathbb{KL}(q||p)=\sum_{Z,\Theta}(Z,\Theta)\log\frac{q(Z,\Theta)}{p(Z,\Theta|X)}$$
