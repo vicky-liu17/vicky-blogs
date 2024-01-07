@@ -147,9 +147,14 @@ Note that we can use ELBO for convergence test at each iteration i.e. the differ
 We often cannot compute posterior, and so we need to approximate them, using variational methods. In variational Bayes, we'd like to find an approximation within some family that minizes the KL divergence to the posterior, but we cannpt directly minimize this. Therefore, we defined the ELBO, which we can mximize, and this is equavalent to minimizing the KL divergence. 
 
 
-The difference between the ELBO and the KL diveregnce is the log normalizer(i.e. the evidence), which is the quantity the the ELBO bounds. 
+The difference between the ELBO and the KL diveregnce is the log normalizer(i.e. the evidence), which is the quantity that the ELBO bounds. 
+
+### MEan Field Variational Inference
 
 
 In mean field Variational Inference, we assume that the variational family factorizes,
 
+$$q(Z_1, ..., Z_n)=\prod_{i}q(Z_i)$$
+
 $$q(Z_1, ..., Z_n, \Theta_1, ..., \Theta_K)=\prod_{i}q(Z_i)\prod_{k}q(\Theta_k)$$
+
