@@ -125,7 +125,7 @@ To do variational Bayes, we want to minimize the KL divergence between our appro
 
 To derive the Evidence Lower Bound, we introduce Jensens inequality(applied to random variables X) here:
 
-![](Pictures/variational04.png)
+$$f(\mathbb{E}[X])\ge \mathbb{E}[f(X)]$$
 
 ![](Pictures/variational05.png)
 
