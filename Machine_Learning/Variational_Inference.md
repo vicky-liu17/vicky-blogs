@@ -135,7 +135,7 @@ If we call the set of latent variables and parameters, $Psi$ , we can rewrite th
 
 $$\sum_{\Psi}q(\Psi)\log\frac{q(\Psi)}{p(\Psi|X)} = - E_{\Psi}[\log_p(X,\Psi)] + E_{\Psi}[\log_q(\Psi)] + \log p(X)$$
 
-
+![](Pictures/Variational06.png)
 
 We cannot actually minimize KL divergence in Equation 3 but since we have Equation 4, we maximize lower bound of log marginal likelihood, the Evidence Lower Bound(ELBO)
 
