@@ -85,6 +85,8 @@ Here, the denominator $p(x_{1:n})$ is a normalization constant ensuring that the
 
 $$p(Z,\theta |X) \approx q(Z, \theta)$$
 
+- This reduces inference to an optimization problem. We measure the closeness of the two distributions p and q with Kullback-Leibler Divergence.
+
 
 由于p（z|x）通常非常复杂，难以直接求解，因此变分推断使用分布q(z)来近似p(z|x)，并通过限制q(z)的形式，得到一种局部最优、但句哟确定解的近似后验分布。其中q(z)即为变分分布（variational distribution), q(z)与p(z|x)之间的相似度通过KL散度来衡量。
 
@@ -102,3 +104,5 @@ $$p(Z,\theta |X) \approx q(Z, \theta)$$
 $$KL(q||p)=E_q[\log\frac{q(Z)}{p(Z|x)}]$$
 
 $$\mathbb{KL}(q||p)=\sum_{Z,\Theta}(Z,\Theta)\log\frac{q(Z,\Theta)}{p(Z,\Theta|X)}$$
+
+If we call the set of latent variables and parameters, $Psi$ , we can 
