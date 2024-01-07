@@ -83,6 +83,9 @@ Here, the denominator $p(x_{1:n})$ is a normalization constant ensuring that the
 
 - For a DGM with observations X, hidden variables Z and model parameters $\Theta$ , we want to pick an approximation q(Z, \Theta)$ to the distribution from some tractable family, and then try to make this approximation as close as possible to the true posterior. 
 
+
+(2)
+
 $$p(Z,\theta |X) \approx q(Z, \theta)$$
 
 - This reduces inference to an optimization problem. We measure the closeness of the two distributions p and q with Kullback-Leibler Divergence.
@@ -103,8 +106,16 @@ $$p(Z,\theta |X) \approx q(Z, \theta)$$
 
 $$KL(q||p)=E_q[\log\frac{q(Z)}{p(Z|x)}]$$
 
+(3) 
+
 $$\mathbb{KL}(q||p)=\sum_{Z,\Theta}q(Z,\Theta)\log\frac{q(Z,\Theta)}{p(Z,\Theta|X)}$$
 
 If we call the set of latent variables and parameters, $Psi$ , we can rewrite the equation as:
 
+(4)
+
 $$\sum_{\Psi}q(\Psi)\log\frac{q(\Psi)}{p(\Psi|X)} = - E_{\Psi}[\log_p(X,\Psi)] + E_{\Psi}[\log_q(\Psi)] + \log p(X)$$
+
+We cannot actually minimize KL divergence in Equation 3 but since we have Equation 4, we maximize lower bound of log marginal likelihood, the Evidence Lower Bound(ELBO)
+
+$$ELBO(q)= E_{\Psi}[\log_p(X,\Psi)] - E_{\Psi}[\log_q(\Psi)]$$
