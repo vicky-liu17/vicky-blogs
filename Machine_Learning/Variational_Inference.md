@@ -84,6 +84,27 @@ Here, the denominator $p(x_{1:n})$ is a normalization constant ensuring that the
 
 ![](Pictures/Variational08.png)
 
+- 从被观测变量推测无法观测的隐变量的过程，被乘坐“推理”（Inference）
+
+- x~p(x) 观测变量 evidence
+
+- z~p(z|x) 后验 posterior
+
+- p(x) 通常难以计算(联合概率分布的积分)
+
+- 用一组相似的概率分布区近似它，近似的过程就叫做变分
+
+- 对隐变量z进行采样后，使用似然度对被观测变量x进行采用，是一个生成（generalization）的过程
+
+![](Pictures/Variational09.png)
+
+![](Pictures/Variational10.png)
+
+- 由于被观测变量p(x)是给定的，所以p(z|x)与p(x,y)成正比；经过一系列化简后，后验正比于一个均值为x-1的高斯分布
+
+![](Pictures/Variational11.png)
+
+
 - The EM-algorithm is used for point estimate for the model parameters; now we want to find the posterior distribution for the unknown model parameters and hidden variables. 
 
 - For a DGM with observations X, hidden variables Z and model parameters $\Theta$ , we want to pick an approximation q(Z, \Theta)$ to the distribution from some tractable family, and then try to make this approximation as close as possible to the true posterior. 
@@ -121,6 +142,8 @@ Intuitively, there are three cases of importance:
 - If q is low then we dont care (i.e. also low KL divergence, regardless of p).
 
 
+![](Pictures/Variational12.png)
+
 
 
 ### Evidence Lower Bound
@@ -153,6 +176,17 @@ We often cannot compute posterior, and so we need to approximate them, using var
 
 
 The difference between the ELBO and the KL diveregnce is the log normalizer(i.e. the evidence), which is the quantity that the ELBO bounds. 
+
+![](Pictures/Variational13.png)
+
+- KL散度永远不小于0
+- log p(x)是evidence，是固定不变的
+- 可以转换思路，最小化KL散度，等同于最大化ELBO
+- ELBO证据下界（log p(x)大于等于ELBO，ELBO为其最小值）
+
+![](Pictures/Variational14.png)
+
+![](Pictures/Variational15.png)
 
 ### MEan Field Variational Inference
 
