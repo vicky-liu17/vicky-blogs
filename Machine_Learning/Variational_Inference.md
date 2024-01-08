@@ -158,3 +158,9 @@ $$q(Z_1, ..., Z_n)=\prod_{i}q(Z_i)$$
 
 $$q(Z_1, ..., Z_n, \Theta_1, ..., \Theta_K)=\prod_{i}q(Z_i)\prod_{k}q(\Theta_k)$$
 
+We refer to $q(z_j)$ , the variational approximation for a single latent variable, as a "local variational approximation". 
+
+
+The setup is a fairly general, however we can also partition the latent variables $z_1, ..., z_m$ into R groups $z_{G_1}, ... z_{G_R}$ , and use the approximation:
+
+$$q(z_1, ..., z_m)=q(z_{G1}, ..., z_{G_R}) = \prod_{r=1}^{R}q(z_{G_r})$$
