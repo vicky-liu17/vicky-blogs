@@ -77,7 +77,12 @@ Here, the denominator $p(x_{1:n})$ is a normalization constant ensuring that the
 - This situation arises in most interesting models. This is why approximate posterior inference is one of the central problems in Bayesian statistics.
 
 
+![](Pictures/Variational07.png)
+
+
 ### Main Idea
+
+![](Pictures/Variational08.png)
 
 - The EM-algorithm is used for point estimate for the model parameters; now we want to find the posterior distribution for the unknown model parameters and hidden variables. 
 
@@ -164,3 +169,13 @@ We refer to $q(z_j)$ , the variational approximation for a single latent variabl
 The setup is a fairly general, however we can also partition the latent variables $z_1, ..., z_m$ into R groups $z_{G_1}, ... z_{G_R}$ , and use the approximation:
 
 $$q(z_1, ..., z_m)=q(z_{G1}, ..., z_{G_R}) = \prod_{r=1}^{R}q(z_{G_r})$$
+
+The hidden vairables can be grouped and the distribution of each group factorizes.
+
+
+Now for rach update equation of q(z_i) we perform the expectation, over the log of the joint distribution, w.r.t. all the hidden variables except the one we are deriving the approximate posterior for. 
+
+
+FOr example, we obtain the update equation for $z_j$ , $q(z_j)$ , by calculating $E_{-z_j} (\log P(X, Z, \Theta))$ . We call this corrdinate ascent VI(CAVI) update equation, i,e:
+
+$$\log q^{*}(\Psi_k)
