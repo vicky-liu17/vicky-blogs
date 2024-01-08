@@ -188,6 +188,8 @@ The difference between the ELBO and the KL diveregnce is the log normalizer(i.e.
 
 ![](Pictures/Variational15.png)
 
+![](Pictures/Variational16.jpg)
+
 ### MEan Field Variational Inference
 
 
