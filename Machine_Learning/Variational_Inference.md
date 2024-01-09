@@ -8,6 +8,12 @@
 
 $$\int y(x,\theta)p(\theta|\mathcal{D})d\theta$$
 
+VI中使用ELBO和EM中使用下界函数解决的是两个完全不一样的问题
+
+- EM算法中，存在“参数”，主要解决的问题是参数估计问题，且假设q(z) 可以直接计算得到。
+- VI中，没有“参数”，主要解决的问题是隐变量推断问题，且假设q(z) 不可直接计算得到。
+
+
 ### Variational Bayes-Mean Field
 
 ![](Pictures/Variational01.png)
@@ -203,3 +209,18 @@ We refer to $q(z_j)$ , the variational approximation for a single latent variabl
 
 
 ![](Pictures/Variational17.jpg)
+
+![](Pictures/Variational18.png)
+
+在基于平均场假设得到以下式子后，可以很轻易的得到所谓的Coordinate Ascent Variation Inference（CAVI）算法，其算法的框架如下所示：
+
+$$q^{*}(z_j)\propto exp[E_{\neg j}\log(p(x,z))]$$
+
+![](Pictures/Variational19.png)
+
+
+![](Pictures/Variational21.png)
+
+在每次更新完一次 $q(z_j)$ 后，函数 $E_{\neg j}\log(p(x,z))$ 都会发生变化，从而使每次优化时，能在原先的角度上更变大一点，使得ELBO不断地被提高，直到收敛。
+
+![](Pictures/Variational20.jpg)
