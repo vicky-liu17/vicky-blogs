@@ -225,4 +225,4 @@ $$q^{*}(z_j)\propto exp[E_{\neg j}\log(p(x,z))]$$
 
 ![](Pictures/Variational20.jpg)
 
-![](Pictures/Variational22.jpg)
+![](Pictures/Variational22.png)
