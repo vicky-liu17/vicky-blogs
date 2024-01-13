@@ -224,3 +224,5 @@ $$q^{*}(z_j)\propto exp[E_{\neg j}\log(p(x,z))]$$
 在每次更新完一次 $q(z_j)$ 后，函数 $E_{\neg j}\log(p(x,z))$ 都会发生变化，从而使每次优化时，能在原先的角度上更变大一点，使得ELBO不断地被提高，直到收敛。
 
 ![](Pictures/Variational20.jpg)
+
+![](Pictures/Variational21.jpg)
