@@ -18,3 +18,8 @@ Finding relevant information
 - IR is inexact in several regards:
     - information need, search query, relevance
 
+### Example IR Systems:
+- in search engine
+- in operating systems
+- in e-mail programs
+
