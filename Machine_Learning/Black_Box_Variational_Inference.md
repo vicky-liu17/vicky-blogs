@@ -19,3 +19,4 @@
 Probablistic Machine Learning
 - ML methods that connect domain knowledge(学科知识) to data
 - Provides a computational methodology for scalable modelling
+- Goal: A methodology that is expressive, scalable, easy to develop.    
