@@ -61,3 +61,20 @@ $$p(z,x)$
 $$p(z|x)=\frac{p(z,x)}{p(x)}$$
 
 - For most interesting models, the denominator is not tractable. We appeal to appriximate posterior inference. 
+- We appeal to it because we can't actually calculate this posterior through which we're inferring something that we can't observe in the world. 
+
+![](Pictures/BBVI03.png)
+
+- Every point on the slide is the distribution of the hidden variables $z$ . 
+- Target: $p$ of $z$ given $x$ . 
+- every point in this ellipse is a parameterization of q and corresponds to a distribution of z. 
+- We start with some initial parameters v, and we optimize following some path to v*, where our hope it that v* is close to the exact posterior that we care about. 
+
+- VI solves inference with optimization. (Contrast with MCMC where you solve inference problem by trying to sample from the distribution you can't calculate. )
+- Posit a variational family of distributions over the latent variables,
+
+$$q(z;v)$$
+
+- Fit the **variational parameters v** to be close(in KL) to the exact posterior. (There are alternative diverences, which connect to algorithms like EP, BP, and others. )
+
+![](Pictures/BBVI04.png)
