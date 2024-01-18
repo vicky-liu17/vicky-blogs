@@ -78,3 +78,24 @@ $$q(z;v)$$
 - Fit the **variational parameters v** to be close(in KL) to the exact posterior. (There are alternative diverences, which connect to algorithms like EP, BP, and others. )
 
 ![](Pictures/BBVI04.png)
+
+- Inference is time-consuming and error-prone. 
+
+![](Pictures/BBVI05.png)
+
+- Easily use variational inference with any model; no more appendices. 
+- Perform inference with massive data. 
+- No mathematical work beyond specifying the model. 
+
+#### BBVI enables probabilistic programming
+
+![](Pictures/BBVI06.png)
+
+- Anglican
+- Edward/Tensorflow Probability
+- PyMC3
+- Pyro
+- Stan
+- Venture
+- Web PPL
+- (& others ...)
