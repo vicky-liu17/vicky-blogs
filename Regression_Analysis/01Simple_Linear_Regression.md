@@ -47,3 +47,20 @@ $\hat{e_i} = y_i - \hat{y_i} =  y_i - \hat{\beta_0} - \hat{\beta_1} x_i$
 are called observed least squares residuals. $Q_0$ is defined as
 
 $$Q_0:=Q(\hat{\beta_0}, \hat{\beta_1}) = \sum_{i=1}^{n}\hat{e_i}^2$$
+
+and is called the residual sum of squares (RSS).
+
+![](Pictures/0103.png)
+
+![](Pictures/0104.png)
+
+### Supervised Learning
+
+- In the parlance of machine learning, we have now used the training set $D_{tr}=[(x_1,y_1), ..., (x_n, y_n)]$ to learn the LSE model. 
+
+- THe next step of learning is to use a test set, i.e., data pairs from the same source not used in LSE
+
+
+$$D_{tr}=[(x_{n+1},y_{n+1}), ..., (x_{n+m}, y_{n+m})]$$
+
+- Compute using the test residual using the learned model predictor $e_i^{t}:=y_{n+i} - \hat{\beta_0} - \hat{\beta_1} x_{n+i}$ for i = 1,...,m. 
