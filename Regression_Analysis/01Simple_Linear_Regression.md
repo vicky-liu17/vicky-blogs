@@ -70,3 +70,17 @@ $$D_{tr}=[(x_{n+1},y_{n+1}), ..., (x_{n+m}, y_{n+m})]$$
 ### Example
 
 ![](Pictures/0106.png)
+
+In the context of linear regression, $s^2$ typically refers to the estimated variance of the residuals or the residual standard error. It is a measure of the variability of the observed responses around the fitted regression line.
+
+
+The formula for calculating \(s^2\) in the context of simple linear regression is as follows:
+
+$$s^2 = \frac{\sum_{i=1}^{n} (y_i - \hat{y}_i)^2}{n-2}$$
+
+Here:
+- $n$ is the number of observations.
+- $y_i$ is the observed value of the response variable for the i-th observation.
+- $\hat{y}_i$ is the predicted value of the response variable for the is-th observation based on the fitted regression line.
+
+The denominator $(n-2)$ accounts for the degrees of freedom lost in estimating the intercept and slope parameters.
