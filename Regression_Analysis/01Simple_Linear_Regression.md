@@ -63,4 +63,10 @@ and is called the residual sum of squares (RSS).
 
 $$D_{tr}=[(x_{n+1},y_{n+1}), ..., (x_{n+m}, y_{n+m})]$$
 
-- Compute using the test residual using the learned model predictor $e_i^{t}:=y_{n+i} - \hat{\beta_0} - \hat{\beta_1} x_{n+i}$ for i = 1,...,m. 
+- Compute using the test residual using the learned model predictor $e_i^{t}:=y_{n+i} - \hat{\beta_0} - \hat{\beta_1} x_{n+i}$ for i = 1,...,m. The residual sum of squares $\sum_{m}^{i=1}(e_i^{t})^2$ in order to compare the **coefficient of determination for both training set and the test set. 
+
+![](Pictures/0105.png)
+
+### Example
+
+![](Pictures/0106.png)
