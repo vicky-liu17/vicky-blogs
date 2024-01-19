@@ -83,4 +83,10 @@ Here:
 - $y_i$ is the observed value of the response variable for the i-th observation.
 - $\hat{y}_i$ is the predicted value of the response variable for the is-th observation based on the fitted regression line.
 
+
 The denominator $(n-2)$ accounts for the degrees of freedom lost in estimating the intercept and slope parameters.
+
+
+- In simple linear regression, we are estimating two parameters: the intercept $\beta_0$ and the slope $\beta_1$ of the regression line. Estimating both the intercept and the slope consumes two degrees of freedom.
+
+- The formula for the estimated variance of the residuals $s^2$ involves dividing the sum of squared residuals by the degrees of freedom, and in this case, $n-2$ is used. 
