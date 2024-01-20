@@ -90,3 +90,5 @@ The denominator $(n-2)$ accounts for the degrees of freedom lost in estimating t
 - In simple linear regression, we are estimating two parameters: the intercept $\beta_0$ and the slope $\beta_1$ of the regression line. Estimating both the intercept and the slope consumes two degrees of freedom.
 
 - The formula for the estimated variance of the residuals $s^2$ involves dividing the sum of squared residuals by the degrees of freedom, and in this case, $n-2$ is used. 
+
+![](Pictures/0107.png)
