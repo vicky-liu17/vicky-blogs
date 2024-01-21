@@ -92,3 +92,7 @@ The denominator $(n-2)$ accounts for the degrees of freedom lost in estimating t
 - The formula for the estimated variance of the residuals $s^2$ involves dividing the sum of squared residuals by the degrees of freedom, and in this case, $n-2$ is used. 
 
 ![](Pictures/0107.png)
+
+### Part 1: Analysis
+
+![](Pictures/0108.png)
