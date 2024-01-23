@@ -96,3 +96,5 @@ The denominator $(n-2)$ accounts for the degrees of freedom lost in estimating t
 ### Part 1: Analysis
 
 ![](Pictures/0108.png)
+
+
