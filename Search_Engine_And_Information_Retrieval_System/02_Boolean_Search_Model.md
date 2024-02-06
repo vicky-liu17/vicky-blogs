@@ -17,3 +17,12 @@ There's nothing wrong with this solution. But it will be to slow if we apply it 
 ![](Pictures/0202.png)
 
 ![](Pictures/0203.png)
+
+#### Boolean Search: Advantages
+- Simple model to understand and implement
+- A Boolean query has a (mathematically) precise meaning
+- Works well for expert users wroking with a well-defined 
+
+![](Pictures/0204.png)
+
+![](Pictures/0205.png)
