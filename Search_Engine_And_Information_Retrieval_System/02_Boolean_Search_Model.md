@@ -29,6 +29,7 @@ There's nothing wrong with this solution. But it will be to slow if we apply it 
 
 ![](Pictures/0206.png)
 
-In reality, a large majority of wods will only appears in few documents. 
+In reality, a large majority of words will only appears in few documents. 
 
-![](Pictures/027.png)
+![](Pictures/0207.png)
+
