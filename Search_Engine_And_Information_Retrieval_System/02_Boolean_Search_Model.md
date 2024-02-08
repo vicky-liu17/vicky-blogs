@@ -33,3 +33,13 @@ In reality, a large majority of words will only appears in few documents.
 
 ![](Pictures/0207.png)
 
+### Tokenization
+
+![](Pictures/0208.png)
+
+##### Basic Text Processing
+- Text comes in many **different formats** (html, text, Word, Excel, PDF, PostScript, ..., ), **languages** and **character sets**
+- It might need be separated from images and other non-textual content
+- strip off markup in HTM and XML
+
+![](Pictures/0209.png)
