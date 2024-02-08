@@ -43,3 +43,14 @@ In reality, a large majority of words will only appears in few documents.
 - strip off markup in HTM and XML
 
 ![](Pictures/0209.png)
+
+-  ASCII and Latin-1 are older character encoding standards with limited character sets, while Unicode and UTF-8 provide comprehensive support for representing text in various languages and scripts around the world. UTF-8 is particularly popular due to its efficiency and compatibility with ASCII.
+
+
+#### Tokenization
+- A token is a meaningful minimal unit of text
+- Usually, spaces and punctuation(标点符号) delimit tokens
+
+![](Pictures/0210.png)
+
+![](Pictures/0211.png)
