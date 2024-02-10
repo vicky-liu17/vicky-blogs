@@ -54,3 +54,5 @@ In reality, a large majority of words will only appears in few documents.
 ![](Pictures/0210.png)
 
 ![](Pictures/0211.png)
+
+cd "Desktop/Coursework/2023-2024 Sem2/DD2476 Search Engine and Information Retrieval System/Assignment01/assignment1"
