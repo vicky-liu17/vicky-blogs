@@ -155,3 +155,7 @@ $$Precision = \frac{Relevant retrieved instances}{All retrieved instances}$$
 - Recall (also known as sensitivity) is the fraction of relevant instances that were retrieved. Written as a formula:
 
 $$Recall = \frac{Relevant retrieved instances}{All relevant instances}$$
+
+- Improves recall: Stemming reduces words to their common root forms, which means that it's more likely to match different variations of the same word. For example, "running," "runs," and "ran" may all be reduced to the stem "run." By doing so, stemming ensures that more relevant documents containing variations of the same word are retrieved, thereby improving recall.
+
+- Lowers precision: Stemming doesn't consider the semantic or syntactic context of the word, which can lead to unrelated words being stemmed to the same root. This can result in the inclusion of irrelevant words that share the same stem but have different meanings. Consequently, while stemming may retrieve more relevant documents, it may also introduce noise by retrieving irrelevant ones, thus lowering precision.
