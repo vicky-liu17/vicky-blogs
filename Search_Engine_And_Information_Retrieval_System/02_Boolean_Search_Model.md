@@ -150,11 +150,11 @@ cd "Desktop/Coursework/2023-2024 Sem2/DD2476 Search Engine and Information Retri
 - Stemming usually improves recall but lowersprecision
     - Precision (also called positive predictive value) is the fraction of relevant instances among the retrieved instances. Written as a formula:
 
-$$Precision = \frac{Relevant retrieved instances}{All retrieved instances}$$
+$$Precision = \frac{Relevant—retrieved-instances}{All-retrieved-instances}$$
 
 - Recall (also known as sensitivity) is the fraction of relevant instances that were retrieved. Written as a formula:
 
-$$Recall = \frac{Relevant retrieved instances}{All relevant instances}$$
+$$Recall = \frac{Relevant-retrieved-instances}{All-relevant-instances}$$
 
 - Improves recall: Stemming reduces words to their common root forms, which means that it's more likely to match different variations of the same word. For example, "running," "runs," and "ran" may all be reduced to the stem "run." By doing so, stemming ensures that more relevant documents containing variations of the same word are retrieved, thereby improving recall.
 
