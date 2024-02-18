@@ -1,5 +1,14 @@
 # The Boolean Search Model
 
+
+信息检索（information retrieval，简称IR）的定义：信息检索是从大规模非结构化数据（通常是文本）的集合（通常保存在计算机上）中找出满足用户信息需求的资料（通常是文档）的过程。
+
+- 非结构化数据的定义：指没有清晰和明显的语义结构的数据，而计算机不易处理这类数据。
+
+- 结构化数据的定义：与非结构化数据相对，例如：关系型数据库
+
+- 半结构化数据的定义：具有格式标记的数据，例如：网页
+
 ### A first IR example
 
 ![](Pictures/0201.png)
@@ -32,6 +41,8 @@ There's nothing wrong with this solution. But it will be to slow if we apply it 
 In reality, a large majority of words will only appears in few documents. 
 
 ![](Pictures/0207.png)
+
+![](Pictures/0225.png)
 
 ### Tokenization
 
@@ -187,4 +198,89 @@ $\epsilon$ : Empty
 
 ![](Pictures/0222.png)
 
+### Sum-up
+- Reading, tokenizing and normalizing ocntents of documents.
+    - File types and character encoding
+    - Tokenization issues: punctuation, compound words,word order, stop words
+    - Normalization issues: diacritica（变音符）, case folding（大小写折叠）, lemmatization（词形还原）, stemming
 
+## Indexing and search
+
+#### Recap
+- We want to quickyly find the **most relevant documents** satisfying our **information need**
+- The user gives a **search query.**
+- The engine searches through the **index** , retrieves the **matching** documents, and possibly **ranks** them. 
+
+### The index
+- Conceptually: the **term-document matrix**
+
+![](Pictures/0223.png)
+
+### Practical Indexing 
+- we need a sparse matrix representation.
+- In the computer assignments we use:
+    - a hashtable for the dictionary
+    - arraylists for the rows
+- Rows are called postings lists (倒排记录表)
+
+![](Pictures/0224.png)
+
+![](Pictures/0226.png)
+
+![](Pictures/0227.png)
+
+#### Intersection
+
+![](Pictures/0228.png)
+
+
+- 交集（intersection）操作非常关键，这是因为必须快速将倒排记录表求交集以尽快找到那些文档同时包含两个词项。该操作有时称为合并（merge）
+
+![](Pictures/0230.png)
+
+#### Skip pointers
+
+- Add skip pointers at indexing time
+
+![](Pictures/0229.png)
+
+- By using skip pointers, we don’t have to compare 41 to 17 or 21
+
+![](Pictures/0231.png)
+
+![](Pictures/0232.png)
+
+## Positional indexes and phrase queries
+
+- E.g. "Joe Biden"
+- Should not match "President Biden"
+    - The concept of phrase queries has proven easily understood by users; one of the few "advanced search: ideas that works
+    - Many more queries are implicit phrase queries
+- For this, it no longer suffices to store only <term : docs> entries. 
+
+- 很多复杂的或技术性的概念、机构名和产品名等都是由多个词语组成的复合词或短语。用户希望能够将类似 Stanford University 的查询中的两个词看成一个整体，从而一篇含有句子 The inventor Stanford Ovshinsky never went to university 的文档不会与该查询匹配。大部分搜索引擎都提供了双引号语法（如“ Stanford University” ）来支持短语查询，这种语法很容易理解并被用户成功使用。大概有 10%的 Web 查询是短语查询，有更多的查询虽然输入时没有加双引号，但实际上是隐式的短语查询（如人名）。要支持短语查询，只列出词项所在的文档列表的倒排记录表已不足以满足要求。
+
+### First attempt: Biword Index
+- “Friends, Romans, Countrymen” generates the biwords
+    – friends romans
+    – romans countrymen
+- Each of these biwords is now a dictionary term.
+- Two-word phrase query-processing is now immediate. 
+- Longer phrases: friends romans countrymen
+- Intersect friends romans and romans countrymen?
+
+- 处理短语查询的一个办法就是将文档中每个接续词对看成一个短语。例如，文本 Friends, Romans, Countrymen 会产生如下的二元接续词对（biword）：
+    - friends romans 
+    - romans countrymen 
+- 这种方法将每个接续词对看成词项，这样马上就能处理两个词构成的短语查询，更长的查询可以分成多个短查询来处理。比如，按照上面的方法可以将查询 stanford university palo alto分成如下的布尔查询：
+- “stanford university” AND “university palo” AND “palo alto” 
+可以期望该查询在实际中效果会不错，但是偶尔也会有错误的返回例子。对于该布尔查询返回的文档，我们并不知道其是否真正包含最原始的四词短语。
+
+##### Biword index: disadvantages
+
+- **False positives(错误的返回例子)**
+    - Requires post-processing to avoid
+- Index blowup due to bigger dictionary
+    - The number of unique word square（n个unique word, 就有 $n^2$ 个Biword
+    - Infeasible for more than biwords, big even for them
+- 存储更长的短语很可能会大大增加词汇表的大小。穷尽所有长度超过2的短语并维护其索引绝对是一件令人生畏的事情，即使只穷尽所有的二元词也会大大增加词汇表的大小。
