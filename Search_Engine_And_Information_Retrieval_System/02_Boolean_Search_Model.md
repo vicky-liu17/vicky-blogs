@@ -167,3 +167,24 @@ $$Recall = \frac{Relevant-retrieved-instances}{All-relevant-instances}$$
 
 $\epsilon$ : Empty
 
+- Output is not neccessarily a word. 
+
+- Porter's algorithm, or the Porter stemming algorithm, is a widely utilized method in natural language processing for stemming, which involves reducing words to their base or root form. Developed by Martin Porter in 1980, this algorithm employs a series of predefined rules to strip common morphological and inflectional endings from words iteratively, aiming to derive their simplest form. By applying these rules, it helps in simplifying text processing tasks such as information retrieval and text mining by transforming words into their base forms, thus enhancing accuracy and efficiency in linguistic analysis. Despite its simplicity, Porter's algorithm remains a cornerstone in stemming algorithms due to its effectiveness and widespread application in various natural language processing applications.
+
+#### Compound Splitting
+
+![](Pictures/0220.png)
+
+- modifier: 修饰语，修饰成分
+
+![](Pictures/0221.png)
+
+#### Stop Words
+
+- 在信息检索中，为节省存储空间和提高搜索效率，在处理自然语言数据（或文本）之前或之后会自动过滤掉某些字或词，这些字或词即被称为Stop Words（停用词）。这些停用词都是人工输入、非自动化生成的，生成后的停用词会形成一个停用词表。
+
+- 通常意义上，停用词大致分为两类。一类是人类语言中包含的功能词，这些功能词极其普遍，与其他词相比，功能词没有什么实际含义，比如'the'、'is'、'at'、'which'、'on'等。但是对于搜索引擎来说，当所要搜索的短语包含功能词，特别是像'The Who'、'The The'或'Take The'等复合名词时，停用词的使用就会导致问题。另一类词包括词汇词，比如'want'等，这些词应用十分广泛，但是对这样的词搜索引擎无法保证能够给出真正相关的搜索结果，难以帮助缩小搜索范围，同时还会降低搜索的效率，所以通常会把这些词从问题中移去，从而提高搜索性能。
+
+![](Pictures/0222.png)
+
+
