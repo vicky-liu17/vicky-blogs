@@ -284,3 +284,87 @@ $\epsilon$ : Empty
     - The number of unique word square（n个unique word, 就有 $n^2$ 个Biword
     - Infeasible for more than biwords, big even for them
 - 存储更长的短语很可能会大大增加词汇表的大小。穷尽所有长度超过2的短语并维护其索引绝对是一件令人生畏的事情，即使只穷尽所有的二元词也会大大增加词汇表的大小。
+
+
+### Positional indexes
+
+- For each term and doc, store the positions where (tokens of) the term appears
+
+![](Pictures/0233.png)
+
+- Intersection needs to deal with more than equality
+
+![](Pictures/0234.png)
+
+- Positional index example. The word “to” has a document frequency 993,477, and occurs 6 times in document 1 at positions 7, 18, 33, etc.
+
+#### Processing phrase queries
+
+- Extract inverted index entries for each distinct term:
+    - to, be, or, not.
+    - Intersect their doc:position lists to enumerate all positions with “to be or not to be”.
+
+- Same general method for proximity searches
+
+![](Pictures/0236.png)
+
+- 邻近搜索中两个倒排记录表 p1 和 p2 的合并算法，算法寻找两个词项在 k 个词之内出现的情形，返回一个三元组<文档 ID，词项在 p1中的位置，词项在 p2中的位置>的列表（An algorithm for proximity intersection of postings lists p1 and p2.The algorithm finds places where the two terms appear within k words of each otherand returns a list of triples giving docID and the term position in p1 and p2.）
+
+#### Positional index size
+
+- Need an entry for each occurrence, not just once per document
+- Consider a term with frequency 0.1%
+    - Doc contain 1000 tokens → 1 occurrence
+    - 100 000 tokens → 100 occurrences
+
+- 采用位置索引会大大增加倒排记录表的存储空间。采用位置索引会加深倒排记录表合并操作的渐
+进复杂性，这是因为需要检查的项的个数不再受限于文档数目而是文档集中出现的所有的词条
+的个数 T。也就是说，布尔查询的复杂度为Θ (T)而不是Θ (N)。
+
+- 位置索引需要对词项的每次出现保留一个条目，因此索引的大小取决于文档的平均长度。网页的平均长度往往不到 1 000 个词项，而诸如证管会（SEC）股票文件、书籍甚至一些英雄史诗等文档的长度则很容易就能达到 100 000 个词项。
+
+- 考虑在平均 1 000 个词项中每个词项的频率都是 1，最后的结果就是：大文件条件下会造成索引存储空间大小的两个数量级规模的增长，如下所示。
+
+- Rule of thumb: is 2–4 as large as a non-positional index 尽管确切的数字要视文档及其语言的具体类型而定，但是利用一些粗略的经验法则可以预期位置索引大概是非位置索引大小的 2～4 倍
+- Positional index size 35–50% of volume of original text 压缩后的位置索引大概为原始未压缩文档文本（去除标记信息）的 1/3～1/2。
+- Caveat（警告）: all of this holds for “English-like” languages
+
+### Large Indexes
+
+- The web is big:
+    - 1998: 26 million unique web pages
+    - 2018: 130 trillion (1.3× $10^14$ ) unique web pages!
+    - about 4.26 billion of these are indexed.
+    - In real applications, the index is too large to fit in main memory
+
+- Task 1.7 asks you to implement an index which is stored on disk
+    – using any method (well, not quite…) for grade C
+    – using a hash table with both dictionary and postings lists on disk for grade B
+    - first construct the index in main memory, then write it to disk
+    - if we have a lot of data, construct several sub-indexes, and then merge them
+
+#### Hash tables on disk- what one would like to do
+
+![](Pictures/0237.png)
+
+![](Pictures/0238.png)
+
+#### Hash table on disk
+
+- Dictionary file:
+    – with entries of a fixed length
+    – entries contain pointer to the data file
+- Data file
+    – contains string representation of postings list
+    – don’t serialize(序列化) the PostingsList objects! (waste of space)
+- Hash function 
+    – inputs word (as a string)
+    – outputs an integer [0…TABLESIZE-1] which is a pointer to the dictionary file
+
+![](Pictures/0239.png)
+
+- Dictionary file 
+    – has a fixed size
+    – will be mostly empty (load factor about 0.33) 
+- Data file grows dynamically 
+    – will be completely packed
