@@ -347,7 +347,11 @@ $\epsilon$ : Empty
 
 ![](Pictures/0237.png)
 
+The reason: 如果两个词的hash value相同，那么就会在data file中被overwrite。
+
 ![](Pictures/0238.png)
+
+
 
 #### Hash table on disk
 
@@ -368,3 +372,42 @@ $\epsilon$ : Empty
     – will be mostly empty (load factor about 0.33) 
 - Data file grows dynamically 
     – will be completely packed
+
+### 哈希冲突 Hash Collisions
+
+![](Pictures/0240.png)
+
+![](Pictures/0241.png)
+
+![](Pictures/0242.png)
+
+### Hash function
+
+- Have a look in the literature
+    - or devise your own method 
+    - be sure there are not too many collisions
+    - about 1 collision/unique word is a reasonable target
+    - (that means about 200,000 collisions)
+
+![](Pictures/0243.png)
+
+- You have to include some information in the cell to make sure it is really the correct word. 
+
+### Dynamic indexing
+
+- Document collections are rarely static.
+    – Documents come in over time and need to be inserted.
+    – Documents are deleted and modified.
+-This means that the dictionary and postings lists have to be modified:
+    – Postings updates for terms already in dictionary
+    – New terms added to dictionary
+
+### Simplest approach
+
+- Maintain “big” main index
+- New docs go into “small” auxiliary index
+- Search across both, merge results
+- Deletions
+    - Invalidation bit-vector for deleted docs
+    - Filter docs output on a search result by this invalidation bit-vector
+- Periodically, re-index into one main index
