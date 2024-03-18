@@ -114,4 +114,8 @@ The F1-score combines precision (P) and recall (R) as their harmonic mean:
 
 $$F_1 = 2/(1/P + 1/R) = 2PR/(P+R)$$
 
-The F1-score is a special case of the more general $F_β-score$.
+- The F1-score is a special case of the more general $F_β-score$.
+
+- "F-beta score" 是一个综合考虑了精度（Precision）和召回率（Recall）的评估指标，其中 β 是一个控制精度和召回率之间权衡的参数。
+
+$$F_\beta = (1 + \beta^2) \cdot \frac{{\text{Precision} \cdot \text{Recall}}}{{\beta^2 \cdot \text{Precision} + \text{Recall}}}$$
