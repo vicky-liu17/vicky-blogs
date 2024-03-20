@@ -119,3 +119,26 @@ $$F_1 = 2/(1/P + 1/R) = 2PR/(P+R)$$
 - "F-beta score" 是一个综合考虑了精度（Precision）和召回率（Recall）的评估指标，其中 β 是一个控制精度和召回率之间权衡的参数。
 
 $$F_\beta = (1 + \beta^2) \cdot \frac{{\text{Precision} \cdot \text{Recall}}}{{\beta^2 \cdot \text{Precision} + \text{Recall}}}$$
+
+- 在这个公式中，精度（Precision）是检索到的相关文档中真正相关的比例，召回率（Recall）是真正相关的文档中检索到的比例。参数 β 控制着精度和召回率之间的平衡。当 β = 1 时，F-beta score 称为 F1 score，对精度和召回率给予相等的权重。
+
+- F-beta score 提供了一个在精度和召回率之间进行权衡的方法。较大的 β 值会更加重视精度，而较小的 β 值则更加重视召回率。
+
+### F1-score vs arithmetic mean
+
+- Suppose P=0.5 and R=0.5
+    - Arithmetic mean = 0.5
+    - F1: 2*0.5*0.5/ (0.5+0.5) = 0.5
+- Suppose P=0.01 and R=0.99
+    - Arithmetic mean = 0.5
+    - F1 = 2*0.01*0.99/(0.5+0.5) = 0.0198
+
+### F1-score vs other averages
+
+![](Pictures/0305.png)
+
+### The practice of evaluation
+- Use gold standards / ground truth
+- Define the notion of relevance (by annotation guidelines)
+- Create test collections
+- Defined shared tasks / competitions
