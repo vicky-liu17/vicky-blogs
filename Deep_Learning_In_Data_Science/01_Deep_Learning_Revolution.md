@@ -86,5 +86,17 @@
 - GMM + HMM approach to Automatic Speech Recognition.
     - Gaussian Mixture Model - Hidden Markov Model
     - 在建模阶段，使用GMM-HMM方法来对语音信号进行建模。具体地，使用高斯混合模型（GMM）来对每个语音单元（例如音素或子词）进行建模，用于表示该语音单元在不同特征空间上的概率分布。然后，使用隐马尔可夫模型（HMM）来建模语音单元之间的转移关系，表示语音信号中的时间序列结构。在GMM-HMM中，每个HMM状态与一个GMM模型相关联，用于描述该状态对应的特征向量的生成概率。
+- Efficient algorithms exist for training the HMM models from training utterances. (forward-backward algorithm)在训练语音识别系统时，使用了前向-后向算法（forward-backward algorithm），这是一种有效的算法，用于根据训练语句来训练HMM模型。
+- Efficient algorithms exist for finding the most likely word sequence given trained HMMs by efficiently computing the likelihoods (Viterbi algorithm).
+- Models of this form had brought great improvements to ASR in the 90’s
+- But in the naughties performance had stagnated. (even when including state-of-the-art techniques such as discriminative training, speaker adaptive training, triphone modelling etc.)
+
 
 ![](Pictures/0107.png)
+
+#### Exciting results
+
+![](Pictures/0108.png)
+
+
+### Image Recognition & Computer Vision
