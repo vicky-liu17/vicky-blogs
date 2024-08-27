@@ -4,7 +4,7 @@
 In probability theory, a **probability space** is a mathematical framework that models a random experiment. It consists of three components:
 
 1. **Sample space ( $\Omega$ )**: The set of all possible outcomes.
-2. **Event space ( $\mathcal{F}$ )**: A set of events, where an event is a subset of the sample space.
+2. **Event space ( $\mathcal{F}$ or $\mathbb{A}$ )**: A set of events, where an event is a subset of the sample space.
 3. **Probability measure ( $P$ )**: A function that assigns a probability to each event in the event space.
 
 ## Sample Space
