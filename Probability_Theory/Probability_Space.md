@@ -27,34 +27,24 @@ $
 
 De Morgan's laws are fundamental rules in set theory, logic, and probability theory. They describe the relationship between the complement of unions and intersections of sets. The laws are expressed as follows:
 
-
-
-For any two sets $ A $ and $ B $:
+For any two sets $A$ and $B$:
 
 1. **Complement of a Union**:
-   $$
-   \overline{A \cup B} = \overline{A} \cap \overline{B}
-   $$
+   $$\overline{A \cup B} = \overline{A} \cap \overline{B}$$
    This states that the complement of the union of two sets is equal to the intersection of their complements.
 
 2. **Complement of an Intersection**:
-   $$
-   \overline{A \cap B} = \overline{A} \cup \overline{B}
-   $$
+   $$\overline{A \cap B} = \overline{A} \cup \overline{B}$$
    This states that the complement of the intersection of two sets is equal to the union of their complements.
 
 ### In Probability Theory
 
-If $ A $ and $ B $ are events in a probability space, then De Morgan's laws can also be interpreted in terms of events:
+If $A$ and $B$ are events in a probability space, then De Morgan's laws can also be interpreted in terms of events:
 
 1. **Complement of a Union**:
-   $$
-   P\left(\overline{A \cup B}\right) = P\left(\overline{A} \cap \overline{B}\right)
-   $$
+   $$P\left(\overline{A \cup B}\right) = P\left(\overline{A} \cap \overline{B}\right)$$
 
 2. **Complement of an Intersection**:
-   $$
-   P\left(\overline{A \cap B}\right) = P\left(\overline{A} \cup \overline{B}\right)
-   $$
+   $$P\left(\overline{A \cap B}\right) = P\left(\overline{A} \cup \overline{B}\right)$$
 
 These formulas are useful when dealing with probabilities of complements, especially when you need to simplify complex probability expressions.
