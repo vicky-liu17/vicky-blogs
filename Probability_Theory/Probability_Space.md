@@ -1,6 +1,15 @@
 # Probablity Space ( $\Omega$ , $\mathbb{A}$ , $\mathbb{P}$ )
 
-- Sampe Space $\Omega$ : Random experiment cannot predict the outcome with certainty, e.g. coin toss , Yet we know all the possible outcomes
+
+In probability theory, a **probability space** is a mathematical framework that models a random experiment. It consists of three components:
+
+1. **Sample space ( $\Omega$ )**: The set of all possible outcomes.
+2. **Event space ( $\mathcal{F}$ )**: A set of events, where an event is a subset of the sample space.
+3. **Probability measure ( $P$ )**: A function that assigns a probability to each event in the event space.
+
+## Sample Space
+
+- Sample Space $\Omega$ : Random experiment cannot predict the outcome with certainty, e.g. coin toss , Yet we know all the possible outcomes
 - The set of all possible outcomes is denoted by $\Omega$ and called **sample space** (or state space)
 
 - An event E is said to occur on a particular trial of the experiment if the outcome observed is an element of the set E.
@@ -48,3 +57,7 @@ If $A$ and $B$ are events in a probability space, then De Morgan's laws can also
    $$P\left(\overline{A \cap B}\right) = P\left(\overline{A} \cup \overline{B}\right)$$
 
 These formulas are useful when dealing with probabilities of complements, especially when you need to simplify complex probability expressions.
+
+### σ-algebra
+
+In probability theory and measure theory, a **sigma algebra** (or **σ-algebra**) is a mathematical structure that allows us to define and work with collections of events in a consistent way. It is a key concept for defining measures, like probability measures, on a set. 
